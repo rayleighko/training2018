@@ -23,13 +23,13 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 ##### Don't think about git, just do git !
 ##### Based on a amazing scenario, c programming with Git (Report card, Knapsack problem)
 
-- [tutorial]()
+- [tutorial](/git/README.md)
 
 ## Round 2. "Tecnical trend"
 
 ##### 
 
-- [trend]()
+- [trend](/trend/README.md)
 
 	1. WEB? - Server & Client
 	2. WEB - Framework!
@@ -42,7 +42,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 #####
 
-- [common sense]()
+- [common sense](/common_sense/README.md)
 
 	1. OOP vs. TDD
 	2. RESTful API
@@ -54,6 +54,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 #####
 
-- [better programmner]()
+- [better programmer](/better_programmer/README.md)
 	1. clean code
-	2. 
+	2.
+
