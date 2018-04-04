@@ -1,8 +1,8 @@
 # Round 1 git
 
-## Round 1-1 git basic
-
 ##### Don't think about git, just do git!
+
+## Round 1-1 git basic
 
 우리가 대부분의 전자기기나 게임을 할 때 메뉴얼을 보지않고 사용하며 익숙해지는 것처럼 Git이라는 프로그램 또한, 사용하면서 익히도록 하자.
 
