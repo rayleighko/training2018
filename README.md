@@ -55,6 +55,26 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 #####
 
 - [better programmer](/better_programmer/README.md)
+
 	1. clean code
 	2.
+
+## Round 5. "Machine Learning basic"
+
+#####
+
+- [Machine Learning](/machine_learning/README.md)
+
+	1.
+	2.
+
+## Round 6. "Python"
+
+#####
+
+- [Python](/python/README.md)
+
+	1. 
+	2.
+
 
