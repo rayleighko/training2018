@@ -24,6 +24,9 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 ##### Based on a amazing scenario, c programming with Git (Report card, Knapsack problem)
 
 - [tutorial](/git/README.md)
+	
+	1. git basic
+	2. 올바른 깃허브 사용
 
 ## Round 2. "Tecnical trend"
 

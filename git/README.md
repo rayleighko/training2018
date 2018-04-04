@@ -177,7 +177,9 @@ REEDDME.md
 * [영문 git 문서][git-documentation]
 * [한국어 git 문서][kor-git-doc]
 * [깃허브로 취업하기][git-get-career]
+* [git-cheat-sheet][git-cheat-sheet]
 
 [git-documentation]: https://git-scm.com/doc/
 [kor-git-doc]: https://git-scm.com/book/ko/
 [git-get-career]: https://sujinlee.me/professional-github/
+[git-cheat-sheet]: https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.ko.md
