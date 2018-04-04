@@ -77,7 +77,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 - [Python](/python/README.md)
 
-	1. 
-	2.
-
+	1. python basic
+	2. 그래서 파이썬이 뭐야?
+	3. 파이썬으로 걸어다녀 보자.
 
