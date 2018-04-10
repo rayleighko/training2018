@@ -60,17 +60,107 @@
 ##### Learning environment
 
 
+## Round 5-x Begining to Deep Learning
+
+# 딥러닝의 시작
+
+## 인류의 간절한 염원, 인공지능
+
+인공지능을 만들기 위해 다양한 분야에서 수많은 이론이 탄생하게 되었다. 그 중 인간의 뇌를 모방하자는 이론이 바로 'Deep Learning'이다. 인간의 뇌는 다양한 동작을 하게 되는데, 이러한 다양한 동작은 가령 상상, 생각, 무의식 등이다.  
+
+이를 신기하게 여긴 학자들은 다양한 동작을 가능하게 하는 것이 뇌 속의 '뉴런'이 모여 서로 작용하기 때문이라는 것을 밝혀낸다.  
+
+이러한 뉴런은 미량의 전기신호로 정보를 전달하는데, 여기서 뉴런에 입력된 정보를 `x`, 정보를 구분하기 위한 신호의 가중치(weight)를 `w`라고 할 때, 뉴런의 각기 다른 촉수에서 들어온 '`x`와 `w`의 곱'들의 합을 정보의 집합(I)으로 간주할 수 있다.    
+
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_1.png)
+
+```
+입력된 값(x) * 신호의 가중치(w) 들의 합(sigma Σ) = 정보의 집합(I)
+```
+
+이렇게 만들어진 하나의 정보는 다음 뉴런으로 전달되기 위해 방향성을 조절하기 위한 값(bios)과 더해지고, 이 값을 활용해 어떠한 동작(function)을 수행하는 과정을 거친다. 여기서 수행되는 과정은 어떤 값 n에 대해 if n > I + b라면 다음 뉴런으로 전달하는 것을 말한다.  
+
+이제 우리는 다음과 같이 하나의 수식을 통해 이 동작을 정의할 수 있다.  
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_2.png)
+
+```
+동작(func){정보의 집합(I) + 바이어스(b)} = 가공된 정보(Y)
+```
+
+위 과정을 거쳐 하나의 뉴런에서 또다른 뉴런으로 가공된 정보가 이동여부를 결정하게 되며, 이러한 정보 이동의 집합을 'Neural Network'라고 부르게 되었다. 이 과정을 유심히 본 공학자들은 '인공적인 신경망'을 떠올리게 되었다.  
+
+```
+이런 수식을 가졌다면 우리도 만들 수 있겠는데?
+```
+
+그렇게 탄생한 것이 'Artificial Neural Network(인공신경망)이다. 이러한 이론이 제기된 초기에는 아래와 같이 하드웨어로 구현할 수밖에 없었고, 그들은 이를 '인공지능'이라고 불렀다.  
+
+당시에는 인공지능, 즉 생각하는 기계를 만들기 위해서는 AND/OR의 연산을 예측해야 한다고 생각했고, 그들의 기계는 이를 당연하게 예측했다. 그러나 여기에도 문제가 있었는데, 완전한 인공지능을 위해서는 XOR 연산까지도 예측해야 한다는 것이었다.    
+
+XOR 연산의 경우에는 신경망 학습을 이용한 예측에서 50%의 예측률을 보였고, 신경망 학습을 이용해 완전하게 XOR을 예측하는 것은 불가능하다고 단정짓는다.  
+
+이 불가능을 단정지어버린 사건은 짧게는 15년, 길게는 20년 딥러닝의 역사를 늦춘 계기가 된다. 이후 1986년 Hinton에 의해 해결되기 전까지 '딥러닝'은 '불가능한 기술'이라는 꼬리표를 달았어야 했다(1974년에 이미 해결 방법이 발견되었지만, 당시 학계 분위기로 인해 사장되었다. 시간이 흘러 결국 Hinton이 이를 재발견하게 되었다).  
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_3.png)
+
+이 논문은 학습된 신경망의 출력이 우리가 원하는 값과는 다를 경우 정보를 반대로 전달(backpropagation)하여 뉴런 각각을 변경시켜 결과를 바꾸는 이론이다. 이로인해 XOR은 물론 더 복잡한 형태의 예측이 가능해졌다.  
+
+또 한편으로는 CNNs이라고 불리는 'Convolutional Neural Networks'이 LeCun에 의해 발표되었다.  
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_4.png)
+
+이 논문은 고양이의 뇌를 관찰하며 발견한 신경망의 작용에 대해 설명한다. 가령 위 그림의 문자를 이해하는데, 고양이의 뇌는 하나의 문자로 인식하는 것이 아닌 여러 문자의 조합으로 인식했다는 것이다.  
+
+조금 깊이 설명하면 어떤 뉴런은 직선을, 어떤 뉴런은 원을 인식하는 등 각기 다른 작용을 하는 뉴런이 집합을 이뤄 하나의 정보를 조합했다는 것을 말한다.  
+
+이러한 작용을 활용하여 다음과 같이 하나의 그림을 잘게 쪼개고 나중에 합치는 방식으로 네트워크를 구성하는 방식을 만들었다(알파고도 이 방식으로 학습되었다).  
+
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_5.png)
+
+이후 'Neural Network'는 자율주행차를 만드는 등 활발하게 활용되는가 싶더니 큰 위기에 봉착하게 된다. Backpropagation을 사용한 알고리즘은 소량의 레이어를 지닌 문제에서는 잘 학습되지만, 실제로 필요한 10여개 이상의 레이어를 가진 문제에서는 제대로 동작하지 않았다.  
+
+10여개 이상의 레이어를 학습시켜야 하는데, backpropagation 알고리즘이 발생한 에러를 뒤로 보낼 때 뒤로 갈수록 에러가 지닌 의미가 거의 전달되지 않아 성능이 떨어지게 되었다.  
+
+backpropagation을 중심으로 한 'Neural Network' 알고리즘의 성능은 당시 학계에서 언급되던 다른 알고리즘에 비해 현저하게 떨어졌고, 심지어 CNNs를 만든 LeCun조차 다른 알고리즘의 성능을 인정하였고, 다시 한 번 'Neural Network'는 침체기에 빠진다.  
+
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_6.png)
+
+침체기는 10년 정도의 시간이 지난 후 2006년에 CIFAR라는 단체에서 연구를 지속하던 Hinton과 Bengio에 의해 벗어나게 된다. 우리는 지금까지 굉장히 deep한(레이어가 많은) 신경망은 학습이 불가능하다고 이야기했다.  
+
+이러한 상황에서 Hinton과 Bengio는 2006년 논문에서 그것은 불가능한 게 아니라 초기값을 잘 조정하면 학습이 가능하다고 말했다. 또한, 2007년 논문에서는 2006년 논문을 기반으로 deep한 신경망을 구축하면 굉장히 복잡한 문제를 해결할 수 있다는 것을 증명했다. 학계가 이를 주목한 이유는 또 있었다.  
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_7.png)
+
+그 이유는 'Neural Network'라는 홀대받던 이름을 당시 학계 분위기를 고려해 'Deep Learning', 'Deep Network'라고 바꿔 발표했기 때문이다. 결국 학계는 다시 신경망에 관심을 갖게 되었고, 활발하게 연구하기 시작했다.  
+
+이 논문을 시작으로 딥러닝은 엄청난 주목을 받게 된 계기가 있었는데, 'IMAGENET'이라는 대회에서 2010년 30%의 에러율을 보였던 이 기술이 2012년 15%의 에러율을 보였고, 2015년 3%의 에러율을 보인 사건이 그 계기이다.  
+
+크게 주목을 받게 된 딥러닝은 단순히 그림을 인식하는 것을 넘어 그림을 설명하는 단계까지 발전하였고, 자연어로 된 프로그램 계획서의 구문을 보고 필요한 API를 자동으로 찾아주거나, 주변 소음이 많은 곳에서 90%까지 소음을 차단해주는 기술 등으로 발전하게 되었다.  
+
+![](https://github.com/rjs1197/ml_study/blob/master/assets/1st_week_8.png)
+
+물론 주변에서도 찾아볼 수 있는데, 알파고나 유튜브의 자동 자막 생성 시스템, 페이스북의 feed 추천, 구글의 검색엔진 등이 그것이다.  
 
 ### 참고자료
 
-[참고1][1]
-[모두를 위한 머신러닝/딥러닝][2]
-[앤드류 응(Andrew Ng) - Machine Learing][3]
-[다프네 콜러(Darphne Koller) - Probabilistic Graphical Model][4]
-[제프리 힌튼(Jeofrrey Hinton) - Neural Networks for Machine Learning][5]
+[nvidia 블로그 - 인공 지능과 머신 러닝, 딥 러닝의 차이점을 알아보자][1]  
+[모두를 위한 머신러닝/딥러닝][2]  
+[앤드류 응(Andrew Ng) - Machine Learing][3]  
+[다프네 콜러(Darphne Koller) - Probabilistic Graphical Model][4]  
+[제프리 힌튼(Jeofrrey Hinton) - Neural Networks for Machine Learning][5]  
+[http://aikorea.org/cs231n/convolutional-networks/][6]  
+[ec 08-2: 딥러닝의 기본 개념2: Back-propagation 과 2006/2007 '딥'의 출현][7]  
+[lec 08-1: 딥러닝의 기본 개념: 시작과 XOR 문제][8]  
 
-[1]: http://blogs.nvidia.co.kr/2016/08/03/difference_ai_learning_machinelearning/
-[2]: https://hunkim.github.io/ml/
-[3]: https://www.coursera.org/learn/machine-learning
-[4]: https://www.coursera.org/learn/probabilistic-graphical-models
-[5]: https://www.coursera.org/learn/neural-networks
+[1]: http://blogs.nvidia.co.kr/2016/08/03/difference_ai_learning_machinelearning/  
+[2]: https://hunkim.github.io/ml/  
+[3]: https://www.coursera.org/learn/machine-learning  
+[4]: https://www.coursera.org/learn/probabilistic-graphical-models  
+[5]: https://www.coursera.org/learn/neural-networks  
+[6]: http://aikorea.org/cs231n/convolutional-networks/  
+[7]: https://www.youtube.com/watch?v=AByVbUX1PUI  
+[8]: https://www.youtube.com/watch?v=n7DNueHGkqE&feature=youtu.be  
