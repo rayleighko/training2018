@@ -81,3 +81,12 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	2. 그래서 파이썬이 뭐야?
 	3. 파이썬으로 걸어다녀 보자.
 
+## Round 7. Web
+
+#####
+
+- [Web](/web/README.md)
+
+	1. [Django - Python web framework](/web/django/README.md)
+
+
