@@ -21,72 +21,78 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 ## Round 1. "git"
 
 ##### Don't think about git, just do git !
-##### Based on a amazing scenario, c programming with Git (Report card, Knapsack problem)
 
-- [tutorial](/git/README.md)
+- [opensource](/git/README.md)
 	
 	1. git basic
 	2. 올바른 깃허브 사용
+	3. 
 
-## Round 2. "Tecnical trend"
+## Round 2. "Common sense"
 
-##### 
+##### Just basic for become a good developer!
 
-- [trend](/trend/README.md)
+- [common sense](/common_sense/README.md)
 
-	1. WEB? - Server & Client
-	2. WEB - Framework!
+	1. WEB?
 	3. Cloud?
 	4. DevOps?
 	5. AI?
 	6. Block Chain?
+	7. OOP?
+	8. TDD?
+	8. RESTful API?
+	9. functional Programming?
+	10. MVC Architecture?
+	11. 
 
-## Round 3. "Common sense"
+## Round 3. "Becoming a Better Programmer"
 
-#####
-
-- [common sense](/common_sense/README.md)
-
-	1. OOP vs. TDD
-	2. RESTful API
-	3. functional Programming
-	4. MVC Architecture
-	5.
-
-## Round 4. "Becoming a Better Programmer"
-
-#####
+##### Recommendation books for become a better programmer!
 
 - [better programmer](/better_programmer/README.md)
 
-	1. clean code
-	2.
+	1. [code - Charles Petzold](/better_programmer/code/README.md)
+	2. [clean code - Robert Cecil Martin](/better_programmner/clean_code/README.md)
+	3. 
+
+## Round 4. "Mordern Java"
+
+##### Java 9, 10
+
+- [Java](/java/README.md)
+
+	1. 
 
 ## Round 5. "Machine Learning basic"
 
-#####
+##### what is ML!
 
 - [Machine Learning](/machine_learning/README.md)
 
-	1.
-	2.
+	1. AI? ML? DL?
+	2. 머신러닝의 개념과 용어
+	3. 딥러닝 기초
+	4. 
 
 ## Round 6. "Python"
 
-#####
+##### do you know this? this awesome!
 
 - [Python](/python/README.md)
 
 	1. python basic
 	2. 그래서 파이썬이 뭐야?
 	3. 파이썬으로 걸어다녀 보자.
+	4. 
 
 ## Round 7. Web
 
-#####
+##### I`m a Web developer. I hope this article will be a basic documentation for web developers like me.
 
 - [Web](/web/README.md)
 
 	1. [Django - Python web framework](/web/django/README.md)
-
+	2. [Spring - Java web framework](/web/spring/README.md)
+	3. 
 
