@@ -4,6 +4,8 @@
 
 [djangogirls tutorial]: https://tutorial.djangogirls.org/ko/
 
+## Round 7-1-1 Django basic
+
 ### 설치  
 
 > ##### Python3 설치  
@@ -113,4 +115,4 @@ DATABASES = {
 
 **It worked!**라는 문장이 나오면 성공한 거에요!  
 
-### Round 7-2 [Template](/template/README.md)
+### Round 7-1-2 [Template](/template/README.md)
