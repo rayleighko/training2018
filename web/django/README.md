@@ -69,7 +69,7 @@ djangotuto
 서버의 시간은 **'TIME_ZONE'**에 정의되어 있습니다. 이를 수정해 서버 시간을 변경해봅시다.  
 
 ```
-    TIME_ZONE = 'Asia/Seoul'
+TIME_ZONE = 'Asia/Seoul'
 ```
   
 #### 정적파일 경로 추가  
@@ -113,4 +113,4 @@ DATABASES = {
 
 **It worked!**라는 문장이 나오면 성공한 거에요!  
 
-
+### Round 7-2 [Template](/template/README.md)
