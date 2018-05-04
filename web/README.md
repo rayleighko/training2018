@@ -2,10 +2,10 @@
 
 #####
 
-- Round 7-1 [django](/django/README.md)
+- Round 7-1 [django](/web/django/README.md)
 
 
-	1. [django basic](/django/README.md)
-	2. [django template](/django/template/README.md)
+	1. [django basic](/web/django/basic/README.md)
+	2. [django template](/web/django/template/README.md)
 
 
