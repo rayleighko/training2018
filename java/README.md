@@ -9,21 +9,27 @@
 ### 구성
 
 ```
-1장 - 기본 프로그래밍 구조
-2장 - 객체 지향 프로그래밍
-3장 - 인터페이스, 람다 표현식
-4장 - 상속과 리플렉션
-5장 - 예외, 단정, 로깅
-6장 - 제네릭 프로그래밍
-7장 - 컬렉션
-8장 - 스트림
-9장 - 입출력 처리
-10장 - 병행 프로그래밍
-11장 - 애너테이션
-12장 - 날짜와 시간 API
-13장 - 국제화
-14장 - 컴파일링과 스크립팅
-15장 - 자바 플랫폼 모듈 시스템
+java
+├───basic
+├───oop
+├───interface
+├───lambda
+├───inheritance
+├───reflection
+├───exception
+├───assertion
+├───logging
+├───generic
+├───collection
+├───stream
+├───io
+├───concurent
+├───annotation
+├───dateapi
+├───globalization
+├───compiling
+├───scripting
+└───platformmodulesystem
 ```
   
 
@@ -41,20 +47,36 @@
 
 따라서 이 책을 한마디로 정의하자면 `"지름길 없이 Java SE 9을 익히기 위한 가장 확실한 코스"`라고 할 수 있겠다.  
 
-### 1장 기본 프로그래밍 구조  
+### 1장 [기본 프로그래밍 구조](/java/basic/README.md)   
 
-이 장을 통해 얻을 수 있는 내용은 다음과 같다.  
+### 2장 - [객체 지향 프로그래밍](/java/oop/README.md)  
 
-```
-1. Java는 모든 method를 class 안에 선언한다. nonstatic method는 method가 속한 class의 object로 call한다.
-2. static method는 object로 호출하지 않는다. program 실행은 static method인 main에서 시작한다.
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-```
+### 3장 - [인터페이스](/java/interface/README.md), [람다 표현식](/java/lambda/README.md)  
 
-#### 참고자료
-[가장 빨리 만나는 코어 자바 9]()
+### 4장 - [상속](/java/inheritance/README.md)과[리플렉션](/java/reflection/README.md)  
+
+### 5장 - [예외](/java/exception/README.md), [단정](/java/assertion/README.md), [로깅](/java/logging/RAEDME.md)  
+
+### 6장 - [제네릭 프로그래밍](/java/generic/README.md)  
+
+### 7장 - [컬렉션](/java/collection/README.md)  
+
+### 8장 - [스트림](/java/stream/README.md)  
+
+### 9장 - [입출력 처리](/java/io/README.md)  
+
+### 10장 - [병행 프로그래밍](/java/concurent/README.md)  
+
+### 11장 - [애너테이션](/java/annotation/README.md)   
+
+### 12장 - [날짜와 시간 API](/java/dateapi/README.md)  
+
+### 13장 - [국제화](/java/globalization/README.md)  
+
+### 14장 - [컴파일링](/java/compiling/README.md)과 [스크립팅](/java/scripting/README.md)
+
+### 15장 - [자바 플랫폼 모듈 시스템](java/platformmodulesystem/README.md)  
+
+#### 참고자료  
+
+[가장 빨리 만나는 코어 자바 9](http://www.gilbut.co.kr/book/bookView.aspx?bookcode=BN001975&page=1&sernewbook=Y&orderby=pdate&TF=T)
