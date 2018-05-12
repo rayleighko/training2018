@@ -21,4 +21,10 @@ sudo update-alternatives --install /usr/bin/javaws javaws /usr/lib/jvm/jdk-10.0.
 
 ### JAVA의 기본적인 문법  
 
+> java는 기본적으로 terminal과 편하게 IDE를 사용하여 작성할 수 있다. 필자의 경우에는 앞서 설명한 것과 같이 terminal 환경에서 진행할 것이다.  
+> 
+> 여기에서 사용될 명령어는 java, javac, javaws, jshell 등이 될 것이고, 사용될 환경은 `Ubuntu LTS 18.04`, `bash shell`으로 진행하게 된다.  
+
+우선 필자의 경우는 이전에 Java를 학습했기 때문에 정말 기본적인 사항에 대해서는 학습의 동기를 위해 생략하고자 한다. 따라서 본 과정을 필자 마음대로 진행할 것이라 다소 어려움이 있다면 다른 예제를 참고하길 바란다.  
+
 
