@@ -24,8 +24,8 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 - [opensource](/git/README.md)
 	
-	1. git basic
-	2. 올바른 깃허브 사용
+	1. [git basic](/git/basic/README.md)
+	2. [올바른 깃허브 사용](/git/advenced_git/README.md)
 	3. 
 
 ## Round 2. "Common sense"
@@ -85,21 +85,22 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 - [Machine Learning](/machine_learning/README.md)
 
-	1. AI? ML? DL?
-	2. 머신러닝의 개념과 용어
-	3. 딥러닝 기초
+	1. [AI? ML? DL?](/machine_learning/aimldl/README.md)
+	2. [머신러닝의 개념과 용어](/machine_learning/mlbasic/README.md)
+	3. [딥러닝 기초](/machine_learning/dlbasic/README.md)
 	4. 
 
 ## Round 6. "Python"
 
-##### do you know this? this awesome!
+##### do you know this? this is awesome!
 
 - [Python](/python/README.md)
 
-	1. python basic
-	2. 그래서 파이썬이 뭐야?
-	3. 파이썬으로 걸어다녀 보자.
+	1. [python basic](/python/basic/README.md)
+	2. [그래서 파이썬이 뭐야?](/python/whatispython/README.md)
+	3. [파이썬으로 걸어다녀 보자](/python/walkingpython/README.md)
 	4. 
+	10. [PEP 8](/python/pep8/README.md)
 
 ## Round 7. Web
 
@@ -115,4 +116,6 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 ##### Do you like 'iceamericano'? I like it! because this document named 'iceimericano'.
 
-	* [Ice Americano](https://github.com/rjs1197/iceamericano)
+	* [Ice Americano](https://github.com/rjs1197/iceamericano)  
+
+
