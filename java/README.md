@@ -79,6 +79,8 @@ java
 
 ### 15장 - [자바 플랫폼 모듈 시스템](java/platformmodulesystem/README.md)  
 
+## [각 장 별 예제](/java/acting/)
+
 #### 참고자료  
 
 [가장 빨리 만나는 코어 자바 9](http://www.gilbut.co.kr/book/bookView.aspx?bookcode=BN001975&page=1&sernewbook=Y&orderby=pdate&TF=T)
