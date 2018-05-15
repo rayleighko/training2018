@@ -116,6 +116,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 ##### Do you like 'iceamericano'? I like it! because this document named 'iceimericano'.
 
-	* [Ice Americano](https://github.com/rjs1197/iceamericano)  
-
+	* [Ice Americano][iceamericano]
+	
+[iceamericano]: https://github.com/rjs1197/iceamericano  
 
