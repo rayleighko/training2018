@@ -17,6 +17,7 @@ This is guidelines for semi-developers, junior developers. but, I can write kind
 also, plz contribution. welcome contribution! whatever i like that. And if you have question, make Issues. Then many people(i hoped) be able to help you.
 
 ---
+# Resume(/resume/README.md)
 
 ## Round 1. "git"
 
