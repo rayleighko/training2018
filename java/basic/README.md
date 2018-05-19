@@ -453,4 +453,109 @@ double x = Double.parseDouble(str); // x = 3.14
 
 따라서 우리가 작업하는 자바는 코드 유닛의 시퀸스를 사용해 문자열을 표현하기 때문에 코드 포인트를 얻기 위해서는 추가적인 메서드를 사용해야 한다. 이는 여기서 다루지않고 넘어가도록 하겠다.  
 
+### 입력과 출력  
+
+터미널 입력을 읽고 포맷 적용 출력을 만들어 내는 방법을 알아보자.  
+
+`System.out.println()`을 호출하면 '표준 출력 스트림'으로 전달되어 터미널에 내용이 출력된다. 반면에 '표준 입력 스트림'에서 내용을 읽는 것은 쉽지않다.  
+
+표준 입력 스트림에 대응하는 `System.in` 객체에는 바이트 한 개를 읽어 오는 메서드만 있기 때문이다. 문자열과 숫자를 읽기 위해서는 `System.in`에 연결된 Scanner를 생성해야 한다.  
+
+```
+Scanner in = new Scanner(System.in);
+```
+  
+nextLine 메서드는 입력을 한 줄 읽는다.  
+
+```
+System.out.println("What is your name?");
+String name = in.nextLine();  
+```
+  
+이 예제에서는 입력이 공백을 포함할 수 있으므로 nextLine 메서드를 사용하면 좋다. 공백으로 구분된 단어 한 개를 읽으려면 다음과 같이 호출하면 된다.  
+
+```
+String firstname = in.next();
+```
+  
+이와 유사하게 정수를 읽으려면 nextInt 메서드를, 부동소수점 수를 읽으려면 nextDouble 메서드를 사용한다.  
+
+```
+System.out.println("How old are you?");
+int age = in.nextInt();  
+```
+  
+> 지금까지 설명한 Scanner 클래스는 java.util 패키지에 있다. 따라서 사용을 위해서는 아래와 같은 선언이 필수적이다.  
+
+```
+import java.util.Scanner;
+```
+  
+> 비밀번호 등 콘솔에 나타나지 않게 입력을 받고자 할 경우에는 Scanner 말고 Console 클래스를 사용해야 한다.  
+
+```
+Console terminal = System.console();  
+String username = terminal.readLine("User name: ");
+char[] passwd = terminal.readPassword("Password: ");
+```
+  
+> readPassword로 입력을 읽으면 비밀번호가 문자 배열로 반환된다. 문자 배열은 비밀번호를 사용한 후 덮어쓸 수 있으므로 String에 저장하는 것보다는 안전하게 사용할 수 있다.  
+
+> 파일에서 입력을 읽어 오거나 파일에 출력을 쓸 경우에는 shell(bash 등)에서 입출력 재지정 문법을 사용한다.  
+
+```
+java mypackage.MainClass < input.txt // 입력  
+java mypackage.MainClass > output.txt // 출력 
+```
+  
+이제 출력에 대해 살펴보자. 지금까지는 개행을 포함한 출력을 표현했지만 개행이 없는 출력 포맷도 존재한다.  
+
+```
+System.out.print("Your age: ");
+int age = in.nextInt();
+```
+  
+이렇게 하면 커서가 프롬프트 다음 줄이 아니라 바로 뒤에 머문다.  
+
+> print나 println 메서드로 소수점이 있는 수를 출력하면 뒤에 붙은 0을 제외한 모든 숫자를 출력하니 참고하자.  
+
+```
+System.out.print(1000.0 / 3.0);
+	// 333.3333333333333
+```
+  
+이런 출력은 화폐로 표시하고 싶을 때 문제가 된다. 이런 문제를 해결하기 위해 숫자의 개수를 제한할 수도 있다.  
+
+```
+System.out.print("%8.2f", 1000.0 / 3.0);
+	// 333.33
+```
+  
+이 결과는 앞의 빈칸 2개와 문자 6개(총 8개)로 구성된 소수점 아래 2자리까지 표현한 부동소수점 수이다.  
+
+아래의 코드처럼 printf에 매개변수를 여러 개 지정할 수도 있다.  
+
+```
+System.out.printf("Hello, %s. Next Year, you'll be %d.\n", name, age);
+```
+  
+우리가 알고있는 printf의 구조와 동일하다. '%(포맷 지정자)'는 각각에 대응하는 인수로 교체된다.  
+
+> 변환 문자표를 보고 포맷 지정자와 문자를 활용해 어떤 자료형과 대응되는지 확인하자. 여기서는 생략한다.  
+
+이외에도 포맷 적용 출력의 모양을 제어하는 플래그를 지정할 수도 있다.  
+
+```
+System.out.printf("%, +2f", 100000.0 / 3.0);  
+	// +33,333.33
+```
+  
+> 포맷 적용 출력용 플래그표를 보고 여러 플래그를 살펴보자. 여기서는 생략한다.  
+
+더불어 `String.format` 메서드를 사용하면 포맷 적용 문자를 출력하지 않고 문자열 하나를 만들 수 있다.  
+
+```
+String message = String.format("Hello, %s. Next year, you'll be %d.\n", name, age);
+```
+  
 
