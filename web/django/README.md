@@ -9,7 +9,8 @@
 ```
 django
 ├───basic
-└───template
+├───template
+└───form
 ```
 
 
@@ -20,3 +21,8 @@ django
 ## Round 7-1-2 [Template](/web/django/template/README.md)
 
 ##### django에서 사용되는 HTML template에 대해 살펴보고 CSRF, XSS 공격 등 HTML을 통한 보안 설정을 살펴본다.
+
+## Round 7-1-3 [Form](/web/django/form/README.md)  
+
+##### HTML에서의 폼 처리를 장고에서는 간편하게 처리할 수 있도록 기능을 제공한다. 이러한 장고 폼 처리 기능에 대해서 자세히 알아보도록 하자.
+
