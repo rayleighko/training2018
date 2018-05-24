@@ -1,5 +1,9 @@
 ## Deep Copy & Shallow Copy
 
+#####
+
+[뒤로가기](/c++/README.md)
+
 이번에 다룰 내용은 Deep Copy(깊은 복사)와 Shallow Copy(얕은 복사)에 대해서이다. 이전에 다룬 Default Copy Constructor은 Shallow Copy에 해당한다.  
 
 이러한 Shallow Copy는 문제점이 있다. 그 문제점은 멤버변수가 힙의 메모리 공간을 참조하는 경우에 발생한다.  

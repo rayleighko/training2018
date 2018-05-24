@@ -1,5 +1,9 @@
 ## install Perf
 
+##### 
+
+[뒤로가기](/perf/README.md)
+
 여러 리눅스 커널 중 System의 Performance를 측정하는 Tool인 'Perf'에 대해 살펴보자.  
 
 또한, 이 글이 유용한 대상은 시스템 프로그래밍, 보안, tracing에 관심이 있는 학생 혹은 초보 개발자일 것이다.  

@@ -1,5 +1,9 @@
 ## Copy Constructor Call Timing
 
+##### 
+
+[뒤로가기](/c++/README.md)
+
 이제 우리는 클래스 별로 필요한 Copy Constructor을 정의할 수 있다. 그럼 이러한 Copy Constructor가 호출되는 세 가지 시기에 대해 알아보도록 하자.  
 
 추가적으로, Copy constructor의 호출시기가 중요한 것은 프로그램에서 Copy Constructor의 호출횟수가 성능에 관관여하기 때문이다. 그럼으로 이는 다소 어렵게 느껴지더라도 꼭 학습해야하는 것이다.  

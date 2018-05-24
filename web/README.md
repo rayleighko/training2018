@@ -2,6 +2,8 @@
 
 #####
 
+[뒤로가기](/README.md)
+
 - Round 7-1 [django](/web/django/README.md)
 
 

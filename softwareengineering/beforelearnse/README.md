@@ -1,5 +1,9 @@
 ## Before learn SE(Software Engineering)
 
+##### 
+
+[뒤로가기](/softwareengineering/README.md)
+
 이번에는 소프트웨어 공학의 전반적인 내용에 대해 다뤄볼 것이다.  
 
 소프트웨어를 이해하고, '공학'과 '소프트웨어 공학'에 대한 전반적인 이해를 다뤄볼 예정이다. 또한, 소프트웨어 개발 단계를 소개하는 시간이 될 것이다.

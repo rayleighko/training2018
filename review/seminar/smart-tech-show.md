@@ -1,6 +1,8 @@
 # Smart Tech Show  
 
-<!--more-->
+##### 
+
+[뒤로가기](/review/README.md)
 
 ### 별점: ★★☆☆☆
 

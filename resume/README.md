@@ -1,5 +1,7 @@
 ## 간략 Rayleigh's RESUME
 
+[뒤로가기](/README.md)
+
 #### 좌우명: 평생학습(Lifelong learning), 민이호학 불치하문(敏而好學 不恥下問)
 
 필자의 관심 분야는 *DevOps*, *Back-end Software*이고, 주로 Cloud와 Computer System에 관심이 많다.  

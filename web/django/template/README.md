@@ -1,5 +1,9 @@
 # Round 7-2 Template  
 
+##### 
+
+[뒤로가기](/web/django/README.md)
+
 ### Template System  
 
 MTV 모델에서 사용자에게 보여주는 화면, 즉 UI를 담당하고 있는 기능이 템플릿 시스템이다.  

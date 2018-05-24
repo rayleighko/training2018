@@ -1,5 +1,9 @@
 ## Special Relation and Identifier    
 
+##### 
+
+[뒤로가기](/database/README.md)
+
 이번 시간에는 Arc(Mutually Exclusive) 관계, 순환 관계, 식별자에 대해 살펴볼 것이다.  
 
 ---

@@ -1,5 +1,9 @@
 ## Android Studio & OpenCV 연동하기  
 
+##### 
+
+[뒤로가기](/opencv/README.md)
+
 Android Studio와 OpenCV 3.3.0을 연동해보도록 하자.  
 
 만약 Android Studio가 Cmake를 지원하지 않았다면, NDK를 추가하기위해 ndk-build를 사용했겠지만 이제는 지원하므로, 우리는 Cmake를 사용하여 연동해보도록 하자.  

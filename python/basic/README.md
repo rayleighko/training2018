@@ -1,5 +1,9 @@
 ## Round 6-1 Python basic
 
+##### 
+
+[뒤로가기](/python/README.md)
+
 1. python 설치하기
 
 * [Python](https://www.python.org/downloads/)

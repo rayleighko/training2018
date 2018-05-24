@@ -1,5 +1,9 @@
 ## Barker 표기법과 IE 표기법의 차이  
 
+##### 
+
+[뒤로가기](/database/README.md)
+
 다소 긴 내용일 될 것 같아 Barker 표기법과 IE 표기법에 대해서는 여기서 따로 다루도록 하겠다. 
 
 ![baker_ie](https://raw.githubusercontent.com/rjs1197/rjs1197.github.io/master/img/database/baker_ie.jpg)

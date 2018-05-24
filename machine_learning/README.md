@@ -2,6 +2,8 @@
 
 ##### Machine Learning으로 배우는 인공지능의 세계
 
+[뒤로가기](/README.md)
+
 ### File Structure
 
 ```

@@ -1,6 +1,8 @@
 ## Database Appendix 1
 
-<!--more-->
+##### 
+
+[뒤로가기](/database/README.md)
 
 이번에는 지금까지 다뤘던 database programming에 대한 전반적인 개념을 정리하고, 부족한 내용에 대해 추가하는 시간을 갖도록 하겠다. 정확하게는 시험기간 대비 핵심 정리이다.  
 

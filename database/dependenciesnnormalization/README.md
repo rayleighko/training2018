@@ -1,5 +1,9 @@
 ## Dependencies and Normalization
 
+##### 
+
+[뒤로가기](/database/README.md)
+
 종속성과 정규화에 대한 정의에 대해 다룰 것이다. 해당 게시글에서는 4, 5 정규형, BCNF에 대한 설명은 진행되지 않으니 참고 바란다.  
 
 ---

@@ -1,5 +1,9 @@
 # Round 7-1 Django - Python web framework
 
+##### 
+
+[뒤로가기](/web/README.md)
+
 본 문서는 [장고걸스 튜토리얼][djangogirls tutorial]을 활용하여 작성한 문서임을 밝힙니다. 또한, 개발 환경의 경우 **Ubuntu linux LTS 16.04**와 **Pycharm 2016.03**, **python 3.5.2**, **pip3 9.0.1**, **django 2.0.3**을 사용하여 진행하였습니다. 마지막으로 참고자료에서는 호스팅을 위해 가상환경에서 진행하였지만, 본 문서에서는 가상환경을 사용하지 않고 [localhost](http://127.0.0.1:8000)에 적용하여 진행했습니다.  
 
 [djangogirls tutorial]: https://tutorial.djangogirls.org/ko/
