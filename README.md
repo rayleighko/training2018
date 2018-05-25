@@ -17,23 +17,26 @@ This is **personal** guidelines for semi-developers, junior developers. but, I c
 also, plz contribution. welcome contribution! whatever i like that. And if you have question, make Issues. Then many people(i hoped) be able to help you.
 
 ---
-# Resume(/resume/README.md)
 
-## Round 1. "git"
+## 2018 Resume(/resume/README.md)
+
+##### 2018년 여름을 기준으로 한 필자의 RESUME.
+
+## git
 
 ##### Don't think about git, just do git !
 
-- [opensource](/git/README.md)
+- [git & github](/git/README.md)
 	
 	1. [git basic](/git/basic/README.md)
 	2. [올바른 깃허브 사용](/git/advenced_git/README.md)
 	3. 
 
-## Round 2. "Common sense"
+## Common sense
 
-##### Just basic for become a good developer!
+##### Basic Article for become a good developer!
 
-- [common sense](/common_sense/README.md)
+- [Common Sense](/commonsense/README.md)
 
 	1. WEB?
 	3. Cloud?
@@ -47,7 +50,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	10. MVC Architecture?
 	11. 
 
-## Round 3. "Becoming a Better Programmer"
+## Becoming a Better Programmer
 
 ##### Recommendation books for become a better programmer!
 
@@ -57,7 +60,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	2. [clean code - Robert Cecil Martin](/better_programmner/clean_code/README.md)
 	3. 
 
-## Round 4. "Mordern Java"
+## Mordern Java
 
 ##### Write Once, Run Anywhere!
 
@@ -80,7 +83,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	15. [자바 플랫폼 모듈 시스템](java/platformmodulesystem/README.md)
 
 
-## Round 5. "Machine Learning basic"
+## Machine Learning basic
 
 ##### what is ML!
 
@@ -91,10 +94,10 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	3. [딥러닝 기초](/machine_learning/dlbasic/README.md)
 	4. 
 
-## Round 6. "Python"
+## Python
 
-##### do you know this? this is awesome!
-
+##### Life is short, Run Python.  
+	
 - [Python](/python/README.md)
 
 	1. [python basic](/python/basic/README.md)
@@ -103,36 +106,40 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	4. 
 	10. [PEP 8](/python/pep8/README.md)
 
-## Round 7. Web
+## Web
 
 ##### I`m a Web developer. I hope this article will be a basic documentation for web developers like me.
 
 - [Web](/web/README.md)
-
+	
 	1. [Django - Python web framework](/web/django/README.md)
 	2. [Spring - Java web framework](/web/spring/README.md)
 	3. 
 
-## Round 8. Algorithm - Ice Americano
+## Algorithm
 
 ##### Do you like 'iceamericano'? I like it! because this document named 'iceimericano'.
 
-	* [Ice Americano][iceamericano]
-	
-[iceamericano]: https://github.com/rjs1197/iceamericano  
+	* [Ice Americano](https://github.com/rjs1197/iceamericano)  
 
-## Round 9. Docker
 
-#####
+## Docker
+
+##### 
 
 - [Docker](/docker/README.md)
 	
 	1. [Docker basic](/docker/basic/README.md)
-	2.
+	2. [Docker practice](/docker/practice/README.md)  
+	3. 
+## C++
 
-## Etc.
+##### 
 
 - [C++](/c++/README.md)
+
+## etc.  
+
 - [Perf](/perf/RAEDME.md)
 - [Linux](/linux/README.md)
 - [Software Engineering](/softwareengineering/README.md)

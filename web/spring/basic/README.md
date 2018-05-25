@@ -1,4 +1,4 @@
-## Round 7-2-1 Spring Basic 
+## Spring Basic 
 
 ##### Spring을 사용하기 위한 개발 환경을 구성해보자.  
 

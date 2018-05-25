@@ -1,4 +1,4 @@
-# Round 1 git
+# git
 
 ##### Don't think about git, just do git!
 
@@ -12,11 +12,11 @@ git
 └───advenced_git
 ```
 
-## Round 1-1 [git basic](/git/basic/README.md)
+## [git basic](/git/basic/README.md)
   
 ##### git을 사용하는 기초적인 방법에 대해 살펴보자.  
 
-## Round 1-2 [올바른 깃허브 사용](/git/advenced_git/README.md)
+## [올바른 깃허브 사용](/git/advenced_git/README.md)
 
 ##### 어떻게 하면 git을 '잘' 사용할 수 있을까?  
 

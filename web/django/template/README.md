@@ -1,6 +1,6 @@
-# Round 7-2 Template  
+# Template  
 
-##### 
+##### django에서 사용되는 HTML template에 대해 살펴보고 CSRF, XSS 공격 등 HTML을 통한 보안 설정을 살펴본다.  
 
 [뒤로가기](/web/django/README.md)
 

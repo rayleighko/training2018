@@ -1,6 +1,6 @@
-## Round 6-1 Python basic
+## Python Basic
 
-##### 
+##### Python을 설치하고, 기초적인 실습을 진행하며 Python이 동작하는 과정을 살펴보자.  
 
 [뒤로가기](/python/README.md)
 

@@ -1,10 +1,8 @@
-## Round 9-1 Docker basic
-
-##### 
-
-[뒤로가기](/docker/README.md)
+## Docker Basic
 
 ##### What is Docker?  
+
+[뒤로가기](/docker/README.md)
 
 Docker는 어플리케이션을 신속하게 구축, 테스트 및 배포할 수 있는 소프트웨어 플랫폼이다. 이렇게 말하면 어렵게 다가온다. 그러나 Docker는 이제 어려운 개념이 아닌 기본적인 개념이기 때문에 보다 쉽게 접근할 필요가 있다.  
 

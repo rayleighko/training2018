@@ -1,8 +1,10 @@
-## Round 7-1-1 Django basic
+## Django Basic
 
-##### 이번 문서에서는 django를 다루기 위한 기본 설정에 대해서 살펴볼 것이다. 따라서 tutorial이 아닌, environment를 설정하는 방법에 대한 내용이 주가 될 것이다.  
+##### django를 다루기 위한 기본적인 environment 설정하는 방법을 살펴볼 것이다.  
 
 [뒤로가기](/web/django/README.md)
+
+이번 문서에서는 django를 다루기 위한 기본 설정에 대해서 살펴볼 것이다. 따라서 tutorial이 아닌, environment를 설정하는 방법에 대한 내용이 주가 될 것이다.  
 
 ### 설치  
 

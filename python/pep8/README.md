@@ -1,6 +1,6 @@
-# Round 6-A PEP8
+# PEP8
 
-##### 
+##### Python의 공식 문서인 PEP() 중 Coding Convension에 관한 문서인 'PEP 8'에 대해 살펴보자.
 
 [뒤로가기](/python/README.md)
 

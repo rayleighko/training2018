@@ -1,6 +1,6 @@
-## Round 1-1 git basic
+## git basic
 
-##### 
+##### git을 사용하는 기초적인 방법에 대해 살펴보자.  
 
 [뒤로가기](/git/README.md)
 
