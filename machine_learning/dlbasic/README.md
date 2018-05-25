@@ -1,4 +1,4 @@
-## Round 5-3 Begining to Deep Learning
+## Begining to Deep Learning
 
 ##### 딥러닝의 시작
 

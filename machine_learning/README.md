@@ -1,4 +1,4 @@
-# Round 5 ML(Machine Learning) basic
+# ML(Machine Learning) basic
 
 ##### Machine Learning으로 배우는 인공지능의 세계
 
@@ -13,15 +13,15 @@ machine_learning
 └───dlbasic
 ```
   
-## Round 5-1 [AI? ML? DL?](/machine_learning/aimldl/README.md)
+## [AI? ML? DL?](/machine_learning/aimldl/README.md)
 
 ##### AI(인공지능)과 ML(머신러닝), DL(딥러닝)의 차이를 살펴보자.  
 
-## Round 5-2 [Machnie Learning의 개념과 용어](/machine_learning/mlbasic/README.md)
+## [Machnie Learning의 개념과 용어](/machine_learning/mlbasic/README.md)
 
 ##### ML(Machine Learning)의 개념과 사용되는 용어에 대해 살펴보자.  
 
-## Round 5-3 [Begining to Deep Learning](/machine_learning/dlbasic/README.md)
+## [Begining to Deep Learning](/machine_learning/dlbasic/README.md)
 
 ##### DL(Deep Learning)의 기초적인 내용을 살펴보고, 어떻게 활용할 것인지에 대해 생각해보자.  
 
