@@ -6,16 +6,19 @@
 
 ### Development Environment  
 
-필자의 기본적인 개발 환경은 'Ubuntu 18.04 LTS', 'JDK(Java SE 10.0.1)', 'Eclipse oxygen 3.A - JAVA EE(2018년 6월 이후에는 photon 예정)', 'Tomcat 9.0.8', 'Maven 3.5.9', 'MariaDB 10.1'이다.  
+필자의 기본적인 개발 환경은 'Ubuntu 18.04 LTS', 'JDK(Java SE 10.0.1)', 'IntelliJ Community - 2018.1.4', 'Tomcat 9.0.8', 'Maven 3.5.9', 'MariaDB 10.1'이다.  
+
+Eclipse를 사용하려 했으나 필자의 경우 IntelliJ가 익숙해 교재와 개발 환경을 달리했다.
 
 모든 설치자료는 각 회사의 홈페이지에서 다운로드 할 수 있으니 그 부분은 생략하도록 하겠다.  
 
 - [Eclipse](eclipse.org)  
+- [IntelliJ](https://www.jetbrains.com/)
 - [JDK](oracle.com)  
 - [Tomcat](tomcat.apache.org)  
 - [Maven](http://apache.tt.co.kr/maven/)  
 
-### STS(Spring Tool Suite)  
+### Eclipse - STS(Spring Tool Suite)  
 
 스프링 프레임워크를 사용하다 보면 라이브러리 관리를 비롯하여 개발자가 신경써야 할 부분이 상당히 많다.  
 
