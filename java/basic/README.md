@@ -806,3 +806,221 @@ for (int i = 0; i < friends.size(); i++)
 }
 ```
   
+> 제너릭 클래스에는 불편한 제약이 하나 있다. 바로 기본 타입을 매개변수로 사용할 수 없다는 점인데 예를 들어 아래의 경우를 허용하지 않는 것이다.  
+
+```
+ArrayList<int>
+```
+  
+그래서 해결책으로 wrapper class를 제공한다. 즉, 기본 타입에 대응하는 wrapper가 존재하는 것이다.  
+
+```
+Byte, Short, Integer, Long, Float, Double, Character, Boolean
+```
+  
+이를 사용해 다음과 같은 형태로 사용할 수 있는 것이다.  
+
+```
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(42);
+int first = number.get(0); //first = 0
+```
+  
+추가적으로 이 과정에서는 오토박싱과 언박싱이라는 과정이 존재한다. 오토박싱은 'add(42)'에서 42라는 정수를 ArrayList의 객체로 취급해주는 것이고, 언박싱은 ArrayList의 객체로 취급된 0번째의 42를 정수로 되돌려주는 작업을 말한다.  
+
+#### 향상된 For Loop  
+
+배열의 모든 요소를 방문하는 일은 아주 잦다. 예를 들어 다음 코드는 숫자 배열에 들어 있는 모든 요소의 합계를 계산한다.  
+
+```
+int sum = 0;
+for (int i = 0; i < numbers.length; i++)
+{
+	sum += numbers[i];
+}
+```
+  
+이런 루프를 자주 사용하기 때문에 향상된 For Loop라는 단축 기법이 만들어졌다.  
+
+```
+int sum = 0;
+for (int n : numbers)
+{
+	sum += n
+}
+```
+  
+향상된 For Loop은 배열읭 인덱스가 아닌 각 요소를 할당받는다. 따라서 n 변수에는 numbers[0], numbers[1], ... 등이 할당된다. ArrayList에서도 향상된 For Loop을 사용할 수 있다.  
+
+```
+for (String name : friends)
+{
+	System.out.println(name);
+}
+```
+  
+#### 복사  
+
+배열 변수를 또 다른 배열 변수로 복사할 수 있지만, 일반적인 방법으로는 같은 배열을 참조하는 두 배열이 생길 뿐이다.  
+
+```
+int[] number = primes;
+numbers[5] = 42;	// 이 경우 primes[5]도 42가 저장된 배열을 가리킨다.
+```
+  
+이런 공유를 원하지 않는다면 배열의 사본을 만들어야 한다. 이 경우에는 정적 메서드 Arrays.copyOf를 사용한다.  
+
+```
+int[] copiedPrimes = Array.copyOf(primes, primes,length)
+```
+  
+이 메서드는 새 배열을 원하는 길이로 생성하고 원본 배열의 요소를 복사한다. 배열 리스트 참조도 동일한 방식으로 작동한다.  
+
+```
+ArrayList<String> people = friends;
+people.set(0, "Mary")	// 이 경우 friends의 0번째도 "Mary"가 된다.
+```
+  
+배열 리스트의 사본을 만들기 위해선 새 배열 리스트를 생성해야 한다.  
+
+```
+String[] names - ...;
+ArrayLsit<String> friends = new ArrayList<>(List.of(names));
+```
+  
+배열 리스트를 배열에 복사할 수도 있다. 여기서 자세하게 설명하진 않겠지만 하위 호환성을 고려해 반드시 올바른 타음으로 된 배열을 전달해야 한다.  
+
+```
+String[] names = friends.toArray(new String[0]);
+```
+  
+> 기본 타입 배열과 그에 대응하는 래퍼 클래스의 배열 리스트를 상호 변환하기는 쉽지 않다. 예를 들어 정수형(int) 배열과 정수(Integer) 배열 리스트를 상호 변환하려면 명시적인 루프나 IntStream을 사용해야 한다.  
+
+#### 명령줄 인수  
+
+이미 살펴본 것처럼 모든 자바 프로그램의 main 메서드는 문자열의 배열을 매개변수로 받는다.  
+
+```
+public static void main(String[] args)
+```
+  
+프로그램을 실행하면 매개변수가 명령줄(command line)에서 지정한 인수들로 설정된다. 예를 들어 다음의 프로그램을 살펴보자.  
+
+```
+public class Greeting
+{
+	public static void main(String[] args)
+	{
+		for (int i = 0; i < args.length; i++)
+		{
+			String arg = args[i];
+			if (arg.equals("-h")) arg = "Hello";
+			else if (arg.equals("-g")) arg = "Goodbye";
+			System.out.println(arg);	
+		}
+	}
+}
+```
+  
+이 프로그램을 다음과 같이 실행하면 args[0]은 "-g", args[1]은 "cruel", args[2]는 "world"가 된다.  
+
+```
+java Greeting -g cruel world
+```
+  
+"java"와 "Greeting"은 main 메서드에 전달되지 않는다는 점에 유의하자.  
+
+> 추가적으로 출력은 Goodbye cruel world가 될 것이다.  
+
+#### 다차원 배열  
+
+자바에는 진정한 다차원 배열이 없다. 자바에서는 배열의 배열로 다차원 배열을 구현한다. 예를 들어 다음 코드는 정수로 구성된 2차원 배열을 선언하고 구현한다.  
+
+```
+int[][] square = {
+	{ 16, 3, 2, 13 },
+	{ 5, 10, 11, 8 },
+	{ 9, 6, 7, 12 },
+	{ 4, 15, 14, 1 }
+};
+```
+  
+기술적으로는 int[]로 구성된 1차원 배열일 뿐이다. 하지만 논리적으로는 별반 다를 게 없으니 일반적인 언어에서의 다차원 배열과 유사하다고 생각하면 될 것이다.  
+### 기능적 분해  
+
+main 메서드가 너무 길어질 때는 프로그램을 여러 클래스로 분해하는 것이 바람직하다. 하지만 간단한 프로그램이라면 코드를 동일한 클래스 안에서 여러 메서드로 나누어도 된다.  
+
+여기서는 자세히 다루지 않으니 이런 메서드들은 main 메서드와 마찬가지로 반드시 static 제어자로 선언해야 한다는 점만 알고 넘어가도록 하자.  
+
+#### 정적 메서드 선언 및 호출  
+
+메서드는 선언할 때는 다음과 같은 요소들이 필요하다.  
+
+```
+public static double average(double x, double y)
+{
+	double sum x + y;
+	return sum / 2;
+}
+```
+  
+반환값의 타입, 메서드 이름, 매개변수의 타입과 이름을 메서드 선언부(header)에 작성한다. 그런 다음 메서드 구현부(body)에 구현할 내용을 채워넣어야 한다.  
+
+main 메서드와 같은 클래스 안에 average 메서드를 추가하자. 이 메서드를 main 앞에 두는지, 뒤에 두는지는 중요하지 않다.  
+
+```
+public static void main(String[] args)
+{
+	double a = ...;
+	double b = ...;
+	double result = average(a, b);
+	...
+}
+```
+  
+#### 가변 인수  
+
+호출하는 쪽에서 인수를 원하는 개수만큼 넘길 수 있게 하는 메서드도 있다. 이미 이런 메서드로 printf를 살펴보았으니 이해하기 쉬울 것이다.  
+
+```
+System.out.printf("%d", n);
+System.out.printf("%d %s", n, "widgets");
+```
+  
+첫 번째 호출은 인수가 두 개고 두 번째 호출은 인수가 세 개이지만, 두 호출 모두 같은 메서드를 호출한다.  
+
+이렇게 작동하는 average 메서드를 정의해서 average(3, 4.5, -5, 0)처럼 인수를 원하는 개수만큼 전달하면서 average를 호출할 수 있게 하자. 다음과 같이 타입 뒤에 ...을 붙여서 '가변 인수' 매개변수를 선언하는 것이다.  
+
+```
+public static double average(double... values)
+```
+  
+이렇게 선언한 매개변수는 double 타입 배열이 된다. 메서드를 호출할 때 배열이 생성되고, 호출하는 쪽에서 전달하는 인수들로 채워진다. 따라서 메서드 구현부에서는 배열처럼 사용하면 된다.  
+
+```
+public static double average(double... values)
+{
+	double sum = 0;
+	for (double v : values) sum += v;
+	return values.length == 0 ? 0 : sum / values.length;
+}
+```
+  
+인수들이 이미 배열 안에 있으면 풀어 쓸 필요가 없다. 인수 목록 대신 배열을 전달하면 된다.  
+
+```
+double[] scores = { 3, 4.5, -5, 0 };
+double avg  = average(scores);
+```
+  
+가변 매개변수는 반드시 메서드의 마지막 매개변수여야 한다. 다른 매개변수를 가변 매개변수 앞에 둘 수 있는데, 예를 들어 다음 메서드는 인수가 적어도 하나는 있다.  
+
+```
+public static double max(double first, double... rest)
+{
+	double result = first;
+	for (double v : rest) result = Math.max(v, result);
+	return result;
+}
+```
+  
