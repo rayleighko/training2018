@@ -18,7 +18,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 ---
 
-## 2018 Resume(/resume/README.md)
+## 2018 [Resume](/resume/README.md)
 
 ##### 2018년 여름을 기준으로 한 필자의 RESUME.
 
@@ -103,8 +103,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	1. [python basic](/python/basic/README.md)
 	2. [그래서 파이썬이 뭐야?](/python/whatispython/README.md)
 	3. [파이썬으로 걸어다녀 보자](/python/walkingpython/README.md)
-	4. 
-	10. [PEP 8](/python/pep8/README.md)
+	4. [PEP 8](/python/pep8/README.md)
 
 ## Web
 
@@ -120,7 +119,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 
 ##### Do you like 'iceamericano'? I like it! because this document named 'iceimericano'.
 
-	* [Ice Americano](https://github.com/rjs1197/iceamericano)  
+- [Ice Americano](https://github.com/rjs1197/iceamericano)  
 
 
 ## Docker
@@ -132,6 +131,7 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	1. [Docker basic](/docker/basic/README.md)
 	2. [Docker practice](/docker/practice/README.md)  
 	3. 
+
 ## C++
 
 ##### 
