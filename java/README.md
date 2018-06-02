@@ -66,35 +66,39 @@ java
 
 따라서 이 책을 한마디로 정의하자면 `"지름길 없이 Java SE 9을 익히기 위한 가장 확실한 코스"`라고 할 수 있겠다.  
 
-### 1장 [기본 프로그래밍 구조](/java/basic/README.md)   
+### [기본 프로그래밍 구조](/java/basic/README.md)   
 
-### 2장 - [객체 지향 프로그래밍](/java/oop/README.md)  
+##### 자바의 기본을 밑바닥까지 흝어보자. 단, 기초적인 내용은 제외한다.
 
-### 3장 - [인터페이스](/java/interface/README.md), [람다 표현식](/java/lambda/README.md)  
+### [객체 지향 프로그래밍](/java/oop/README.md)  
 
-### 4장 - [상속](/java/inheritance/README.md)과[리플렉션](/java/reflection/README.md)  
+##### 객체 지향 프로그래밍에서는 객체가 속한 클래스에 객체의 동작을 정의하고, 객체를 사용해 작업을 수행한다. 자바는 객체 지향 프로그래밍을 완전히 수용한 첫 번째 주류 프로그래밍 언어다.  
 
-### 5장 - [예외](/java/exception/README.md), [단정](/java/assertion/README.md), [로깅](/java/logging/RAEDME.md)  
+### [인터페이스](/java/interface/README.md), [람다 표현식](/java/lambda/README.md)  
 
-### 6장 - [제네릭 프로그래밍](/java/generic/README.md)  
+### [상속](/java/inheritance/README.md)과[리플렉션](/java/reflection/README.md)  
 
-### 7장 - [컬렉션](/java/collection/README.md)  
+### [예외](/java/exception/README.md), [단정](/java/assertion/README.md), [로깅](/java/logging/RAEDME.md)  
 
-### 8장 - [스트림](/java/stream/README.md)  
+### [제네릭 프로그래밍](/java/generic/README.md)  
 
-### 9장 - [입출력 처리](/java/io/README.md)  
+### [컬렉션](/java/collection/README.md)  
 
-### 10장 - [병행 프로그래밍](/java/concurent/README.md)  
+### [스트림](/java/stream/README.md)  
 
-### 11장 - [애너테이션](/java/annotation/README.md)   
+### [입출력 처리](/java/io/README.md)  
 
-### 12장 - [날짜와 시간 API](/java/dateapi/README.md)  
+### [병행 프로그래밍](/java/concurent/README.md)  
 
-### 13장 - [국제화](/java/globalization/README.md)  
+### [애너테이션](/java/annotation/README.md)   
 
-### 14장 - [컴파일링](/java/compiling/README.md)과 [스크립팅](/java/scripting/README.md)
+### [날짜와 시간 API](/java/dateapi/README.md)  
 
-### 15장 - [자바 플랫폼 모듈 시스템](java/platformmodulesystem/README.md)  
+### [국제화](/java/globalization/README.md)  
+
+### [컴파일링](/java/compiling/README.md)과 [스크립팅](/java/scripting/README.md)
+
+### [자바 플랫폼 모듈 시스템](java/platformmodulesystem/README.md)  
 
 ## [각 장 별 예제](/java/acting/)
 
