@@ -1,6 +1,6 @@
 ## Friend
 
-##### 
+##### 'friend' keyword가 무엇인지 살펴보자.  
 
 [뒤로가기](/c++/README.md)
 

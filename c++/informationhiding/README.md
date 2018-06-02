@@ -1,6 +1,6 @@
 ## Information Hiding
 
-#####
+##### 정보 은닉에 대해 설명한다.  
   
 [뒤로가기](/c++/README.md)
   

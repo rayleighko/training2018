@@ -1,6 +1,6 @@
 ## Advanced 'const'
 
-##### 
+##### 'const' keyword에 대한 깊은 이야기를 다룬다.  
 
 [뒤로가기](/c++/README.md)
 
@@ -130,5 +130,3 @@ int main()
 |const SimpleFunc: 10|
 |const SimpleFunc: 3|
 |const SimpleFunc: 10|  
-
-이는 오버로딩 된 const 함수가 호출되는 시기를 보기위한 예제이다. 참고하기 바란다.  

@@ -8,34 +8,33 @@
 
 ```
 c++
-├───About C++ Language based C
-├───Function Overloading
-├───Parameter's Default value
-├───Inline Function
-├───Namespace
-├───Boolean
-├───Reference Variable
-├───Reference Function
-├───New Delete
-├───Call C Standard library in C++
-├───Structure in C++
-├───Class & Object
-├───OOP Programming
-├───Information Hiding
-├───Encapsulation
-├───Constructor & Destructor
-├───Class & Array & 'this' pointer
-├───Copy Constructor
-├───Deep Copy & Shallow Copy
-├───Copy Constructor Call Timing
-├───Advanced 'const'
-├───Friend
-├───Static
-├───Before entering the Inheritance
-└───Inheritance
+├───basic
+├───functionoverloading
+├───parametersdefaultvalue
+├───inlinefunction
+├───namespace
+├───boolean
+├───referencevariable
+├───referencefunction
+├───newdelete
+├───callcstandardlibraryincpp
+├───Structureincpp
+├───classnobject
+├───oop
+├───informationhiding
+├───encapsulation
+├───constructorndestructor
+├───ClassnArraynthispointer
+├───copyconstructor
+├───deepcopynshallowcopy
+├───copyconstructorcalltiming
+├───advancedconst
+├───friend
+├───static
+├───beforeenteringtheinheritance
+└───inheritance
 ```
-
-
+  
 ## 1. [About C++ Language based C](/c++/basic/README.md)
 
 ##### C를 기반으로 C++에 대해 설명한다. 과연 무엇이 다를까?
@@ -84,7 +83,7 @@ c++
 
 ##### 클래스와 객체를 살펴보자. 자바의 핵심이다.
 
-## 13. [OOP Programming](/c++/oopprogramming/README.md)
+## 13. [OOP(Object Oriented Programming)](/c++/oop/README.md)
 
 ##### 객제지향 프로그래밍에 대해 공부하고, 이를 활용하는 연습을 하자.
 
@@ -128,7 +127,7 @@ c++
 
 ##### 'static'이란 무엇일까?
 
-## 24. [Before learning the Inheritance](/c++/beforelearningtheinheritance /README.md)
+## 24. [Before learning the Inheritance](/c++/beforelearningtheinheritance/README.md)
 
 ##### 상속을 학습하기 전에 알아야 할 것들.
 

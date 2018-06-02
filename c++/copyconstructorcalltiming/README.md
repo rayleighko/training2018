@@ -1,6 +1,6 @@
 ## Copy Constructor Call Timing
 
-##### 
+##### 복사 생성자의 호출 타이밍에 대해 살펴보자.  
 
 [뒤로가기](/c++/README.md)
 

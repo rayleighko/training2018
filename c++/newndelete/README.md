@@ -1,6 +1,6 @@
 ## new & delete  
 
-##### 
+##### Malloc과 Free를 대신하는 New와 Delete.  
 
 [뒤로가기](/c++/README.md)
 

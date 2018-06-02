@@ -1,6 +1,6 @@
 ## Before entering the Inheritance 
 
-##### 
+##### 상속을 학습하기 전에 알아야 할 것들.  
 
 [뒤로가기](/c++/README.md)
 

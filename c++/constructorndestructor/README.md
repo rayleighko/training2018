@@ -1,6 +1,6 @@
 ## Constructor & Destructor
 
-##### 
+##### 생성자와 소멸자에 대해 살펴보자.  
 
 [뒤로가기](/c++/README.md)
 
@@ -153,9 +153,10 @@ public:
 
 int main()
 {
-	SimpleClass sc1();		// 함수의 원형을 선언한 것이다
-    SimpleClass mysc = sc()1;
+	SimpleClass sc1();	// 함수의 원형을 선언한 것이다
+	SimpleClass mysc = sc()1;
     mysc.ShowData();
+
     return 0;
 }
 
@@ -305,10 +306,10 @@ class Rectangle
 {
 private:
 	Point upLeft;
-    Point lowRight;
+	Point lowRight;
 public:
 	Rectangle(const int &x1, const int &y1, const int &x2, const int &y2);
-    void ShowRecInfo() const;
+	void ShowRecInfo() const;
 };
 ```
 
@@ -317,15 +318,14 @@ public:
 그 전에, Rectangle 클래스의 생성자 정의를 보자.  
 
 ```
-Rectangle::Rectangle(const int &x1, const int &y1, const int &x2, const int &y2)
-			:upLeft(x1, y1), lowRight(x2, y2)
+Rectangle::Rectangle(const int &x1, const int &y1, const int &x2, const int &y2) :upLeft(x1, y1), lowRight(x2, y2)
 
 {
 	// empty
 }
 ```
   
-위 코드에서 아래의 내용이 'Member Initializer(멤버 이니셜라이저)'이다.
+위 코드에서 아래의 내용이 'Member Initializer(멤버 초기화)'이다.
 
 ```
 :upLeft(x1, y1), lowRight(x2, y2)
@@ -417,10 +417,9 @@ public:
 	Rectangle(const int &x1, const int &y1, const int &x2, const int &y2);
 	void ShowRecInfo() const;
 };
-
-{% endhighlight %}  
-
-{% highlight Cpp %}
+```
+  
+```
 //Rectangle.cpp
 
 #include <iostream>
@@ -462,9 +461,9 @@ int main()
 
 그러면 우리는 아래와 같이 3단계로 객체의 생성과정을 정리할 수 있다.  
 
-1. 메모리 공간의 할당		// 선언
-2. 이니셜라이저를 이용한 멤버변수(객체)의 초기화	// or 생성자의 몸체부분 실행
-3. 생성자의 몸체부분 실행
+1. 메모리 공간의 할당	// 선언  
+2. 이니셜라이저를 이용한 멤버변수(객체)의 초기화	// or 생성자의 몸체부분 실행  
+3. 생성자의 몸체부분 실행  
   
 
 Cpp의 모든 객체는 위의 세 가지 과정을 순서대로 거쳐서 생성이 완성된다(물론 Initializer가 선언되지 않았다면, 메모리 공간의 할당과 생성의 몸체부분의 실행으로 객체생성은 완성된다).  
@@ -525,7 +524,7 @@ public:
 class FruitBuyer
 {
 private:
-   	int myMoney;
+	int myMoney;
     int numOfApples;
 public:
   	FruitBuyer(int money)
@@ -658,7 +657,7 @@ public:
 이렇게 되면 아래와 같은 형태로는 객체 생성이 불가능하다. 아래와 같이 매개변수를 받는 생성자가 정의되지도, 자동으로 삽입되지도 않았기 때문이다.  
 
 ```
-SoSimple simObj2;					// X
+SoSimple simObj2;			// X
 SoSimple *simPtr2 = new SoSimple;	// X
 ```
 

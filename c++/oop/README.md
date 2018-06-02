@@ -1,6 +1,6 @@
-## OOP Programming 
+## OOP(Object Oriented Programming)
 
-##### 
+##### 객체지향 프로그래밍에 대해 공부하고, 이를 활용하는 연습을 하자.  
 
 [뒤로가기](/c++/README.md)
 

@@ -1,6 +1,6 @@
 ## Copy Constructor
 
-#####
+##### 복사 생성자에 대해 살펴보자.  
 
 [뒤로가기](/c++/README.md)
   

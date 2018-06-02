@@ -1,6 +1,6 @@
 ## Class & Array & 'this' pointer
 
-##### 
+##### 클래스와 배열, 'this' 포인터를 이용해 간단한 예제를 살펴보자.  
 
 [뒤로가기](/c++/README.md)
 
