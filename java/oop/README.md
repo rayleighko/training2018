@@ -90,4 +90,193 @@ date = date.plusDays(1);
 
 ### 클래스를 구현해보자.  
 
+본격적으로 클래스를 만들어보자. C++과 같은 다른 객체 지향 프로그래밍 언어에서 다뤄봤었을 수 있지만, 다시 한 번 익히고 넘어가도록 하자.  
+
+우선 Employee 클래스를 만들어 가며 다양한 언어 규칙을 살펴보도록 하자. 직원에게는 이름과 금여가 있다. 직원의 이름은 바꿀 수 없지만 그가 받는 급여는 알맞게 수시로 조절할 수 있다.  
+
+```
+public class Employee {
+	private String name;
+	private double salary;
+}
+```
+  
+앞선 설명과 같이 이름과 급여를 넣을 변수를 생성했다. 자바에서는 '인수턴스 변수'라고 부르며 객체의 상태를 나타낸다.  
+
+자바에서는 보통 인스턴스 변수를 private으로 선언한다. private으로 선언하면 같은 클래스에 속한 메서드만 변수에 접근할 수 있다. 이런 보호가 바람직한 이유는 아래의 2가지이다.  
+
+1. 프로그램의 어느 부분이 변수를 변경할 수 있는지 제어할 수 있다.  
+2. 언제든지 내부 표현을 변경할 수 있다.  
+
+예를 들어 직원들을 데이터베이스에 저장하고 객체에는 오직 기본키만 남겨 둘 수도 있다. 이 경우 메서드를 이전과 똑같이 작동하도록 재구현한다면 클래스의 사용자는 이런 변경에 개의치 않을 것이다.  
+
+#### Method Header  
+
+이제 Employee class의 메서드를 구현해 보자. 메서드를 선언할 때는 메서드 이름, 매개변수의 타입과 이름, 반환 타입을 지정해야 한다.  
+
+```
+public void raiseSalary(double byPercent)
+publice String getName()
+```
+  
+이 메서드는 double 타입 매개변수를 한 개 받고, 어떤 값도 반환하지 않는다.  
+
+반면, getName은 형태가 다르다. 이러한 형태를 두고 '시그니처(signature)(서명)'이라고 부른다. 이 메서드는 매개변수가 없고 String을 반환한다.  
+
+#### Method body  
+
+앞서 메서드 헤더를 만들었다. 그렇다면 이제는 그에 맞는 몸통을 만들 차례다.  
+
+```
+public void raise(double byPercent) { // Method Header
+	double raise = salary * byPercent / 100;
+	salary += raise;
+}
+```
+  
+메서드에서 값을 돌려줄 때는 return 키워드를 사용해야 한다는 것쯤은 알고 있을 것이다.  
+
+```
+public String getName() {
+	return name;
+}
+```
+  
+메서드 선언은 클래스 선언 안에 넣어야 하는데, 다음과 같이 하나의 Employee Class를 만들 수 있다.  
+
+```
+public class Employee {
+	private name;
+	private salary;
+
+	public void raiseSalary(double byPercent) {
+		double raise = salary * byPercent / 100;
+		salary += raise;
+	}
+
+	public String getName() {
+		return name;
+	}
+	...
+```
+  
+#### Instance Method  
+
+메서드를 호출하는 상황을 살펴보자.  
+
+```
+fred.raiseSalary(5);
+```
+  
+프레드라는 직원이 5퍼센트의 연봉인상을 요구해왔다. 이 호출에서 인수 5는 raiseSalary의 byPercent를 초기화하는 데 사용한다.  
+
+```
+double byPercent = 5;
+```
+  
+이후 다음의 동작이 일어난다.  
+
+```
+double raise = fred.salary * byPercent / 100;
+fred.salary += raise;
+```
+  
+인스턴스 변수 salary는 메서드 호출에 사용한 인스턴스에 적용된다는 점을 명심하자. 클래스 자체가 아닌 인스턴스에 작동하는 이러한 메서드를 '인스턴스 메서드'라고 부른다.  
+
+> 자바에서 static으로 선언하지 않은 메서드는 모두 인스턴스 메서드이다.  
+
+코드를 보며 한 가지 이상한 점을 발견하지 못했는가? 그것은 바로 fred의 존재이다. 일반적으로 함수에서 인수를 전달하면, 그 인수만 함수 내에서 어떠한 작업을 진행하는 것이 객체 지향 프로그래밍 이전의 개발이었다.  
+
+하지만, 여기서는 fred의 존재로 인해 위의 메서드에 2개의 값이 전달되는 기적같은 일이 일어난다. 이러한 존재를 '객체에 대한 참조'라고 일컬을 수 있고, 메서드 내에서 사용할 수 있다.  
+
+기술적으로는 객체에 대한 참조나 byPercent 둘 다 메서드의 매개변수이지만, 자바에서는 다른 객체 지향 언어처럼 첫 번째 값(객체에 대한 참조)이 특별한 역할을 한다.  
+
+이러한 값을 메서드 호출의 receiver(수신자)라고 부르기도 한다.  
+
+#### this 참조  
+
+하나의 객체의 메서드를 호출할 때 해당 객체를 참조할 수 있다. 이를 'this'로 설정하여 다루면 되는데, 다음을 참고하자.  
+
+```
+public void raiseSalary(double byPercent) {
+	double raise = this.salary * byPercent / 100;
+	this.salary += raise;
+}
+```
+  
+일부 개발자는 지역 변수와 인스턴스 변수를 명확히 구별하려고 이러한 스타일(this 방식)을 선호한다. 이러한 스타일에 익숙해지면 위 코드를 보고 한 번에 raise 는 local 변수, salary는 인스턴스 변수라는 사실을 금새 알 수 있기 때문이다.  
+
+또한, local과 instance를 구분하여 같은 이름의 변수를 만들 수 있다.  
+
+```
+public void setSalary(double salary) {
+	this.salary = salary;
+}
+```
+  
+이렇게 instance와 local의 이름이 같을 때 salary처럼 한정하지 않은 이름은 local을, this.salary는 instance를 나타낸다.  
+
+> 일부 언어에서는 인스턴스 변수를 _name이나 _salary 식으로도 쓴다. 이는 자바에서도 가능하지만, 선호하지 않는다.  
+>
+> 원한다면 this를 메서드의 매개변수로도 선언할 수 있다(생성자의 매개변수에서는 불가능하다). 이는 보통 reciver에 애너테이션을 붙이는 용도로만 사용하니 참고하도록 하자.  
+
+#### 값을 사용한 호출  
+
+매서드에 객체를 전달하면 해당 메서드는 객체 참조의 사본을 얻는다. 메서드는 이 참조로 매개변수 객체에 접근하거나 매개변수 객체를 변경할 수 있다.  
+
+```
+private class EvilManager {
+	private Random generator;
+	...
+	public void giveRandomRaise(Employee e) {
+		double percentage = 10 * generator.nextGaussian();
+		e.raiseSalary(percentage);
+```
+  
+다음과 같이 호출한다고 하자.  
+
+```
+boss.giveRandomRaise(fred);
+```
+  
+그러면 fred를 e 매개변수에 복사하고, giveRandomRaise 메서드는 두 참조가 공유하는 객체를 변경한다(e와 fred가 공유하는 객체를 말이다).  
+
+자바에서는 기본 타입 매개변수를 업데이트하는 메서드를 작성할 수 없다. 예를들어 double의 값을 증가시키는 아래의 메서드는 의도한 대로 작동하지 않는다.  
+
+```
+public void increaseRandomly(double x) {
+	double amount = x * getnerator.nextDouble();
+	x += amount;
+}
+```
+  
+이를 다음과 같이 호출한다고 해보자.  
+
+```
+boss.increaseRandomly(sales);
+```
+  
+그러면 sales가 x로 복사된다. 다음으로 x를 증가시키지만 sales는 변하지 않는다. 이후 매개변수는 유효 범위를 벗어나고 증가 연산은 효력을 잃는다.  
+
+같은 이유로 객체 차모를 다른 것으로 바꾸는 메서드도 작성할 수 없다. 예를 들어 다음 메서드는 의도한 대로 작동하지 않는다.  
+
+```
+public class EvilManager {
+	...
+	public void replaceWithZombie(Employee e) {
+		e = new Employee("", 0);
+	}
+}
+```
+  
+다음과 같이 호출하면 참조 fred가 e변수로 복사될 것이다.  
+
+```
+boss.replaceWithZombie(fred);
+```
+  
+그런 다음 e는 다른 참조로 설정된다. 메서드가 끝날 때 e는 유효 범위를 벗어난다. 결국 fred는 어디서도 변경되지 않았다. 이는 local이기 때문이라고 이해하면 쉽게 넘어갈 수 있을 것이다.  
+
+> 자바는 객체에 '참조를 이용한 호출'을 사용한다고 말하는 사람도 더러 있다. 두 번째 예제에서 보았듯이 이 말은 사실이 아니다. 참조를 이용한 호출을 지원하는 언어에서는 메서드가 전달받은 변수의 내용을 다른 것으로 교체할 수 있다. 자바에서는 기본 타입 값은 물론 객체 차조까지 모든 매개변수가 값으로 전달된다.  
+
 
