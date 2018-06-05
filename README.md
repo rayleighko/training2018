@@ -26,8 +26,8 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 
 - [git & github](/git/README.md)
 	
-	1. [git basic](/git/basic/README.md)
-	2. [올바른 깃허브 사용](/git/advenced_git/README.md)
+	1. git basic  
+	2. 올바른 깃허브 사용  
 	3. 
 
 ## Common Sense for become a better programmer
@@ -50,8 +50,8 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 
 - [books](/commonsense/books/README.md)
 
-	1. [code - Charles Petzold](/books/code/README.md)
-	2. [clean code - Robert Cecil Martin](/books/clean_code/README.md)
+	1. CODE - Charles Petzold  
+	2. Clean Code - Robert Cecil Martin  
 	3. 
 
 ## Machine Learning
@@ -60,9 +60,9 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 	
 - [Machine Learning](/machine_learning/README.md)
 
-	1. [AI? ML? DL?](/machine_learning/aimldl/README.md)
-	2. [머신러닝의 개념과 용어](/machine_learning/mlbasic/README.md)
-	3. [딥러닝 기초](/machine_learning/dlbasic/README.md)
+	1. AI? ML? DL?  
+	2. 머신러닝의 개념과 용어  
+	3. 딥러닝 기초  
 	4. 
 
 ## Mordern Java
@@ -71,21 +71,21 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 
 - [Java](/java/README.md)
 
-	1. [기본 프로그래밍 구조](/java/basic/README.md)
-	2. [객체 지향 프로그래밍](/java/oop/README.md)
-	3. [인터페이스](/java/interface/README.md), [람다 표현식](/java/lambda/README.md)
-	4. [상속](/java/inheritance/README.md)과[리플렉션](/java/reflection/README.md)
-	5. [예외](/java/exception/README.md), [단정](/java/assertion/README.md), [로깅](/java/logging/RAEDME.md)
-	6. [제네릭 프로그래밍](/java/generic/README.md)
-	7. [컬렉션](/java/collection/README.md)
-	8. [스트림](/java/stream/README.md)
-	9. [입출력 처리](/java/io/README.md)
-	10. [병행 프로그래밍](/java/concurent/README.md)
-	11. [애너테이션](/java/annotation/README.md)
-	12. [날짜와 시간 API](/java/dateapi/README.md)
-	13. [국제화](/java/globalization/README.md)
-	14. [컴파일링](/java/compiling/README.md)과 [스크립팅](/java/scripting/README.md)
-	15. [자바 플랫폼 모듈 시스템](java/platformmodulesystem/README.md)
+	1. 기본 프로그래밍 구조  
+	2. 객체 지향 프로그래밍  
+	3. 인터페이스, 람다 표현식  
+	4. 상속과 리플렉션  
+	5. 예외, 단정, 로깅  
+	6. 제네릭 프로그래밍  
+	7. 컬렉션  
+	8. 스트림  
+	9. 입출력 처리  
+	10. 병행 프로그래밍  
+	11. 애너테이션  
+	12. 날짜와 시간 API  
+	13. 국제화  
+	14. 컴파일링과 스크립팅  
+	15. 자바 플랫폼 모듈 시스템  
 
 ## Python
 
@@ -93,10 +93,10 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 	
 - [Python](/python/README.md)
 
-	1. [python basic](/python/basic/README.md)
-	2. [그래서 파이썬이 뭐야?](/python/whatispython/README.md)
-	3. [파이썬으로 걸어다녀 보자](/python/walkingpython/README.md)
-	4. [PEP 8](/python/pep8/README.md)
+	1. python basic
+	2. 그래서 파이썬이 뭐야?
+	3. 파이썬으로 걸어다녀 보자
+	4. PEP 8
 
 ## C++
 
@@ -104,19 +104,19 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 
 - [C++](/c++/README.md)
 
-	1. [About C++ Language based C](/c++/basic/README.md)
-	2. [Function Overloading](/c++/functionoverloading/README.md)
-	3. [Parameter's Default value](/c++/parametersdefaultvalue/README.md)
-	4. [Inline Function](/c++/inlinefunction/README.md)
-	5. [Namespace](/c++/namespace/README.md)
-	6. [Boolean](/c++/boolean/README.md)
-	7. [Reference Variable](/c++/referencevariable/README.md)
-	8. [Reference Function](/c++/referencefunction/README.md)
-	9. [New & Delete](/c++/newndelete/README.md)
-	10. [Call C Standard library in C++](/c++/callcstandardlibraryincpp/README.md)
-	11. [Structure in C++](/c++/structureincpp/README.md)
-	12. [Class & Object](/c++/classnobject/README.md)
-	13. [OOP(Object Oriented Programming)](/c++/oop/README.md)
+	1. About C++ Language based C  
+	2. Function Overloading  
+	3. Parameter's Default value  
+	4. Inline Function  
+	5. Namespace  
+	6. Boolean  
+	7. Reference Variable  
+	8. Reference Function  
+	9. New & Delete  
+	10. Call C Standard library in C++  
+	11. Structure in C++  
+	12. Class & Object  
+	13. OOP(Object Oriented Programming)  
 
 ## Web Framework
 
@@ -124,8 +124,8 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 
 - [Web Framework](/web/README.md)
 	
-	1. [Django - Python web framework](/web/django/README.md)
-	2. [Spring - Java web framework](/web/spring/README.md)
+	1. Django - Python web framework  
+	2. Spring - Java web framework  
 	3. 
 
 ## Algorithm
@@ -140,8 +140,8 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 
 - [Docker](/docker/README.md)
 	
-	1. [Docker basic](/docker/basic/README.md)
-	2. [Docker practice](/docker/practice/README.md)  
+	1. Docker basic
+	2. Docker practice
 	3. 
 
 ## (Personal practice, learning contents) Etc.  
