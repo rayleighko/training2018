@@ -4,10 +4,6 @@
 
 ```
 review
-├───book
-	├───angular
-	├───easy-aws
-	└───code
 ├───seminar
 	├───gdgkorea-session
 	├───smart-tech-show
@@ -17,10 +13,6 @@ review
 └───codingtest
 	└───ebay
 ```
-
-## [book](/review/book/)  
-  
-##### 책을 읽고 느낀 점, 감상평 등을 남겨 기록한다.  
 
 ## [seminar](/review/seminar/)  
 

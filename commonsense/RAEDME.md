@@ -8,6 +8,10 @@
 
 ```
 commonsense
+├───book
+	├───angular
+	├───easy-aws
+	└───code
 ├───web
 ├───cloud
 ├───devops
@@ -20,6 +24,10 @@ commonsense
 ├───mvcarchitecture
 └───webframework
 ```
+
+## [Books](/commmonsense/books/)
+
+##### 개발과 관련된 다양한 책을 읽으며 성장하도록 하자.    
 
 ## [Web Framework](/commonsense/webframework/RAEDME.md)  
 
