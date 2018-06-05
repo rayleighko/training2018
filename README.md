@@ -4,27 +4,25 @@
 
 </div>
 
-# training
-
 ## What is this?
 
 예비 개발자, 주니어 개발자 대상 학습하면 좋은, 좋을 자료를 정리해놓은 **개인 공부 저장용** Repository입니다. '개발'에 속하는 모든 분야를 담지 못했지만, 그저 가이드라인으로 참고하길 바라는 마음에 작성하게 되었습니다.
 
 부족한 부분과 추가되었으면 하는 내용에 대해서는 Pull Request 혹은 Issue를 통해 contribution 해주시면 감사하겠습니다. 해당 Repository를 학습하는 과정에서 발생하는 의문, 질문 등은 Issue를 통해 공유하면 빠른 시일 내에 해결할 수 있을 것입니다. :)
 
-This is **personal** guidelines for semi-developers, junior developers. but, I can write kind of 'The Development'. because The Developement's feild is very Big!! anyway, enjoy this!
+This is **personal** guidelines for semi-developers, junior developers. but, I can't write all of 'The Development'. because The Developement's feild is very wide!! anyway, enjoy this repository!
 
-also, plz contribution. welcome contribution! whatever i like that. And if you have question, make Issues. Then many people(i hoped) be able to help you.
+also, plz contribution. welcome contribution whatever, I like that. And if you have question and make an Issues in this repository. Then many people(i hoped) be able to help you.
 
 ---
 
-## 2018 [Resume](/resume/README.md)
+## [2018 Resume](/resume/README.md)
 
-##### 2018년 여름을 기준으로 한 필자의 RESUME.
+#### 2018년 여름을 기준으로 한 필자의 RESUME.
 
 ## git
 
-##### Don't think about git, just do git !
+#### Don't think about git, just do git !
 
 - [git & github](/git/README.md)
 	
@@ -32,9 +30,9 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	2. [올바른 깃허브 사용](/git/advenced_git/README.md)
 	3. 
 
-## Common sense
+## Common Sense for become a better programmer
 
-##### Basic Article for become a good developer!
+#### Recommendation books for become a better programmer!
 
 - [Common Sense](/commonsense/README.md)
 
@@ -48,21 +46,28 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	8. RESTful API?
 	9. functional Programming?
 	10. MVC Architecture?
-	11. 
+	11.  
 
-## Becoming a Better Programmer
+- [books](/commonsense/books/README.md)
 
-##### Recommendation books for become a better programmer!
-
-- [better programmer](/better_programmer/README.md)
-
-	1. [code - Charles Petzold](/better_programmer/code/README.md)
-	2. [clean code - Robert Cecil Martin](/better_programmner/clean_code/README.md)
+	1. [code - Charles Petzold](/books/code/README.md)
+	2. [clean code - Robert Cecil Martin](/books/clean_code/README.md)
 	3. 
+
+## Machine Learning
+
+#### learn to ML, DL. if you wanna used Tensorflow, follow [this](https://github.com/JuniorDevelopersKR/facevalue).
+	
+- [Machine Learning](/machine_learning/README.md)
+
+	1. [AI? ML? DL?](/machine_learning/aimldl/README.md)
+	2. [머신러닝의 개념과 용어](/machine_learning/mlbasic/README.md)
+	3. [딥러닝 기초](/machine_learning/dlbasic/README.md)
+	4. 
 
 ## Mordern Java
 
-##### Write Once, Run Anywhere!
+#### Write Once, Run Anywhere!
 
 - [Java](/java/README.md)
 
@@ -82,21 +87,9 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	14. [컴파일링](/java/compiling/README.md)과 [스크립팅](/java/scripting/README.md)
 	15. [자바 플랫폼 모듈 시스템](java/platformmodulesystem/README.md)
 
-
-## Machine Learning basic
-
-##### what is ML!
-
-- [Machine Learning](/machine_learning/README.md)
-
-	1. [AI? ML? DL?](/machine_learning/aimldl/README.md)
-	2. [머신러닝의 개념과 용어](/machine_learning/mlbasic/README.md)
-	3. [딥러닝 기초](/machine_learning/dlbasic/README.md)
-	4. 
-
 ## Python
 
-##### Life is short, Run Python.  
+#### Life is short, Run Python.  
 	
 - [Python](/python/README.md)
 
@@ -105,36 +98,9 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	3. [파이썬으로 걸어다녀 보자](/python/walkingpython/README.md)
 	4. [PEP 8](/python/pep8/README.md)
 
-## Web
-
-##### I`m a Web developer. I hope this article will be a basic documentation for web developers like me.
-
-- [Web](/web/README.md)
-	
-	1. [Django - Python web framework](/web/django/README.md)
-	2. [Spring - Java web framework](/web/spring/README.md)
-	3. 
-
-## Algorithm
-
-##### Do you like 'iceamericano'? I like it! because this document named 'iceimericano'.
-
-- [Ice Americano](https://github.com/rjs1197/iceamericano)  
-
-
-## Docker
-
-##### Docker is Software platform for Container ecosystem.
-
-- [Docker](/docker/README.md)
-	
-	1. [Docker basic](/docker/basic/README.md)
-	2. [Docker practice](/docker/practice/README.md)  
-	3. 
-
 ## C++
 
-##### C를 기반으로 한 C++을 학습해보자.  
+#### C를 기반으로 한 C++을 학습해보자.  
 
 - [C++](/c++/README.md)
 
@@ -152,12 +118,39 @@ also, plz contribution. welcome contribution! whatever i like that. And if you h
 	12. [Class & Object](/c++/classnobject/README.md)
 	13. [OOP(Object Oriented Programming)](/c++/oop/README.md)
 
-## etc.  
+## Web Framework
 
-- [Perf](/perf/RAEDME.md)
+#### I hope this article will be a basic documentation for junior web developers.
+
+- [Web Framework](/web/README.md)
+	
+	1. [Django - Python web framework](/web/django/README.md)
+	2. [Spring - Java web framework](/web/spring/README.md)
+	3. 
+
+## Algorithm
+
+#### Algorithm Solving is cool your head.  therefore i naming to short name is AA(Ice Americano).
+
+- [Ice Americano](https://github.com/rjs1197/iceamericano)  
+
+## Docker
+
+#### Docker is Software platform for Container ecosystem.
+
+- [Docker](/docker/README.md)
+	
+	1. [Docker basic](/docker/basic/README.md)
+	2. [Docker practice](/docker/practice/README.md)  
+	3. 
+
+## (Personal practice, learning contents) Etc.  
+
+- [Perf](/perf/README.md)
 - [Linux](/linux/README.md)
 - [Software Engineering](/softwareengineering/README.md)
 - [Review](/review/README.md)
 - [OpenCV](/opencv/README.md)
 - [Database](/database/README.md)
+- [Network](/network/README.md)
 
