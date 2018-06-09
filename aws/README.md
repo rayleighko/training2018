@@ -9,6 +9,7 @@
 ```
 aws
 ├───basic
+├───iam
 ├───ec2
 ├───sdk
 ├───s3
@@ -18,6 +19,10 @@ aws
 ## [AWS basic](/aws/basic/README.md)
 
 ##### 클라우드와 함께 AWS에 대해 알아보도록 하자!  
+
+## [AWS IAM](/aws/iam/README.md)
+
+##### AWS IAM을 통해 보안을 강화해보자!  
 
 ## [AWS EC2](/aws/ec2/README.md)
 
@@ -34,5 +39,4 @@ aws
 ## [AWS RDS](/aws/rds/README.md)
 
 ##### AWS RDS에 대해 살펴보자.  
-
 
