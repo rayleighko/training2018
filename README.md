@@ -153,4 +153,6 @@ also, plz contribution. welcome contribution whatever, I like that. And if you h
 - [OpenCV](/opencv/README.md)
 - [Database](/database/README.md)
 - [Network](/network/README.md)
+- [Kubernetes](/kubernetes/README.md)  
+- [AWS](/aws/README.md)  
 
