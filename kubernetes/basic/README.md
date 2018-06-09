@@ -1,6 +1,10 @@
 ## Kubernetes basic  
 
-이번에는 [쿠버네티스](https://ko.wikipedia.org/wiki/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4)에 대해 살펴보도록 하자.  
+##### 쿠버네티스에 대해 알아보도록 하자!
+
+[뒤로가기](/kubernetes/README.md)
+
+이번에는 [쿠버네티스](https://ko.wikipedia.org/wiki/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4)의 기본적인 내용에 대해 살펴보도록 하자.  
 
 우선 쿠버네티스란 무엇일까? 위의 링크에도 나와있지만, 위키백과에 따르면 다음과 같다.  
 
@@ -77,7 +81,7 @@
 
 #### 참고 자료
 
-[What is kuvernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)  
+[What is kubernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)  
 [초보자를 위한 쿠버네티스 - Samsung SDS](https://www.samsungsds.com/global/ko/support/insights/Kubernetes_inform_kr.html)  
 [생활코딩 - AWS Auto Scaling](https://opentutorials.org/course/608/3010)  
 [쿠버네티스 실습 - Developer.IBM](https://developer.ibm.com/kr/cloud/2018/01/25/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EC%8B%A4%EC%8A%B5/)  
