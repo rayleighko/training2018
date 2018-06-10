@@ -94,6 +94,53 @@ SSH는 Secure SHell의 약자로, 리눅스나 맥같은 유닉스 계열의 원
 
 > 추가적으로 public key pair와 private key pair가 존재하는데, 여기에 대해서는 따로 찾아보기 바란다.  
 
+### Linux Ubuntu Instance에 웹 서버 설치하기  
+
+우선 인스턴스는 running 상태여야 한다. 상태를 확인한 후 AWS의 콘솔(웹사이트)에서 connect 버튼을 클릭하자.  
+
+그러면 자세한 설명이 나오는데 필자는 Linux 환경이므로 다음과 같이 진행했다(rayleigh_web.pem은 필자의 key pair이고, ec2-13~ 하는 부분은 필자의 인스턴스 식별번호이다).  
+
+> 1. Open an SSH client. (find out how to connect using PuTTY)
+>
+> 2. Locate your private key file (rayleigh_web.pem). The wizard automatically detects the key you used to launch the instance.
+>
+> 3. Your key must not be publicly viewable for SSH to work. Use this command if needed:
+> chmod 400 rayleigh_web.pem
+>
+> 4. Connect to your instance using its Public DNS:
+> ec2-13-125-237-254.ap-northeast-2.compute.amazonaws.com
+>
+> Example: ssh -i "rayleigh_web.pem" ubuntu@ec2-13-125-237-254.ap-northeast-2.compute.amazonaws.co  
+
+이 과정을 거치면 우리는 해당 인스턴스의 터미널에 접속하게 된다(인스턴스의 식별번호는 stop 후 start하게 되면 바뀌니 참고하도록 하자).  
+
+이후에는 리눅스 환경으로 진행되므로 리눅스에 익숙하지 않다면 주의하도록 하자.  
+
+```
+ubuntu@ip-172-31-31-193:~$ sudo apt-get update  
+// 패키지 저장소 최신화
+
+ubuntu@ip-172-31-31-193:~$ sudo apt-get install apache2
+// apache2 패키지 설치 - 자동으로 시작된다.  
+```
+  
+
+아파치 서버가 실행된 것을 확인하고 이를 웹 브라우저에서 확인하고자 한다면 해당 인스턴스의 도메인 주소 혹은 IP 주소를 알아야 한다. AWS 콘솔에서 인스턴스를 눌러 하단의 정보를 확인하자.  
+
+> Public IP가 IP 주소이고, Public DNS가 도메인 주소이다.  
+
+이제 웹 브라우저에서 IP 주소 혹은 도메인 주소로 접속해보면 우리가 설치한 웹 서버가 제대로 구동되는 것을 확인할 수 있다.  
+
+여기서 제공되는 페이지는 우리의 인스턴스에 존재하는 '/var/www/html' 디렉터리 안에 있는 index.html를 보여주는 것이므로 index.html을 수정하면 수정된 정보가 기록된다.  
+
+index.html의 내용을 모두 지우고 'Hello~'를 입력해보자. 어떤 변화가 있는가?  
+
+```
+Hello~
+```
+  
+우리는 앞서 Security Group을 설정했기 때문에 HTTP를 통한 접근(웹 브라우저)과 SSH를 통한 접근(유닉스 터미널)에 대한 권한이 주어진 것이다. 만약 이를 설정하지 않았다면 접근에 문제가 생기므로 이에 대해 유의하도록 하자.  
+
 #### 참고 자료  
 
 [AWS - free tier](https://aws.amazon.com/ko/free/)  
