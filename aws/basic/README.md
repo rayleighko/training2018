@@ -6,7 +6,7 @@
 
 우선 AWS에 대한 내용을 학습하기 전에 [클라우드](/commonsense/cloud/README.md)에 대해 링크를 통해 간단하게 살펴보자. 아주 간단하게만 말이다.  
 
-AWS에는 다양한 서비스가 존재한다. 우리는 그 중에서 가장 기초적인 EC2(Virtual Servers), S3(Scalable Storage), RDS(Managed Relational Database Service)를 중심으로 살펴볼 것이다. 만약 기회가 된다면 IAM(Identity and Access Management)에 대해서도 다룰 수 있었으면 좋겠다.  
+AWS에는 다양한 서비스가 존재한다. 우리는 그 중에서 가장 기초적인 IAM(Identity, Access Management)EC2(Virtual Servers), S3(Scalable Storage), RDS(Managed Relational Database Service)를 중심으로 살펴볼 것이다.  
 
 본격적으로 AWS에 대해 알아보자. AWS에는 어떤 장점들이 존재할까?  
 
@@ -78,11 +78,7 @@ Region에 대해 살펴봤다. 다음으로 설명할 Avaliabilty zone은 Region
 
 보안에 대한 설정이 끝났으면 본격적으로 다른 예제를 살펴보도록 하자.  
 
-
-
 #### 참고자료  
 
 [about aws](https://aws.amazon.com/ko/about-aws/)  
 [생활코딩 - AWS](https://opentutorials.org/course/2717/11268)  
-[생활코딩 - AWS 보안설정](https://opentutorials.org/course/2717/11269)  
-
