@@ -11,8 +11,10 @@ aws
 ├───basic
 ├───iam
 ├───ec2
-├───sdk
+	├───basic
+	└───scalability
 ├───s3
+├───sdk
 └───rds
 ```
 
@@ -26,15 +28,15 @@ aws
 
 ## [AWS EC2](/aws/ec2/README.md)
 
-##### AWS EC2에 대해 살펴보자.  
-
-## [AWS SDK](/aws/sdk/README.md)
-
-##### AWS SDK에 대해 살펴보자.  
+##### AWS EC2로 AWS에 입문하자!
 
 ## [AWS S3](/aws/rds/README.md)
 
 ##### AWS S3에 대해 살펴보자.  
+
+## [AWS SDK](/aws/sdk/README.md)
+
+##### AWS SDK에 대해 살펴보자.  
 
 ## [AWS RDS](/aws/rds/README.md)
 

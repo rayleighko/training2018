@@ -1,12 +1,17 @@
 
-
 <div align=center>
 
 ![](/assets/training_main.png)
 
 </div>
 
-[필자 소개](/resume/README.md)  
+[![Contributors](https://img.shields.io/badge/contributors-1-green.svg?style=flat-square)](/CONTRIBUTING.md) 
+[![HitCount](http://hits.dwyl.io/rjs1197/training.svg)](http://hits.dwyl.io/rjs1197/training) 
+![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
+![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)  
+  
+
+#### [필자 소개](/resume/README.md)  
 
 ```
 "호랑이는 죽어서 가죽을 남기고, 사람은 죽어서 이름을 남긴다. 개발자는 Github을 남기지.. 않을까?"  
@@ -163,9 +168,10 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 	1. AWS Basic  
 	2. AWS IAM  
-	3. AWS EC2  
-	4. AWS S3  
-	5. AWS RDS  
+	3. AWS EC2
+	4. AWS S3 
+	5. AWS SDK
+	6. AWS RDS  
 
 ## (Personal practice, learning contents) Etc.  
 
@@ -177,5 +183,4 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 - [Database](/database/README.md)  
 - [Network](/network/README.md)  
 - [Kubernetes](/kubernetes/README.md)  
-- [2018 Resume](/resume/README.md)  
 
