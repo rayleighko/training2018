@@ -11,8 +11,8 @@ aws
 ├───basic
 ├───iam
 ├───ec2
-	├───basic
-	└───scalability
+    ├───basic
+    └───scalability
 ├───s3
 ├───sdk
 └───rds
