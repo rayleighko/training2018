@@ -39,14 +39,13 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 	- Python  
 	- C++  
 	- Machine Learning  
-	- lgorithm  
+	- Algorithm  
 - Tool 
 	- git & github  
 	- Web Framework  
 	- Docker  
 	- AWS  
   
-
 ## Common Sense for become a better programmer
 
 #### Recommendation books for become a better programmer!
@@ -141,6 +140,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 	
 	1. Git Basic  
 	2. Correct use of Git  
+	3. Git for Teams  
 
 ### Web Framework  
 

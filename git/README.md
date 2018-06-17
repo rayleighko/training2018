@@ -9,7 +9,8 @@
 ```
 git
 ├───basic
-└───advenced_git
+├───advenced_git
+└───gitforteams
 ```
 
 ## [git basic](/git/basic/README.md)
@@ -20,16 +21,21 @@ git
 
 ##### 어떻게 하면 git을 '잘' 사용할 수 있을까?  
 
-여기서는 git을 올바르게 사용하는 방법을 사용하고, `git commit --amend`와 같은 commit 수정을 위한 command를 살펴보자.  
+## [Git for Teams](/git/gitforteams/README.md)
 
-### 추가 자료
+##### 팀을 위해 git을 사용하자. 이건 단순히 git에 대한 이야기만은 아니다.  
+  
+
+#### 추가 자료
 
 * [영문 git 문서][git-documentation]
 * [한국어 git 문서][kor-git-doc]
 * [깃허브로 취업하기][git-get-career]
 * [git-cheat-sheet][git-cheat-sheet]
+* [팀을 위한 Git][git-for-teams]
 
 [git-documentation]: https://git-scm.com/doc/
 [kor-git-doc]: https://git-scm.com/book/ko/
 [git-get-career]: https://sujinlee.me/professional-github/
 [git-cheat-sheet]: https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.ko.md
+[git-for-teams]: http://www.hanbit.co.kr/store/books/look.php?p_code=B9451664636
