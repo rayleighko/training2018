@@ -9,7 +9,8 @@
 ```
 ec2	
 ├───basic
-└───scalability
+├───scalability
+└───scaleout
 ```
   
 ## [AWS EC2 Basic](/aws/ec2/basic/README.md)
@@ -19,3 +20,8 @@ ec2
 ## [AWS EC2 Scalability](/aws/ec2/scalability/README.md)
 
 ##### AWS EC2를 이용해 급변하는 인스턴스의 규모를 유연하게 변경해보자.
+
+## [AWS EC2 Scale Out](/aws/ec2/scaleout/README.md)
+
+##### Scale out을 이용해 Scalability를 보장하자.  
+
