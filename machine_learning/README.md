@@ -10,7 +10,8 @@
 machine_learning
 ├───aimldl
 ├───mlbasic
-└───dlbasic
+├───dlbasic
+└───acting
 ```
   
 ## [AI? ML? DL?](/machine_learning/aimldl/README.md)
@@ -25,6 +26,10 @@ machine_learning
 
 ##### DL(Deep Learning)의 기초적인 내용을 살펴보고, 어떻게 활용할 것인지에 대해 생각해보자.  
 
+## [Deep Learning acting](/machine_learning/acting/README.md)
+
+##### '밑바닥부터 시작하는 딥러닝' 교재를 활용해 간단한 실습을 진행해보자.
+
 ### 참고자료
 
 [nvidia 블로그 - 인공 지능과 머신 러닝, 딥 러닝의 차이점을 알아보자][1]  
@@ -35,6 +40,7 @@ machine_learning
 [http://aikorea.org/cs231n/convolutional-networks/][6]  
 [ec 08-2: 딥러닝의 기본 개념2: Back-propagation 과 2006/2007 '딥'의 출현][7]  
 [lec 08-1: 딥러닝의 기본 개념: 시작과 XOR 문제][8]  
+[밑바닥부터 시작하는 딥러닝 - 사이토 고키][9]
 
 [1]: http://blogs.nvidia.co.kr/2016/08/03/difference_ai_learning_machinelearning/  
 [2]: https://hunkim.github.io/ml/  
@@ -44,3 +50,5 @@ machine_learning
 [6]: http://aikorea.org/cs231n/convolutional-networks/  
 [7]: https://www.youtube.com/watch?v=AByVbUX1PUI  
 [8]: https://www.youtube.com/watch?v=n7DNueHGkqE&feature=youtu.be  
+[9]: http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198  
+
