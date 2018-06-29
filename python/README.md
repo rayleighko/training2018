@@ -9,14 +9,23 @@
 ```
 python
 ├───basic
-├───whatispython
 ├───pep8
+├───virtualenv
+├───whatispython
 └───walkingpython
 ```
   
 ## [Python Basic](/python/basic/README.md)
 
 ##### Python을 설치하고, 기초적인 실습을 진행하며 Python이 동작하는 과정을 살펴보자.  
+
+## [PEP 8](/python/pep8/README.md)
+
+##### Python의 공식 문서인 PEP() 중 Coding Convension에 관한 문서인 'PEP 8'에 대해 살펴보자.
+
+## [Virtual Environment](/python/virtualenv/README.md)
+
+##### Virtualenv가 무엇이고 왜 필요한지 살펴보자.    
 
 ## [그래서 파이썬이 뭐야?](/python/whatispython/README.md)
 
@@ -26,7 +35,4 @@ python
 
 ##### 지금까지 다룬 내용을 바탕으로 Python에서 사용하는 제어문, 반복문 등과 연산자 등을 살펴보자.
 
-## [PEP 8](/python/pep8/README.md)
-
-##### Python의 공식 문서인 PEP() 중 Coding Convension에 관한 문서인 'PEP 8'에 대해 살펴보자.
 
