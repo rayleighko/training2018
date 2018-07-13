@@ -1,6 +1,6 @@
 # Django - Python web framework
 
-##### 
+##### 하나, 둘, Django!
 
 [뒤로가기](/web/README.md)
 

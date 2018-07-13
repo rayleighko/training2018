@@ -1,6 +1,6 @@
 # Flask - Python web framework
 
-##### 
+##### 실험실이 아닌 사무실에서 Flask 사용하기!
 
 [뒤로가기](/web/README.md)
 

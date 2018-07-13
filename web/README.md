@@ -1,17 +1,32 @@
-## Web framework
+## WEB
 
-##### I'm a Web developer. I hope this article will be a basic documentation for web framework.
+##### I'm a Web developer. I hope this article will be a basic documentation for WEB.
+
+#### File Structure
+
+```
+web
+├───basic
+├───django
+├───flask
+└───spring
+```
 
 
 [뒤로가기](/README.md)
 
+- [Web Basic](/web/basic/README.md)
+
+##### Web에 입문해보자!
+
 - [Django](/web/django/README.md)
 
-	1. [django basic](/web/django/basic/README.md)
-	2. [django template](/web/django/template/README.md)
-	3. [django form](/web/django/form/README.md)
+##### 하나, 둘, Django!
+
+- [Flask](/web/flask/README.md)
+
+##### 실험실이 아닌 사무실에서 Flask 사용하기!
 
 - [Spring](/web/spring/README.md)
 
-	1. [Spring Basic](/webspring/basic/README.md)
-	2. 
+##### Spring이 그렇게 유명하다며?
