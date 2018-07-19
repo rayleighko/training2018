@@ -11,6 +11,7 @@ commonsense
 ├───books
 	├───angular
 	├───easy-aws
+	├───ml_proj
 	└───code
 ├───web
 ├───cloud
@@ -29,7 +30,7 @@ commonsense
 
 ##### 개발과 관련된 다양한 책을 읽으며 성장하도록 하자.    
 
-## [Cloud Computing](/commonsense/cloud/README.md
+## [Cloud Computing](/commonsense/cloud/README.md)
 
 ##### 서버를 저 멀리 날려버리자!  
 

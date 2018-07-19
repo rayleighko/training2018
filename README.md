@@ -53,11 +53,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 - [Common Sense](/commonsense/README.md)
 
 	1. Web Framework?
-
-- [books](/commonsense/books/README.md)
-
-	1. CODE - Charles Petzold  
-	2. Clean Code - Robert Cecil Martin  
+	2. books
 
 ## Computer Science  
 
