@@ -5,11 +5,11 @@
 
 </div>
 
-[![Contributors](https://img.shields.io/badge/contributors-1-green.svg?style=flat-square)](/CONTRIBUTING.md) 
-[![HitCount](http://hits.dwyl.io/rjs1197/training.svg)](http://hits.dwyl.io/rjs1197/training) 
-![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
+[![Contributors](https://img.shields.io/badge/contributors-1-green.svg?style=flat-square)](/CONTRIBUTING.md)
+[![HitCount](http://hits.dwyl.io/rjs1197/training.svg)](http://hits.dwyl.io/rjs1197/training)
+![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)
 ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)  
-  
+
 
 #### [필자 소개](/resume/README.md)  
 
@@ -29,7 +29,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 ---
 
-#### Talbe of Contents 
+#### Talbe of Contents
 
 - Common Sense for become a better programmer
 	- Common Sense  
@@ -39,13 +39,13 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 	- Python  
 	- C++  
 	- Machine Learning  
-	- Algorithm  
-- Tool 
+	- Algorithm 
+- Tool
 	- git & github  
 	- Web Framework  
 	- Docker  
 	- AWS  
-  
+
 ## Common Sense for become a better programmer
 
 #### Recommendation books for become a better programmer!
@@ -137,7 +137,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 #### Don't think about git, just do git !  
 
 - [git & github](/git/README.md)
-	
+
 	1. Git Basic  
 	2. Correct use of Git  
 	3. Git for Teams  
@@ -145,9 +145,9 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 ### Web Framework  
 
 #### I hope this article will be a basic documentation for junior web developers.  
- 
+
 - [Web Framework](/web/README.md)
-	
+
 	1. Django - Python web framework  
 	2. Spring - Java web framework  
 
@@ -156,7 +156,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 #### Docker is Software platform for Container ecosystem.  
 
 - [Docker](/docker/README.md)
-	
+
 	1. Docker Basic  
 	2. Docker Practice  
 
@@ -169,7 +169,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 	1. AWS Basic  
 	2. AWS IAM  
 	3. AWS EC2
-	4. AWS S3 
+	4. AWS S3
 	5. AWS SDK
 	6. AWS RDS  
 
@@ -183,4 +183,3 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 - [Database](/database/README.md)  
 - [Network](/network/README.md)  
 - [Kubernetes](/kubernetes/README.md)  
-
