@@ -12,6 +12,7 @@
 ```
 Javascript
 ├───basic
+├───object
 ├───expression_and_operator
 ├───javascript_structure
 ├───web_browser_javascript
