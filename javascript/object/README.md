@@ -26,9 +26,9 @@
 >extensible 속성은 객체에 새 프로퍼티를 추가할 수 있는지를 결정한다.
 
 ######세 부류의 자바스크립트 객체
->네이티브 객체는 ECMAScript 명세에 정의된 객체 또는 그 객체의 클래스다. Array, Function, Date, 정규 표현식들은 전부 네이티브 객체다.
->호스트 객체는 브라우저와 같이 자바스크립트 인터프리터가 내장된 호스트 환경에 정의된 객체다. HTMLElement 객체는 웹 페이지의 구조가 클라이언트 측 자바스크립트로 표현된 호스트 객체다.
->사용자 정의 객체는 자바스크립트 코드의 실행으로 생성된 객체다.
+>**네이티브 객체** 는 ECMAScript 명세에 정의된 객체 또는 그 객체의 클래스다. Array, Function, Date, 정규 표현식들은 전부 네이티브 객체다.
+>**호스트 객체** 는 브라우저와 같이 자바스크립트 인터프리터가 내장된 호스트 환경에 정의된 객체다. HTMLElement 객체는 웹 페이지의 구조가 클라이언트 측 자바스크립트로 표현된 호스트 객체다.
+>**사용자 정의 객체** 는 자바스크립트 코드의 실행으로 생성된 객체다.
 
 ######두 종류의 프로퍼티
 >고유 프로퍼티는 객체에 직접 정의된 프로퍼티다.
@@ -55,7 +55,7 @@ a1은 x,y프로퍼티를 상속받는다.
 function inherit(a) {
 	if (a == null) throw TypeError();
     if (Object.create)
-    	return Object.create(p);
+    	return Object.create(a);
     var t = typeof a;
     
     if (t == "object" && t !== "function") throw TypeError();
@@ -206,7 +206,7 @@ var p = {
 
 var q = inherit(p);
 q.x = 1; q.y = 1; -> 객체 q에 고유 데이터 프로퍼티들을 만든 후
-console.log(q,r); -> 상속 받은 접근자 프로퍼티를 사용한다.
+console.log(q.r); -> 상속 받은 접근자 프로퍼티를 사용한다.
 console.log(q.theta);
 ```
 
@@ -318,7 +318,7 @@ Object.defineProperty(Object.prototype,
 객체의 prototype속성은 프로퍼티를 상속하는 객체를 지정한다. 
 객체 o의 프로토타입 속성 이 아닌 **객체 o의 프로토타입**이라고 할 만큼 매우 중요하다.
 
-prototype 속성은 객체가 만들어지는 시점에 설정된다. 객체 리터럴을 통해 만든 객체는 Object.prototype을 객체의 프로토타입으로 설정한다. new를 사용해 만든 객체는 생성자 함수의 prototype 프로퍼티 값이 prototype 속성의 값이 되고, object.create() 메서드로 만든 객체는 메서드의 첫 번째 인자가 프로토타입 속성의 갑시 된다.
+prototype 속성은 객체가 만들어지는 시점에 설정된다. 객체 리터럴을 통해 만든 객체는 Object.prototype을 객체의 프로토타입으로 설정한다. new를 사용해 만든 객체는 생성자 함수의 prototype 프로퍼티 값이 prototype 속성의 값이 되고, object.create() 메서드로 만든 객체는 메서드의 첫 번째 인자가 프로토타입 속성의 값이 된다.
 
 new 표현식으로 생성된 객체는, 일반적으로 객체를 만드는 데 사용되는 생성자 함수를 참조하는 **constructor 프로퍼티** 를 상속 받는다.
 객체 리터럴이나 object.create()로 생성된 객체는 Object()의 생성자를 constructor 프로퍼티로 갖는다. 따라서 constructor.prototype은 객체리터럴에 대해서는 정확한 프로토타입을 참조하지만 Object.create()로 생성된 객체의 경우 그렇지 않다.
@@ -327,10 +327,10 @@ new 표현식으로 생성된 객체는, 일반적으로 객체를 만드는 데
 var p = {x:1};
 var o = Object.create(p);
 p.isPrototypeOf(o); -> true 객체o 는 객체 p를 상속받는다.
-Object.prototype.isPrototypeOf(o); ->true: 객체p는 Object.prototype을 상속받는다.
+Object.prototype.isPrototypeOf(p); ->true: 객체p는 Object.prototype을 상속받는다.
 ```
 
-######class
+######class 속성
 객체의 class속성은 객체의 타입에 대한 정보를 담고 있는 문자열이다.ECMAScript3과 ECMAScript5 모두 어떠한 방법으로도 이 속성을 변경할 수 없고, 그 값을 질의하는 것도 아주 간접적으로만 가능하다.
 Object.prototype으로부터 상속되는 기본 toString() 메서드는 객체의 타입을 아래 형태의 문자열로 반환한다.
 
@@ -401,12 +401,9 @@ toString 메서드는 어떠한 인자도 받지 않고, 호출 대상 객체의
 ```
 [1,2,3].toString -> "1,2,3"
 ```
-
-2.toLocaleString() 메서드
+2. toLocaleString() 메서드
 객체의 지역화된 문자열 표현을 반환하는것이다. 이 메서드는 toString과 동일하게 작동하지만 각 배열 원소의 toLocaleString메서드를 호출한다는 점이 다르다.
-
-3.toJSON() 메서드
+3. toJSON() 메서드
 object.prototype에는 toJSON() 메서드가 정의되어 있지 않다. 하지만 JSON.stringfy() 메서드는, 직렬화 할 객체에 toJSON() 메서드가 있는지 찾고, 만약 직렬화 하려는 객체에 toJSON() 메서드가 있으면, toJSON() 메서드가 호출되고 그 결과값이 원래 객체 대신 직렬화 된다. (ex -> Date.toJSON)
-
-4.valueOf() 메서드
+4. valueOf() 메서드
 toString과 매우 유사하며 객체가 원시 타입 값을 필요로 하는 문맥 안에서 사용될 때, 자바스크립트는 valueOf() 메서드를 자동으로 호출한다.
