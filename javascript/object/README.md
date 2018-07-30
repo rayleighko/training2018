@@ -267,8 +267,7 @@ Object.defineProperty(o, "x", {
     enumerable: false,
     configurable: true});
     
-//이상태 에서도 변경가능
-//프로퍼티 값을 변경한다.
+//이 상태 에서도 변경가능, 프로퍼티 값을 변경한다.
 Object.defineProperty(o, "x", {writable: false});
 o.x = 2; o.x -> 1 단순히 값을 변경하지 못하거나, 엄격보드에서 TypeError 예외 발생
 
