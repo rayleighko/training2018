@@ -448,7 +448,7 @@ quacks() 함수와 관련하여 명심해할 두가지 중요한 사항이 있�
 quacks() 함수와 관련하여 두번째 중요한 점은, 이 함수는 내장 클래스에 대해서는 작동하지 않는다는 것이다. 예를 들어 Array에 있는 메서드와 같은 이름을 가진 메서드가 객체 o에도 있는지를 검사하려 할때, quacks(o, Array)와 같은 코드는 사용할 수 없다. 왜냐하면, 내장 클래스의 메서드는 열거할 수 없어서,quacks() 함수 내의 for/in 루프는 내장클래스의 메서드를 볼 수 없기 때문이다.(ECMAScript 5에서는 Object.getOwnPropertyNames()를 사용함으로써 해결할 수 있다.)
 ###자바스크립트 객체 지향 기법
 #####1. 예제: set 클래스
-집합은 중복되지 않은 값을 정렬되지 않은 형태로 저장하는 데이터 구조다. 집합의 필수 연산은 어떤 값이 이미 집합에 있는지를 검사하는 것과 값을 집합에 추가하는 것이고, 일반적으로 이 연산은 빠ㅡㄹ게 수행되도록 구현된다. 자바스크립트 객체는 기본적으로 프로퍼티 이름으로 이루어진 집합이다.(그리고 프로퍼티는 각자의 값을 가지고 있다.) 따라서 객체를 문자열의 집합으로 사용하는 것은 대수롭지 않은 일이다.
+집합은 중복되지 않은 값을 정렬되지 않은 형태로 저장하는 데이터 구조다. 집합의 필수 연산은 어떤 값이 이미 집합에 있는지를 검사하는 것과 값을 집합에 추가하는 것이고, 일반적으로 이 연산은 빠르게 수행되도록 구현된다. 자바스크립트 객체는 기본적으로 프로퍼티 이름으로 이루어진 집합이다.(그리고 프로퍼티는 각자의 값을 가지고 있다.) 따라서 객체를 문자열의 집합으로 사용하는 것은 대수롭지 않은 일이다.
 다음은 Set클래스를 구현하고 있다. 이 클래스는 자바스크립트 값을 고유 문자열로 매핑하고, 이 문자열을 프로퍼티 이름으로 사용한다.객체와 함수에는 단축된 형태로 자신을 확실하게 나타낼 수 있는 고유 문자열 표현이 없기에,Set 클래스는 세트에 저장되는모든 객체와 함수에 프로퍼티 식별자를 정의해야 한다.
 ```
 function Set() {														->생성자 정의
@@ -510,7 +510,8 @@ Set._v2s = function(val) {
             default:	   return '@' + objectId(val);					->객체와 함수 앞에는 @를 붙인다.
         }
     }
-	//모든 객체에 대해 문자열을 반환한다. 이 함수는 서로 다르 객체에 대해서는 다른 문자열을 반환하고, 같은 객체에 대해서는 언제나 같은 문	자열을 반환한다.
+	//모든 객체에 대해 문자열을 반환한다. 
+    //이 함수는 서로 다른 객체에 대해서는 다른 문자열을 반환하고, 같은 객체에 대해서는 언제나 같은 문자열을 반환한다.
 	//이를 위해 o에 프로퍼티를 만든다. ECMAScript 5에서 이 프로퍼티는 열거되지 않으며 읽기 전용이 될 수 있다.
 	function objectId(o) {
 		var prop = "|**objectid**|";									->id에 대한 전용 프로퍼티 이름.
@@ -566,7 +567,7 @@ function enumeration(namesTovalues) {
     
     //인스턴스를 순회하는 클래스 메서드
     enumeration.foreach = function(f,c) {
-    	for(var i = 0; i < this.values.length; i++) f.call(c,this.values[i]);
+    	for(var i = 0; i < this.values.length; i++) f.call(c.this.values[i]);
     };
     
     //새로운 형식을 나타내는 생성자를 반환한다.
@@ -613,7 +614,7 @@ function Deck() {
 	var cards = this.card = [];
     Card.Suit.foreach(function(s) {
     	Card.Rank.foreach(function(r) {
-        	card.push(new Card(s,r));
+        	cards.push(new Card(s,r));
         });
     });
 }
@@ -752,3 +753,261 @@ Range.byLowerBound = function(a,b) { return compareTo(b); };
 ranges.sort(Range.byLowerBound);
 ```
 어떤 클래스는 두 가지 이상의 방법으로 정렬될 수 있다. 예를 들어, Card 클래스에는 무늬(suit)에 따라 카드를 정렬하는 메서드와 계급(rank)에 따라 정렬한 것은 그 한 사례다.
+#####5. 메서드 빌려오기
+자바스크립트의 메서드에는 특별한 것이 없다. 단순히 객체의 프로퍼티로 할당된 함수일 뿐이며, 객체를 **통해** 또는 객체를 **대상으로** 호출될 따름이다. 하나의 함수는 두 프로퍼티에 할당될 수 있고, 그런 다음에는 두개의 메서드로 작동한다. Set클래스에서 toArray()메서드를 복사하여 toJSON() 메서드로 사용한 것은 그 한 사례다.
+심지어 하나의 함수는 하나 이상의 클래스의 메서드로 사용될 수도 있다. 예를들어, Array 클래스에 있는 내장 메서드 대부분은 충분히 일반화되어 있어서, 만약 여러분이 유사 배열 객체의 클래스를 작성한다면, Array.prototype으로부터 이 클래스의 프로퍼티 객체로 함수를 복사해 넣어도 된다. 전통적인 객체 지향 언어의 관점에서 자바스크립트를 바라보면, 어떤 클래스의 메서드를 다른 클래스의 메서드로 사용하는 것이 다중 상속의 한 형태로 생각될 수도 있다. 그러나 자바스크립트는 전통적인 객체 지향 언어가 아니고, 이런 메서드 재활용 방식을 비공식적인 용어를 사용하여 '메서드 빌려오기' 라고 부르는 것을 선호한다.
+Array의 메서드만 이렇게 빌려올 수 있는 것이 아니다. 우리만의 일반화된 메서드도 작성할 수 있다. 다음 예제는 일반화된 toString()메서드와 equals()메서드를 정의하며, 이 메서드들은 Range 클래스, Complex 클래스, Card 클래스와 같이 간단한 클래스에 적합하게 사용될 수 있다. 만약 Range 클래스에 equals() 메서드가 없다면, 다음과 같이 일반화된 equals()메서드를 빌려올 수 있을 것이다.
+```
+Range.prototype.equals = generic.equals;
+```
+이 메서드는 오직 얕은 비교만 하며, 어떤 클래스가 equals() 메서드를 재정의한다면, 그런 클래스의 인스턴스들에 generic.equals()를 사용하는 것은 적합하지 않다. 아울러 이 메서드에는 객체가 Set에 삽입될 때 추가되는 프로퍼티를 처리하는 특수코드가 포함되어 있다.
+```
+var generic = {
+	//상속받은 프로퍼티와 함수를 제외한 모든 프로퍼티의 이름과 값을 포함한 문자열을 반환한다.
+    //가능하면 생성한 함수의 이름도 포함한다.
+    toString: function() {
+    	var s = '[';
+        //만약 객체가 생성자를 가지고 있고, 생성자에 이름이 지정되어 있다면, 생성자의 이름(클래스이름)을 반환될 문자열에 추가한다.
+        //함수의 name 프로퍼티는 비표준이고, 따라서 모든 인터프리터가 name 프로퍼티를 지원하지는 않음을 유념하라.
+        if(this.constructor && this.constructor.name)
+        	s += this.constructor.name + ": ";
+        
+        상속되지 않은 프로퍼티와 함수가 아닌 프로퍼티 모두를 열거한다.
+        var n = 0;
+        for (var name in this) {
+        	if (!this.hasOwnProperty(name)) continue;						-> 상속된 값은 건너뛴다.
+        	var value = this[name];
+            if (typeof value === "function") continue;						-> 메서드도 건너뛴다.
+            if (n++) s += ", ";
+            s += name + '=' + value;
+        }
+        return s + ']';
+    },
+    //this와 that의 constructor 프로퍼티와 instance 프로퍼티를 비교함으로써 this와 that이 같은지를 검사한다.
+    //인스턴스의 프로퍼티가 === 연산자를 통해 비교될 수 있는 경우에만 작동한다.
+    //=== 연산자로 비교하려면 해당 객체가 원시 값을 반환해야 한다. (valueOf 메서드의 반환 값)
+    //특수한 경우 Set 클래스가 추가한 프로퍼티는 무시한다.
+    equals: function(that) {
+    	if (that == null) return false;
+        if (this.constructor !== that.constructor) return false;
+        for (var name in this) {
+        	if (name === "[**objectid**]") continue;						->특정 프로퍼티는 건너뛴다.
+            if (!this.hasOwnProperty(name)) continue;						->상속된 프로퍼티는 건너뛴다.
+            if (this[name] !== that[name]) return false;					->값들을 비교한다.
+        }
+        return ture;														->모든 프로퍼티가 같으면, 두객체는 같다.
+    }
+};
+```
+#####6.private 상태
+전통적인 객체 지향 프로그래밍에서는 종종 중요한 상태 변수를 직접 읽거나 쓰는 것을 금지하고, 오직 객체의 메서드만을 통해 객체 상태에 접근하도록 허용함으로써 객체의 상태를 캡슐화 하거나 숨기는 것을 목표로 삼는다. 이 같은 목적을 위해 자바와 같은 언어는 "private" 인스턴스 필드를 선언하며, 이 private 필드는 오직 인스턴스 메서드로만 접근할 수도 있고 클래스 외부에는 보이지 않는다.
+인스턴스를 생성할 때, 생성자 호출의 클로저에 포착된 변수(혹은 인자)를 사용하면 private 인스턴스 필드를 흉내 낼 수 있다. 그러려면 생성자 내부에서 함수들을 정의하고(다라서 생성자의 인자와 변수에 접근할 수 있다,), 이 함수들을 새로 생성한 객체의 프로퍼티로 할당해야 한다.
+다음예제는 이 기법을 사용하여 Range클래스를 캡슐화시킨 것이다. 이from() 메서드와 to()메서드는 Rnage객체마다 정의되고 prototype으로부터 상속되지 않는다. Range의 다른 메서드는 이전 처럼 프로토타입에 정의되지만, 프로퍼티로부터 from, to를 직접 읽는 대신 from() 메서드와 to() 메서드를 호출하도록 수정되었다.
+```
+function Range(from, to){
+	//this 객체의 프로퍼티로 form, to를 저장하지 말 것. 대신에 시작점과 끝점을 반환하는 접근자 함수를 정의한다.
+    //인자로 넘어온 from, to 값은 클로저에 저장된다.
+    this.from = function() { return from; };
+    this.to = function() { return to; };
+}
+//프로토타입의 메서드들은 생성자에 인자로 전달된 from, to를 직접 볼 수 없다.
+//프로토타입의 메서드들은 다른 모든 것과 마찬가지로 접근자 메서드를 호출해야 한다.
+Range.prototype = {
+	constructor: Range,
+    includes: function(x) { return this.from() <= x && x <= this.to(); },
+    foreach: function(x) {
+    	for(var x = Math.ceil(this.from()), max = this.to(); x <= max; x++) f(x);
+    },
+    toString: function() { return "(" + this.from() + "..." + this.to() + ")"; }
+};
+```
+새 버전의 Range 클래스에는 범위의 하한과 상한을 질의하는 메서드는 정의되어 있지만, 설정하는 메서드나 프로퍼티는 없다. 이는 인스턴스에 일종의 불변성을 제공하는데, 제대로 사용된다면 Range 인스턴스의 하한과 상한의 그 인스턴스가 생성된 이후에는 변하지 않을 것이다. 그러나 ECMAScript 5의 기능을 사용하지 않는 한, from 프로퍼티와 to 프로퍼티는 여전히 덮어 쓰일 수 있고, 따라서 Range 객체가 실제로 불변인 것은 아니다.
+```
+var r = new Range(1,5);						->불변 범위
+r.from = function() { return 0; };			->메서드를 교체함으로써 변형된다.
+```
+이러한 캡슐화 기법에는 오버헤드가 있다는 것을 염두에 두자. 상태를 캡슐화하도록 클로저를 사용하는 클래스는 그렇지 않은 클래스보다 확실이 느리고 크다.
+#####7.생성자 오버로딩과 팩터리 메서드
+때로는 객체를 한 가지 이상의 방법으로 초기화 해야할 필요가 있다. 예를 들어 Complex 객체를 실수와 허수 대신 반경과 각도(극좌표)로 초기화한다거나, Set의 맴버를 생성자의 인자 대신 배열 원소들로 초기화 한다거나 하는 경우다.
+이를 위한 한 가지 방법은 생성자를 오버로드하고, 전달인자에 따라 각기 다른 초기화 작업이 수행되도록 하는 것이다. 다음은 Set 생성자의 오버로드 버전이다.
+```
+function Set() {
+	this.value = {};								->세트에 보관하는 this 객체의 프로퍼티.
+    this.n = 0;										->세트에 얼마나 많은 값이 저장되어 있는지를 나타낸다.
+    
+    //하나의 유사 배열 객체가 전달되면, 그 요소들을 세트에 추가한다. 그렇지 않으면 모든 인자를 세트에 추가한다.
+    if (arguments.length == 1 && isArrayLike(arguments[0]))
+    	this.add.apply(this, arguments[0]);
+    else if (arguments.length > 0)
+    	this.add.apply(this, arguments);
+}
+```
+이런 방식으로 Set() 생성자를 정의하면, 생성자를 호출할 떄 명시적으로 집합 원소들을 나열하거나 원소들의 배열을 생성자로 전달할 수 있다. 그러나 생성자에는 불행하게도 모호함이 있따. 맴버가 배열 하나뿐인 집합은 이 생성자를 사용하여 생성할 수 없는 것이다.(이를 가능하게 하려면 빈 집합을 만들고 add()메서드를 명시적으로 호출해야 한다.)
+극좌표로 초기화되는 복소수의 경우에는, 생성자 오버로딩이 아예 불가능하다. 극좌표건 실수-허수 표현이건 두개의 부동소수점 인자를 사용하기 때문에, 세 번째 인자를 추가하지 않는 한 인자만으로는 어떤 표현이 원하는 것인지를 판단할 방법이 업식 때문이다. 대신 팩터리 메서드를 사용할 수 있는데, 팩터리 메서드는 해당 클래스의 인스턴스를 반환하는 클래스 메서드다. 다음은 극좌표를 사용하여 초기화된 Complex 객체를 반환하는 팩터리 메서드다.
+```
+Complex.polar = function(r, theta) {
+	return new Complex(r*Math.cos(theta), r*Math.sin(theta));
+};
+```
+다음은 배열을 사용하여 집합을 초기화하는 팩터리 메서드다.
+```
+Set.fromArray = function(a) {
+	s = enw Set();											-> 빈 세트를 만든다.
+    s.add.spply(s, a);										-> 배열 a의 요소를 add 메서드에 전달한다.
+    return s;												-> 세트를 반환한다.
+}
+```
+팩터리 메서드의 매력은 메서드 이름을 원하는 대로 지을 수 있다는 점이고, 이름이 다른 메서드는 다른 방식의 초기화를 하도록 할 수 있다는 점이다. 그렇다 하더라도 생성자가 클래스를 대표하는 식별자 역할을 하기 때문에 일반적으로는 클래스마다 하나의 생성자를 둔다. 하지마느 이것은 엄격히 따라야할 규칙은 아니다. 자바스크립트에서는 하나의 프로토타입 객체를 공유하는 생성자 함수를 여러 개 정의할 수 있다. 그리고 만약 이렇게 한다면, 이떤 생성자 함수를 사용하건 생성된 객체는 같은 자료형이 될 것이다. 다음은 이러한 형식의 보조생성자이지만, 이러한 기법이 권장되지 않는다.
+```
+//Set 클래스의 보조 생성자.
+function SetFromArray(a){
+	//인자 a의 요소를 개별 인자로 전달하여, Set()을 함수로 호출하여 새 객체를 초기화 된다.
+    Set.apply(this, a);
+}
+
+//프로토타입을 설정함으로써 SetFromArray가 Set의 인스턴스를 생성하게 한다.
+SetFromArray.prototpye = Set.prototype;
+
+var s = new SetFromArray([1,2,3]);
+s instanceof Set											-> true
+```
+ECMAScript 5에서는 함수의 bind() 메서드를 사용하여 이러한 종류의 보조 생성자를 만들 수 있다.
+
+###서브 클래스
+객체 지향 프로그래밍에서 클래스 B는 다른 클래스 A를 확장(extend)하거나 클래스 A의 하위 클래스가 될 수 있다. 이런 경우, 클래스 A를 슈퍼클래스라 하고 클래스 B를 서브클래스 라고 한다. 클래스 B의 인스턴스는 클래스 A의 모든 인스턴스 메서드를 상속한다. 클래스 B는 자신만의 인스턴스 메서드를 가질 수 있고, 그중 몇 가지는 클래스 A로부터 상속받은 메서드를 똑같은 이름으로 재정의 할 수도 있다.
+클래스 B의 메서드가 클래스 A의 메서드를 재정의했을 때, 클래스 B의 재정의된 메서드에서 클래스 A의 원래 메서드를 호출할 수가 있는데, 이는 메서드 체이닝이라고 한다. 서브 클래스는 또한 자신의 서브클래스를 가질 수 있다.
+클래스 계층 구조를 사용할 때는 추상클래스를 정의하는 것이 유용한 경우도 있다. 추상 클래스는 실제로는 구현되지 않은 추상 메서드가 하나 이상있는 클래스다. 이 추상 메서드의 실제 구현은 추상 클래스를 상속한 서브클래스가 담당한다.
+자바스크립트에서 서브클래스를 만드는 핵심 프로토타입 객체를 적절하게 초기화하는 것이다. 만약 클래스 B가 클래스 A를 확장한다면 B.prototype은 반드시 A.prototype을 상속해야 한다. 그래야, 클래스 B의 인스턴스가 B.prototype을 상속하고 차례로 A.prototype을 상속하게 된다. 이번 절은 서브클래스와 관련하여 앞에서 언급한 각 용어를 다루고, 또한 서브클래스의 대안으로 조합에 대해서도 다뤄본다.
+#####1. 서브클래스 정의
+자바스크립트 객체는 클래스의 프로토타입 객체로부터 프로퍼티(보통 메서드)를 상속한다. 만약 객체 O가 클래스 B의 인스턴스이고 클래스 B가 클래스 A의 서브클래스라면, 객체 O는 틀림없이 클래스 A의 프로퍼티 또한 상속하고 있다. 클래스 B의 프로토타입 객체가 클래스 A의 프로토타입 객체를 상속했다는 것을 확실히 함으로써 이를 정리할 것이다. 이를 위해 inherit() 함수를 사용하여 다음과 같이 코드를 작성할 수 있다.
+```
+B.prototype = inherit(A.prototype);							->서브 클래스는 슈퍼클래스를 상속한다.
+B.prototype.constructor = B;								->상속된 constuctor 프로퍼티를 재정의한다.
+```
+두 줄의 코드는 자바스크립트에서 서브클래스를 만드는 핵심이다. 이러한 프로토타입 상속이 없다면 프로토타입 객체는 Object.prototype을 상속받은 평범한 객체일 뿐이고, 이는 여러분이 만든 클래스는 다른 모든 클래스처럼 Object의 서브클래스가 된다는 것을 뜻한다.
+defineClass() 함수에 위의 두줄을 추가하면, 다음예제 defineSubclass() 함수와 Function.prototype.extend()메서드로 변환할 수 있다.
+```
+//간단한 서브클래스를 생성하는 함수.
+function defineSubclass(superclass,
+						constructor,
+                        methods,
+                        statics)
+{
+	//서브클래스의 프로토타입 객체를 설정한다.
+    constructor.prototype = inherit(superclass.prototype);
+    constructor.prototype.constructor = constructor;
+    //일반적인 클래스로 다룰 수 있도록 메서드와 정적 값들을 복사한다.
+    if (methods) extend(constructor.prototype, methods);
+    if (statics) extend(consructor, statics);
+    //클래스를 반환한다.
+    return constructor;
+}
+//또한,슈퍼클래스 생성자의 메서드로 서브클래스를 생성할 수 있다.
+Function.prototype.extend = function(constructor, methods, statics) {
+	return defineSubclass(this, constructor, methods, statics);
+};
+```
+다음 예제는 defineSubclass()함수를 사용하지 않고 직접 서브클래스를 작성한다. 이 예제는 Set의 서브클래스로 SingletonSet을 정의한다. 이 클래스는 읽기 전용이고 하나의 상수 맴버만 가진 특별한 집합이다.
+```
+//생성자 함수.
+function SinglettonSet(member) {
+	this.member = member;
+}
+//Set의 프로토타입을 상속한 프로토타입 객체를 생성한다.
+SingletonSet.prototype = inherit(Set.prototype);
+
+//프로토타입에 프로퍼티를 추가한다. 이 프로퍼티들은 Set.prototype에 있는 같은 이름을 가진 프로퍼티를 재정의한다.
+extend(SingletonSet.prototype, {
+	//constructor 프로퍼티를 SingletonSet에 적합하게 설정한다.
+    consturctor: SingletonSet,
+    //이 세트는 읽기 전용이다. add()와 remove()는 에러를 발생시킨다.
+    add: function() { throw "read-only set"; },
+    remove: function() {throw "read-only set"; },
+    //SingletonSet의 크기는 언제나 1이다.
+    size: function() { return 1; },
+    //맴버가 하나만 있기 때문에 함수를 한 번만 호출하면 된다.
+    foreach: function(f, context) { f.call(context, this.member); },
+    //contains() 메서드는 간단하다. 한 가지 값에 대해서만 참이다.
+    contains: function(x) { return x === this.member; }
+});
+```
+이 클래스는 Set의 다섯 개 핵심 메서드를 구현하고 있지만, toString(), toArray(), equals() 같은 함수들은 슈퍼클래스로부터 상속한다. 이러한 메서드 상속이 서브클래스를 정의하는 이유다. 예를 들면, Set 클래스의 equals()메서드는 제대로 동작하는 size()와 foreach() 메서드가 있는 Set 객체를, 역시 제대로 동작하는 Size()와 contains() 메서드가 있는 Set 객체와 비교할 수 있다. SingletonSet은 Set의 서브클래스이기 때문에 이런 equals() 구현을 자동으로 상속하고 별도로 equals() 메서드를 따로 작성할 필요가 없다. 물론 하나의 맴버만 취급하는 SingletonSet의 특성상, SingletonSet에는 다음과 같이 equals()를 별도로 정의하는 것이 더 효율적일 것이다.
+```
+SingletonSet.prototpye.equals = function(that) {
+	return that instanceof Set && that.size() == 1 && that.contains(this.member);
+};
+```
+SingletonSet은 Set의 메서드를 정적으로 빌려오지 않는다는 점을 유념하라. 동적으로 Set클래스의 메서드를 상속하는 것이다.
+따라서 Set.prototpye에 새 메서드를 추가하면 그 즉시 Set과 SingletonSet의 모든 인스턴스는 추가한 메서드를 사용할 수 있다.(Set.prototpye에 새로 추가한 메서드와 이름이 같은 메서드가 SingletonSet에 없다고 가정한다.)
+#####2.생성자 체이닝과 메서드 체이닝
+앞 절의 SingletonSet 클래스는 완전히 새로운 집합을 구현하여, 슈퍼클래스로 부터 상속한 핵심 메서드 들을 완전히 교체하였다. 그러나 서브클래스를 정의할때 종종 메서드를 완전히 교체하지 않고, 오직 슈퍼클래스 메서드의 행위를 확장하거나 수정만 하고 싶을 때가 있다. 이를 위해 서브클래스의 생성자와 메서드는 슈퍼클래스의 생성자와 메서드를 호출, 즉 체이닝 해야 한다.
+다음 예제가 그 사례이고, 이 예제는 NonNullSet이라는 Set의 서브클래스를 정의하는데, NonNullSet은 null과 undefined값을 맴버로 허용하지 않는다. add는 이와같은 값을 테스트할 필요가 있다. 하지만 add() 메서드를 완전히 재구현하고 싶지는 않기 때문에, 슈퍼클래스의 add() 메서드를 체이닝 할 것이다.또한 NonNullSet() 생성자는 NonNullSet만을 위한 어떤 행동도 취하지 않는다. NonNullSet() 생성자는 슈퍼클래스 생성자가 새로운 객체를 초기화 할 수 있도록 인자를 슈퍼클래스의 생성자에 전달하기만 할 뿐이다.
+```
+//NonNullSet은 null과 undefined를 맴버로 허용하지 않는 Set의 서브클래스다.
+function NonNullSet() {
+	//NonNullSet을 위한 별도의 동작 없이, 단지 슈퍼클래스의 생성자를 체이닝 한다.
+    //이 생성자 호출에 의해 생성된 객체를 초기화하기 위해 슈퍼클래스의 생성자를 일반 함수처럼 호출한다.
+    Set.apply(this, arguments);
+}
+//Set의 서브클래스인 NonNullSet을 만든다.
+NonNullSet.prototype = inherit(Set.prototype);
+NonNullSet.prototpye.constructor = NonNullSet;
+
+//null과 undefined를 제외하려면, add() 메서드만 재정의하면 된다.
+NonNullSet.prototype.add = function() {
+	//인자가 null 또는 undefined인지 여부를 검사한다.
+    for( var i = 0; i < arguments.length; i++)
+    	if (arguments[i] == null) throw new Error("null 또는 undefined는 NonNullSet에 추가할 수 없습니다.");
+    
+    //실제 맴버 삽입은 슈퍼클래스의 메서드를 체이닝 하여 수행한다.
+    return Set.prototype.add.apply(this, arguments);
+};
+```
+null을 허용하지 않는 집합이라는 개념을 '필터 적용 집합'으로 일반화 해보자. 이 집합에 원소가 추가되려면, 그원소는 반드시 필터 함수를 거쳐야 한다. 이제 클래스 팩터리 함수를 정의할 텐데, 이 함수는 필터 함수를 인자로 받고 새 Set 서브클래스를 반환한다. 사실 여기서 좀 더 일반화를 할 수 있는데, 클래스 팩터리 함수가 두 개의 인자를 받도록 정의하는 것이다. 첫 인자는 서버클래스를 만들 클래스이고, 두 번째 인자 add() 메서드에 적용될 필터다. 이 팩터리 함수를 filterSetSubclass()로 부르자. 사용법은 다음과 같다.
+```
+//문자열만 저장하는 Set 클래스를 정의한다.
+var StringSet = filteredSetSubclass(Set, function(x) { return typeof x==="string"; });
+
+//null, undefined 그리고 함수를 허용하지 않는 Set 클래스를 정의한다.
+var MySet = filteredSetSubclass(NonNullSet, function(x) { return typeof x !== "function"; });
+```
+이 클래스 팩터리 함수의 코드는 다음에 나와있다. NonNullSet에서 다루었던 생성자 체이닝과 메서드 체이닝을 클래스 팩터리 함수가 어떻게 수행하는지 살펴보자.
+```
+//이 함수는 Set 서브클래스의 add() 메서드에 지정된 필터를 적용하여 재정의된 클래스를 반환한다.
+function filteredSetSubclass(superclass, filter) {
+	var constructor = function() {
+    	superclass.apply(this, arguments);
+    };
+    var proto = constructor.prototype = inherit(superclass.prototype);
+    proto.constructor = constructor;
+    proto.add = function() {
+    	//값을 추가하기 전에 모든 인자에 대해 필터를 적용한다.
+        for (var i = 0, i < arguments.length; i++) {
+        	var v = arguments[i];
+            if (!filter(v)) throw("value " + v + " rejected by filter");
+        }
+        //슈퍼 클래스의 add 메서드에 체이닝 한다.
+        superclass.prototype.add.apply(this, argument);
+    };
+    return constructor;
+}
+```
+위의 예제의 흥미로운 점은 서브클래스를 생성하는 코드를 함수로 래핑함으로써, 서브클래스 생성자에서 superclass 인자를 사용할 수 있게 되었고, 실제 하드 코딩된 슈퍼클래스 이름 대신 메서드 체이닝 코드를 사용할 수 있따는 점이다. 이는, 만약 여러분이 슈퍼클래스를 변경하고 싶다면 코드에서 슈퍼클래스가 나오는 모든 위치를 찾아 바꾸지 않고, 한 부분만 변경하면 된다는 뜻이다.
+이것은 클래스 팩터리 이외의 경우에도 사용할 가치가 있는 기법이다. 일례로, 래퍼 함수와 Function.prototype.extends() 메서드를 사용하면 NonNullSet을 다음과 같이 재작성할 수 있다.
+```
+NonNullSet = (function() {
+	var superclass = Set;
+    return superclass.extend(
+    	function() { superclass.apply(this, arguments); },
+        {
+        	add : function() {
+            	//인자 null또는 undefined 여부를 검사한다.
+                for(var i = 0; i < arguments.length; i++)
+                	if( arguments[i] == null) throw new Error("null 또는 undefined는 추가할 수 없습니다.");
+                //실제 맴버 삽입은 슈퍼클래스의 메서드를 체이닝하여 수행한다.
+                return superclass.prototype.add.apply(this, arguments);
+            }
+        });
+}());
+```
+강조하건대, 이런 형태의 클래스 팩터리를 구현할 수 있는 것은 자바스크립트의 동적인 특성 때문이다. 자바나 C++같은 언어에는 클래스 팩터리와 같은 강력하고 유용한 기능이 없다.
