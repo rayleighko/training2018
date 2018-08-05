@@ -1189,3 +1189,278 @@ var ArraySet = AbstractWritableSet.extend(
     }
 );
 ```
+###ECMAScript 5 클래스
+ECMAScript 5에는 프로퍼티 속성(getter, setter, 열거여부, 쓰기여부, 설정여부)을 지정하는 메서드와 객체 확장을 제한하는 메서드가 추가되었다.
+#####1. 열거되지 않는 프로퍼티 만들기
+Set 클래스는 어떤 객체를 집합 원소로 저장하기 위해 집합에 추가되는 모든 객체에 'object id'프로퍼티를 추가하는 트릭을 사용했다. 만약 나중에 다른 코드가 for/in 루프에서 이 객체를 사용하면, 임의로 추가한 'object id' 프로퍼티로도 열거될 것이다. ECMAScript 5 에서는 해당 프로퍼티를 열거할 수 없도록 하여 이런 상황을 피할 수 있다. 다음 예제는 Object.defineProperty()를 사용하여 프로퍼티를 열거할 수 없게 하는 방법을 보여준다. 또한 getter 함수 여부, 객체 확장 기능 여부를 어떻게 테스트할 수 있는지도 다루고 있다.
+```
+//코드를 함수로 둘러싸서 함수 유효범위 안에서만 변수를 정의할 수 있다.
+(function () {										->자기 호출 함수 : 해석과 동시에 실행되는 코드블럭
+	//모든 객체가 상속하는 objectId 프로퍼티를 정의하지만, 이 프로퍼티는 열거되지 않는다.
+    //이 프로퍼티가 읽힐 때 getter 함수가 호출되는데 setter 함수는 없기 때문에 이 프로퍼티는 읽기 전용이다.
+    //또한 프로퍼티 속성을 설정 할 수 없기 떄문에, 이 프로퍼티는 임의로 삭제될 수 없다.
+    Object.defineProperty(Object.prototype, "objectId", {
+    									get: idGetter,						->값을 얻기 위한 메서드.
+                                        enumerable: false,					->열거되지 않음.
+                                        configurable: false});				->삭제할 수 없음.
+    
+    //이 함수는 objectId가 읽힐 때 호출되는 getter 함수다.
+    function idGetter() {													->id를 반환하는 getter 함수.
+    	if(!(idprop in this)) {												->만약 객체에 id가 없고
+        	if(!object.isExtensible(this)) 									->만약 객체를 확장할 수 없다면,
+            	throw Error("Can`t define id for nenextensible objects");
+            object.defineProperty(this, idprop, {							->idprop을 생성한다.
+            					value: nextid++,							->idprop의 값.
+                                writable: false,							->읽기 전용을 나타냄
+                                enumerable: false,							->열거되지 않음.
+                                configurable: false});						->프로퍼티를 삭제할 수 없음.
+        }
+        return this[idprop];										->기존 프로퍼티 값이나 새로 만든 프로퍼티 값을 반환한다.
+    };
+    //다음 변수들은 idGetter()에서 사용되고 이 함수에서만 유효하다.
+    var idprop = "|**objectId**|";											->이런 프로퍼티 이름은 사용되지 않는다 가정한다.
+    var nextid = 1;															->시작 id 값을 지정.
+}());														-> 코드를 바로 실행하기 위해 래퍼 함수를 호출.
+```
+#####2. 변경되지 않는 클래스 정의하기
+변경되지 않는 인스턴스를 만드는 클래스를 정의할 때 편리하다. 다음 예제는 Range 클래스의 불변 버전으로서, Object.definedProperties()와 object.create()를 사용하여 불변성을 구현한다. 또한, Range클래스는 Object.defineProperties()를 사용하여 Range 클래스의 프로토타입 객체를 만들고, 인스턴스 메서드를 열거되지 않도록 변경한다. 그리고 거기서 더 나아가 인스턴스 메서드들을 읽기 전용으로 설정하고, 삭제될수 없게 하며, 실행 중에 대체 될 수 없도록 한다. 마지막으로 한가지 흥미로운 점은, 이 예제의 생성자 함수는 new 키워드 없이 호출하면 팩터리얼 함수로 동작한다는 것이다.
+```
+//이 함수는 new 키워드를 사용하면 생성자로, 그렇지 않으면 팩터리 함수로 작동한다.
+function Range(from, to) {
+	//다음은 읽기 전용 프로퍼티인 from과 to에 대한 프로퍼티 디스크립터 객체다.
+    var props = {
+    	from: {value:from, enumerable: true, writable:false, configurable: false},
+        to: {value:from, enumerable: true, writable:false, configurable: false}
+    };
+    if(this instanceof Range)									->이 함수가 생성자로 호출되면
+    	Object.definePropertyies(this, props);					->this 객체에 프로퍼티를 정의한다.
+    else														->그렇지 않으면 팩터리 함수이고,
+    	return Object.create(Range.prototype, props);			->새로운 Range 객체를 생성하고 props를 설정한 다음 반환한다
+}
+//같은 방식으로 Range.prototype 객체의 프로퍼티에도 프로퍼티 속성을 설정할 수 있다.
+//다음 코드에서는 enumerable, writable, configurable 속성을 지정하지 않았기 때문에,
+//그 값들은 기본적으로 모두 false이다.
+object.defineProperties(Range.prototype, {
+	includes: {
+    	value: function(x) { return this.from <= x && x <= this.to; }
+    },
+    foreach: {
+    	value: function(f) {
+        	for(var x = Math.ceil(this.from); x <= this.to; x++) f(x);
+        }
+    },
+    toString: {
+    	value: function() { return "(" + this.from + "..." + this.to + ")"; }
+    }
+});
+```
+위 예제에서 변경할 수 없고 열거되지 않는 프로퍼티를 정의하기 위해 Object.defineProperties()와 Object.create()를 사용했다. 이 메서드들은 강력하지만, 해당 메서드에 전달해야 하는 프로퍼티 디스크립터 객체는 코드를 읽기 어렵게 만들수 있다. 대안은 이미 정의된 프로퍼티 속성을 수정할 수 있는 유틸리티 함수를 정의하는 것이다.
+```
+//객체 o의 프로퍼티 중 지정한 이름을 가진 프로퍼티의 값을 변경할 수 없게 하고, 설정될(configurable) 수도 없게 한다.
+function freezeProps(o) {
+    var props = (arguments.length == 1)									->인자가 하나라면,
+    	? Object.getOwnPropertyNames(o)									->대상은 모든 프로퍼티이다.
+        : Array.prototype.splice.call(arguments, 1);					->아니면 지정한 이름의 프로퍼티만.
+    props.forEach(function(n) {
+       	//원래부터 설정될 수 없는 프로퍼티는 무시한다.
+        if (!Object.getOwnPropertyDescriptor(o, n).configurable) return;
+        Object.defineProperty(o, n, { writable: false, configurable: false });
+    });
+    return o;
+}
+//객체 o의 프로퍼티 중 지정된 이름을 가진 프로퍼티를 열거되지 않게 한다.
+//단, 해당 프로퍼티가 설정될 수 있어야 한다.
+function hideProps(o) {
+  	var props = (arguments.length == 1)								->인자가 하나라면,
+		? Object.getOwnPropertyNames(o)								->대상은 모든 프로퍼티.
+		:Array.prototype.splice.call(arguments, 1);				->아니면 지정한 이름의 프로퍼티만
+    props.forEach(function(n) {								->각 프로퍼티를 for/in 루프에 의해 열거되지 않도록 한다.
+     	//설정할 수 없는 프로퍼티는 무시한다.
+        if (!Object.getOwnPropertyDescriptor(o, n).configurable) return;
+        Object.defineProperty(o, n, { enumerable: false });
+    });
+    return o;
+}
+```
+#####3.객체 상태를 캡슐화하기
+이전 예제에서 생성자의 변수나 인자를 해당 생성자로 만든 객체의 private 상태처럼 사용하는 방법을 살펴보았다. 이 방법의 단점은, ECMAScript 3에서는 해당 private 상태에 점근할 수 있는 접근자 메서드를 임의로 교체할 수 있다는 것이다. ECMAScrip 5에서는 삭제할 수 없는 getter/setter 메서드 프로퍼티를 정의할 수 있으므로, 좀 더 견고한 캡슐화를 실현할 수 있다.
+```
+//이 Range 클래스의 from, to 프로퍼티는 변경될 수 있지만, 언제나 from 값이 to 값보다 같거나 작은 상태를 유지한다.
+//시작점과 끝점 변수를 캡슐화하고 있다.
+function Range(from, to) {
+	//인스턴스가 생성될 때 올바른 값이 지정되었는지를 검증한다.
+    if (from > to) throw new Error("Range: from must be <= to");
+    //항상 from <= to를 유지하는 접근자 메서드를 정의한다.
+    function getFrom() { return from; }
+    function getTo() { return to; }
+    function setFrom(f) {										->form 값이 to보다 크게 설정되지 않게 한다.
+    	if(f <= to) from = f;
+        else throw new Error("Range: from must be <= to");
+    }
+    function setTo(t) {
+    	if(t >= from) to = t;									->to값이 from보다 작게 설정되지 않도록 한다.
+        else throw new Error("Range: to must be >= from");
+    }
+    //열거될 수 있고 설정되지 않는 프로퍼티들을 정의한다.
+    //이 프로퍼티들은 접근자 메서드를 사용한다.
+    Object.definePropertyies(this, {
+    	from: {get: getFrom, set: setFrom, enumerable: true, configurable: false},
+        to: {get: getTo, set: setTo, enumerable: true, configurable: false}
+    });
+}
+//프로토타입 객체는 이전의 예제와 동일하다.
+//인스턴스 메서드는 from과 to로 일반적인 프로퍼티처럼 읽을 수 있다.
+Range.prototype = hideProps({
+	constructor: Range,
+    includes: function(x) { return this.from <= && x <= this.to; },
+    foreach: function(f) { for(var x = Math.ceil(this.from); x <= this.to; x++) f(x); },
+    toString: function() { return "(" + this.from + "..." + this.to + ")"; }
+});
+```
+#####4.클래스 확장 막기
+프로토타입 객체에 새 메서드를 추가하여 클래스를 동적으로 확장하는 기법은 보통 자바스크립트의 기본 기능으로 간주된다. 그러나 ECMAScript 5에서는 원한다면 이를 금지할 수 있다. 
+Object.preventExtensions()는 객체를 확장할 수 없게 하는데 이는 해당 객체에 새로운 프로퍼티가 추가될 수 없다는 뜻이다.
+Object.seal()은 새로운 프로퍼티가 추가되는 것을 막을 뿐만 아니라, 현재 객체에 있는 모든 프로퍼티를 재설정될 수 없게 한다. 따라서 프로퍼티들은 삭제될 수 없다. 값 변경은 여전히 가능하다.
+```
+Object.seal(Object.prototype);
+```
+자바스크립트에서는 또한 객체의 메서드를 동적으로 교체할 수 있다.
+```
+var original_sort_method = Array.prototpye.sort;
+Array.prototype.sort = function() {
+	var start = new Date();
+    original_sort_method.apply(this, arguments);
+    var end = new Date;
+    console.log("Array sort took " + (end - start) + " milliseconds.");
+};
+```
+인스턴스 메서드를 읽기 전용으로 만들려면 이런 변경을 막을 수 있다. 앞에서 정의한 freezeProps() 유틸리티 함수는 이러한 목적을 달성하는 한가지 방법이다.
+또 한가지 방법은 Object.freeze()를 사용하는 것으로, Object.freeze()는 Object.seal()의 모든 과정을 수행하고 추가로 모든 프로퍼티를 읽기 전용으로 설정하며 또한 재설정할 수 없도록 만든다.
+읽기 전용 프로퍼티는 만약 객체 o가 읽기전용 프로퍼티 p를 상속했다면, o.p에 무언가를 할당하려는 시도는 실패할 것이고, 객체 o에 새로운 프로퍼티도 생성되지 않을 것이다. 재정의를 하려면 Object.defineProperty()나 Object.defineProperties()를 사용해야 하고, 새 프로퍼티를 만들려면 Object.create를 사용해야 한다.
+#####5.서브클래스의 ECMAScript 5
+ECMAScript 5의 기능을 사용하여 서브클래스를 만드는 방법을 보여준다. 이전 예제에 나온 AbstractWritableSet 클래스의 서브클래스로 StringSet클래스를 정의한다. 이 예제의 주된 기능은 Object.create() 메서드를 사용하여 슈퍼클래스의 프로토타입을 상속한 프로토타입 객체를 만드는 것과 새로 만들어진 객체의 프로퍼티를 정의하는 것이다. 앞서 언급했듯이 Object.create() 사용과 관련해서 어려운 점은, 다루기 까다로운 프로퍼티 디스크립터를 사용해야 한다는 것이다.
+다른 흥미로운 점은 아무 것도 상속하지 않은 객체를 생성하기 위해 Object.create()에 null을 전달한다는 것이다. 집합의 원소를 지정하는 데 사용되는 이 객체는 프로토타입을 가지고 있지 않기 때문에 hasOwnProperty() 메서드 대신 in 연산자를 사용할 수 있다.
+```
+function StringSet() {
+	this.set = Object.create(null)
+    this.n = 0;
+    this.add.apply(this, arguments);
+}
+//Object.create를 사용하면 한 번의 호출로 슈퍼클래스의 프로토타입을 상속하고 메서드 또한 정의할 수 있다는 점을 주목하라.
+//writable, enumerable 그리고 configurable 속성 중 어떤 것도 지정하지 않았기 때문에,
+//이들 프로퍼티의 속성은 기본 값인 false로 설정된다.
+//이 클래스에 읽기 전용 메서드를 정의하면, 이 클래스의 서브 클래스를 정의하기가 까다로워질 수 있다.
+StringSet.prototype = Object.create(AbstractWritableSet.prototype, {
+	constructor: { value: StringSet },
+    contains: { value: function(x) { return x in this.set; }},
+    size: { value: function(x) { return this.n; }},
+    foreach: { value: function(f,c) { Object.keys(this.set).forEach(f,c);}},
+    add: {
+    	value: functino() {
+        	for(var i = o; i < arguments.length; i++) {
+            	if(!(arguments[i] in this.set)) {
+                	this.set[arguments[i]] = true;
+                    this.n++;
+                }
+            }
+            return this;
+        }
+    },
+    remove: {
+    	value: function() {
+        	for(var i = 0; i < arguments.length; i++) {
+            	if(arguments[i] in this.set) {
+            		delete this.set[arguments[i]];
+                    this.n--;
+            	}
+            }
+            return this;
+        }
+    }
+})
+```
+#####6.프로퍼티 디스크립터
+이번에는 ECMAScript 5프로퍼티와 관련한 여러 작업을 보여주는 확장된 예제를 보여준다.
+다음 예제는 properties() 메서드(열겨되지 않는)를 Object.prototpye에 추가한다. 이 메서드는 프로퍼티 목록을 나타내는 객체를 만환하고, 이 객체에는 프로퍼티와 프로퍼티 속성을 표시(디버깅 유용)하고, 프로퍼티 디스크립터(프로퍼티를 프로퍼티 속성과 함께 복사하려 할 때 필요하다.)를 얻고, 프로퍼티 속성을 설정(앞서 정의한 hideProps와 freezePros 함수의 대안)하는데 유용한 메서드들이 있다. 이 예제는 ECMAScript 5의 프로퍼티와 관련된 대부분의 기능을 다룰 뿐 아니라, 다음 절에서 설명할 모듈화 코딩 기법도 사용하고 있다.
+```
+//Object.prototype에 properties() 메서드를 정의한다.
+//이 메서드는, 메서드를 호출한 객체에서 지정한 이름을 가진 프로퍼티를 나타나는 객체를 반환한다.
+//(아무 인자없이 호출되면 호출한 객체의 모든 프로퍼티를 포함한 객체를 반환한다.)
+//반환된 객체에는 toString()과 descriptors(), hide(), show() 같은 유용한 메서드가 정의되어 있다.
+(function namespace() {												->모든것을 private 함수 유효범위로 둘러싼다.
+	//이 함수는 모든 객체의 메서드가 된다.
+    function properties() {
+    	var names;													->프로퍼티 이름 배열
+        if (arguments.length == 0)									->이 객체에 있는 모든 프로퍼티가 대상이다.
+        	name = Object.getOwnPropertyNames(this);
+        else if (arguments.length == 1 && Array.isArray(arguments[0]))
+        	names = arguments[0];									->아니면 프로퍼티 이름을 저장한 배열이거나,
+        else														->아니면 인자 목록에서 이름들을 얻는다.
+        	names = Array.prototype.splice.call(arguments, 0);
+        return new Properties(this, names);			->지정된 이름에 대한 프로퍼티를 나타내는 properties객체를 반환한다
+    }
+    //이 함수는 Object.prototype의 열거되지 않는 프로퍼티로 설정한다.
+    //properties 프로퍼티가 이 private 함수 유효범위에서 외부로 내보내는 유일한 값이다.
+    Object.defineProperty(Object.prototype, "properties", {
+    	value: properties,
+        enumerable: false, writable: true, configurable: true
+    });
+    //이 생성자 함수는 앞의 properties() 함수에 의해 호출된다.
+    //properties 클래스는 객체 프로퍼티들의 집합을 나타낸다.
+    function Properties(o, names) {
+    	this.o = o;													->프로퍼티가 속한 객체
+        this.names = names;											->프로퍼티 이름.
+    }
+    //이 객체가 나타내는 프로퍼티들을 열거되지 않게 만든다.
+    Properties.prototype.hide = function() {
+    	var o = this.o, hidden = { enumerable: false };
+        this.names.forEach(function(n) {
+        	if(o.hasOwnProperty(n))
+            	Object.defineProperty(o, n, hidden);
+        });
+        return this;
+    };
+    //이 객체가 나타내는 프로퍼티들을 읽기 전용으로, 그리고 설정될 수 없도록 만든다.
+    Properties.prototype.freeze = functiion() {
+    	var o = this.o, frozen = { writable: false, configurable: false };
+        this.names.forEach(function(n) {
+        	if(o.hasOwnProperty(n)) Object.defineProperty(o, n, frozen);
+        });
+        return this;
+    };
+    //프로퍼티 이름과 디스크립터를 매핑하는 객체를 반복한다.
+    //만약 프로퍼티를 프로퍼티 속성과 함께 복사하고 싶다면 다음과 같이 사용한다.
+    //Object.defineProperties(dest, src.properties, descriptors());
+    Properties.prototype.descriptors = function() {
+    	var o = this.o, desc = {};
+        this.names.forEach(function(n) {
+        	if(!o.hasOwnProperty(n)) return
+            desc[n] = Object.getOwnPropertyDescriptor(o,n);
+        });
+        return desc;
+    };
+    //프로퍼티 이름, 값, 속성을 나열하여 프로퍼티 목록을 보기 좋은 형태의 문자열로 변환한다.
+    //설정(configurable)될 수 없음을 뜻하는 용어로 "permanent"를 사용하고, 
+    //값을 변경할 수 없음을 의미하는 용어로 "readonly"를,
+    //그리고 열거되지 않음을 뜻하는 용어로 "hidden"을 사용한다.
+    //일반적으로 enumerable, writable, configurable 프로퍼티에는 나열될 속성이 없다.
+    Properties.prototype.toString = function() {
+    	var o = this.o;											->아래 중첩 함수 nameToString()에서 사용한다.
+        var lines = this.names.map(nameToString);
+        return "{\n " + lines.join(",\n ") + "\n}";
+        
+        function nameToString(n) {
+        	var s = "", desc = Object.getOwnPropertyDescriptor(o, n);
+            if (!desc) return "nonexistent " + n + ": undefined";
+            if (!desc.configurable) s += "permanent ";
+            if (!desc.get && !desc.set) || !desc.writable) s += "readonly ";
+            if (!desc.enumerable) s += "accessor " + n
+            if (desc.get || desc.set) s += "accessor " + n
+            else s += n + ": " + ((typeof desc.value === "function")?"function":desc.value);
+            return s;
+        }
+    };
+    //마지막으로 이 예제에서 정의한 메서드를 사용하여, prototype.object의 인스턴스 메서드를 열거되지 않게 만든다.
+    Properties.prototype.properties().hide();
+}());	//함수를 정의하자마자 둘러싼 함수를 호출한다.
+```
