@@ -125,7 +125,7 @@ Range.prototype = {							->역 참조를 위해 constructor 프로퍼티를 명
 일반적으로 사용하는 또 다른 기법은, constructor 프로퍼티가 있는 미리 정의되어 있는 prototype 객체를 사용하는 것이다. 거기에 하나씩 메서드를 추가해 가면 된다.
 ```
 //미리 정의되어 있는 Range.prototype 객체를 확장하기 때문에, 자동으로 생성된 Range.prototype.constructor 프로퍼티를 덮어쓰지 않는다.
-Range.prototype.includes = function(x) { return this.from<=x && x<=this.to; };
+Range.prototype.includes = function(x) { return this.from <= x && x <= this.to; };
 Range.prototype.foreach = function(f) {
 	for( var x = Math.ceil(this.from); x <= this.to; x++ ) f(x);
 };

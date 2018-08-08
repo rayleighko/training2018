@@ -60,7 +60,7 @@ function inherit(a) {
     
     if (t == "object" && t !== "function") throw TypeError();
     function f() {};
-    f.prototype = p;
+    f.prototype = a;
     return new f();
 }
 ```

@@ -520,7 +520,7 @@ function addPrivateProperty(o, name, predicate) {
     o["get" + name] = function() { return value; };
     
     o["set" + name] = function(v) {
-    	if(predicate && !predicate(v))
+    	if(predicate && !predicate(v))						->??
         	throw Error("set" + name + ": 유효하지 않은 값 " + v);
         else
         	value = v;
