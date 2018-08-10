@@ -447,3 +447,124 @@ finally {
 	//finally 절은 별 다를 바 없이 작동한다.
 }
 ```
+###E4X: XML을 위한 ECMAScript
+E4X로 더 잘 알려진 XML을 위한 ECMAScript는, 자바스크립트에 대한 표준 확장으로서 XML 문서를 처리하는 데 필요한 강력한 기능들을 포함하고 있다.
+E4X는 XML 문서를 XML 객체(또는 XML 문서의 요소나 속성)로 표현하고, XML조각(공통된 부모에 포함되어 있지 않은 하나 이상의 XML요소)을 밀접한 관계의 XMLList 객체로 표현한다. 이번 절 전체에서 XML 객체를 생성하고 XML 객체를 다루는 여러 방법을 살펴보자. XML객체는 근본적으로 새로운 종류의 객체고, XML 객체를 지원하는 특수 목적 E4X 문법 또한 그렇다. 알다시피 typeof 연산자는 함수가 아닌 모든 표준 자바스크립트 객체에 대해 "object"를 반환한다. 함수가 그렇듯, XML 객체는 일반적인 자바스크립트 객체와 다르고 typeof 연산자는 XML 객체에 대해 "xml"을 반환한다. XML객체가 클라이언트 측 자바스크립트에서 사용하는 DOM 객체와 관련이 없다는 사실은 중요하다.
+```
+//XML 객체를 생성한다.
+var pt =
+	<periodictable>
+    	<element id = "1"><name>Hydrogen</name></element>
+        <element id = "2"><name>Helium</name></element>
+        <element id = "3"><name>Lithium</name></element>
+	</periodictable>
+//주기율표(periodictable)에 새 요소를 추가한다.
+pt.element += <element id="4"><name>Beryllium</name></element>;
+```
+E4X의 XML 리터럴 문법은 중괄호를 이스케이프 문자로 사용하고, 이를 통해 자바스크립트 표현식을 XML 내에둘 수 있다. 다음 예는 방금 보았던 XML요소를 생성하는 다른 방법이다.
+```
+pt = <periodictable></periodictable>;
+var elements = ["Hydrogen", "Helium", "Lithium"];
+//배열을 사용하여 XML 태그를 만든다.
+for(var n = 0; n <elements.length; n++) {
+	pt.element += <element id={n+1}><name>{element[n]}</name></element>;
+}
+```
+이러한 리터럴 문법 외에도 문자열로부터 해석된 XML 또한 사용할 수 있다. 다음 코드는 주기율표에 새로운 요소를 추가한다.
+```
+pt.element += new XML('<element id="5"><name>Boron</name></element>');
+```
+여러 XML 조각을 한번에 처리해야할 때는 XML() 대신 XMLList를 사용한다.
+```
+pt.element += new XMLList('<element id="6"><name>Carbon</name></element>'
+	+ '<element id="7"><name>Nitrogen</name></element>');
+```
+한번  XML 문서가 정리되면, E4X에서 제공하는 직관적인 문법을 사용하여 XML 문서의 내용에 접근할 수 있다.
+```
+var elements = pt.element;			->모든 <element> 태그의 목록으로의 평가된다.
+var names = pt.element.name;		->모든 <name> 태그의 목록으로 평가된다.
+var n = names[0];					->"Hydrogen": <name> 태그의 0번째 내용.
+```
+마침표가 두 개 붙은 ..연산자는 자손연산자이고, 이 연산자를 일반 맴버 접근 연산자.을 사용하는 곳에 사용하는 곳에 사용할 수 있다.
+```
+//모든 <name> 태그의 목록을 얻는 또 다른 방법이다.
+var names2 = pt..name;
+```
+E4X는 와일드카드 연산자도 지원한다.
+```
+//모든 <element> 태그의 모든 하위 태그를 얻는다.
+//이것은 모든 <name> 태그의 목록을 얻는 또 다른 방법이다.
+var names3 = pt.element.*;
+```
+E4X에서 속성 이름은 @ 문자를 사용하여 태그 이름과 구분할 수 있다.
+```
+//Helium의 원소 번호는 몇번인가?
+var atomicNumber = pt.element[1].@id;
+```
+속성 이름에 대한 와일드카드 연산자는 @*이다.
+```
+//모든 <element> 태그의 전체 속성 목록.
+var atomicNums = pt.element.@*;
+```
+E4X에는 임의의 단정 표현식을 사용하여 목록을 걸러내는 문법이 정의되고 있고, 이 문법은 강력하고도 매우 간결하다.
+```
+//모든 요소에 대해 id 속성이 3보다 작은 요소만 포함한다.
+var lightElements = pt.element.(@id < 3);
+//모든 요소에 대해 태그 이름이 "B"로 시작하는 것만 포함하고,
+//걸러낸 각각의 element 태그 아래에 <name>태그를 만든다.
+var bElementNames = pt.element.(name.charAt(0) == 'B').name;
+```
+XML 태그와 속성 목록을 순회하기 위해 E4X표준이 정한 것이다. for/each는 for/in과 비슷하다는 점을 떠올려보라. 둘의 차이는 for/in이 객체의 프로퍼티를 순회하고, for/each는 객체의 프로퍼티 값을 순회한다는 점이다.
+```
+//주기율 테이블의 각 요소의 이름을 출력한다.
+for each (var e in pt.element) {
+	console.log(e.name);
+}
+//요소의 원자 번호를 출력한다.
+for each (var n in pt.element.@*)
+	console.log(n);
+```
+E4X 표현식은 할당 표현식의 왼쪽에 나올 수 있다. 따라서 이미 존재하는 태그와 속성을 변경할 수 있고, 새로운 태그와 속성을 추가할 수도 있다.
+```
+//Hydrogen에 대한 <element> 태그에 새로운 속성을 추가하고 새로운 하위 요소를 추가하여 다음과 같은 구조로 만든다.
+//<element id="1" symbol="H">
+//	<name>Hydrogen</name>
+//	<weight>1.00794</weight>
+//</element>
+pt.element[0].@symbol = "H";
+pt.element[0].weight = 1.00794;
+```
+속성과 태그를 제거하는 것 또한 표준 delete 연산자를 사용하여 쉽게 할 수 있다.
+```
+delete pt.element[0].@symbol;			->속성을 삭제한다.
+delete pt..weight;						->모든 <weight> 태그를 삭제한다.
+```
+E4X는 XML 객체에 몇 가지 메서드들을 정의하고 있는데, 다음 코드는 그 중 하나인 insertChildBefore()에 대한 예다.
+```
+pt.insertChildBefore(pt.element[1], <element id="1"><name>Deuterium</name></element>);
+```
+E4X는 XML 네임스페이스를 완전히 인식하며, XML네임스페이스에 대한 문법과 API를 제공한다.
+```
+//"default xml namespace" 구문을 사용하여 기본 네임스페이스를 정의한다.
+default xml namespace = "http://www.w3.org/1999/xhtml";
+
+//몇 개의 svg 태그를 가진 xhtml 문서다.
+d = <html>
+		<body>
+        	이것은 작고 빨간 사각형이다.
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+            	<rect x="0" y="0" width="10" height="10" fill="red"/>
+            </svg>
+        </body>
+    <html>
+
+//body 요소, 네임스페이스 uri, 지역 이름(네임스페이스 접두사가 붙이 않은 이름)
+var tagname = d.body.name();
+var bodyns = tagname.uri;
+var localname = tagname.localName;
+
+//<svg> 요소를 선택하는 것은 까다로운데, 이는 svg가 기본 네임스페이스가 없기 때문이다.
+//따라서 svg에 대한 Namespace 객체를 생성하고, :: 연산자를 사용하여 네임스페이스를 태그이름에 추가한다.
+var avg = new Namespace('http://www.w3.org/200svg');
+var color = d.svg::rec.@fill									->color 변수의 값은 "red" 이다.
+```
