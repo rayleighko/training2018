@@ -165,3 +165,167 @@ server.on("connection", function(stream) {
 });
 ```
 기본 "net" 모듈 외에도 노드는 내장된 "http"모듈을 통해 HTTP 프로토콜을 지원하고 있다. 다음 예제에서 좀 더 자세히 다루자.
+#####1.노드 예제: HTTP 서버
+이 서버는 현재 디렉터리의 파일을 제공하고 또한 특별한 목적을 지닌 두 URL을 구현한다. 이 서버는 노드의 "http"모듈과 앞에서 다룬 파일 API와 스트림 API를 사용한다.
+```
+//이것은 간단한 NODEJS HTTP 서버로 현재 디렉터리의 파일을 제공하며
+//테스트를 위한 특별한 두 가지 URL을 구현한다.
+//http://localhost:8000이나 http://127.0.0.1:8000를 통해 서버에 연결할 수 있다.
+
+//먼저, 사용할 모듈을 불러온다.
+var http = require('http');
+var fs = require('fs');
+
+var server = new http.Server();
+server.listen(8000);
+
+//노드는 이벤트 핸들러를 등록하기 위해 "on()" 메서드를 사용한다.
+//서버가 새로운 요청을 받으면, 요청을 처리하기 위해 이 함수를 실행한다.
+server.on("request", function (request, response) {
+	//요청 URL을 분석한다.
+    var url = require('url').parse(request.url);
+    
+    //응답을 보내기 전에 잠시 대기하는 URL
+    //이는 느린 네트워크 연결을 시뮬레이션 하는 데 유용하다.
+    if(url.pathname === "/test/delay") {
+    	//쿼리 문자열의 지연 값을 사용하거나 기본으로 2000밀리초를 지정한다.
+        var delay = parseInt(url.query) || 2000;
+        //응답 상태 코드와 헤더를 설정한다.
+        response.writeHead(200, {"Content-Type": "text/plain; charset=UTF-8"});
+        //응답 본문을 출력한다.
+        response.write("Sleeping for " + delay + "milliseconds...");
+        //그리고 setTimeout을 통해 나중에 호출되는 함수에서 응답을 종료하게 한다.
+        setTimeout(function() {
+        	response.write("done.");
+            response.end();
+        }, delay);
+    }
+    //요청 URL이 "/test/mirror"라면, 요청을 그대로 다시 돌려 보낸다.
+    //요청 헤더와 본문을 보고자 할 때 유용하다.
+    else if (url.pathname === "/test/mirror") {
+    	//응답 상태와 헤더
+        response.writeHead(200, {"Content-Type": "text/plain; charset=UTF-8"});
+        //응답 본문을 요청 내용으로 쓰기 시작.
+        response.write(request.method + " " + request.url + "HTTP/" + request.httpVarsion + "\r\n");
+        //요청 헤더
+        for(var h in request.headers) {
+        	response.write(h + ": " + request.headers[h] + "\r\n");
+        }
+        response.write("\r\n");									->빈 줄을 추가하여 헤더 출력을 끝냄
+        //이벤트 핸들러 함수에서 응답을 완료함.
+        //요청 본문의 청크를 수신하는 대로, 응답에 추가한다.
+        request.on("data", function(chunk) { response.write(chunk); });
+        //요청이 끝에 이르면, 응답 역시 완료된다.
+        request.on("end", function(chunk) { response.end(); });
+    }
+    //그렇지 않으면 로컬 디렉터리의 파일을 제공한다.
+    else {
+    	//로컬 파일 이름을 얻고 확장자를 기반으로 콘텐츠 형식을 정한다.
+        var filename = url.pathname.substring(1);						->제일 앞의 슬래시를 제거
+        var type;
+        switch(filename.substring(filename.lastIndexOf(".")+1)) {		->확장자
+        	case "html":		
+            case "htm":			type = "text/html; charset=UTF-8; break;
+            case "js":			type = "application/javascript; charset=UTF-8"; break;
+            case "css":			type = "text/css; charset=UTF-8"; break;
+            case "txt":			type = "text/plain; charset=UTF-8"; break;
+            case "manifest":	type = "text/cache-manifest; charset=UTF-8"; break;
+            default:			type = "application/octet-stream"; break;
+        }
+        
+        //비동기적으로 파일을 읽고, 읽은 내용을 콜백 함수에 단일 청크로 전달한다.
+        //매우 큰 파일에 대해서는, fs.createReadStream()과 스트리밍 API를 사용하는 편이 더 좋다.
+        fs.readFile(filename, function(err, context) {
+        	if(err) {													->어떠한 이유로 파일을 읽을 수 없다면
+            	response.writeHead(404, {								->404 Not Foun 상태를 전송
+                	"Content-Type": "Text/plain; charset=UTF-8"
+                });
+                response.write(err.message);							->간단한 에러 메시지 본문
+                response.end();											->완료
+            }
+            else {														->아니면, 파일을 정상적으로 읽었다.
+            	response.writeHead(200, {"Content-Type": type});		->상태 코드와 MIME 형식을 설정한다.
+                response.write(content);								->파일 내용을 응답 본문으로 보낸다.
+                reponse.end();											->완료
+            }
+        });
+    }
+});
+```
+#####2.노드 예제: HTTP 클라이언트 유틸리티 모듈
+HTTP GET과 POST 요청을 보내는 유틸리티 함수를 정의하려고 "http" 모듈을 사용한다. 예제는 "httputils" 모듈로 구조화 되었고, 다음과 가팅 코드에서 사용할 수 있다.
+```
+var httputiles = require("./httputils");				->".js" 접미사가 없는 것에 유의
+httputils.get(url, function(status, headers, body) { console.log(body); });
+```
+require() 함수는 모듈 코드를 실행할 때 eval()을 사용하지 않는다. 모듈 코드는 어떤 전역 변수도 정의할 수 없고 전역 네임스페이스를 젼경할 수도 없는 특별한 환경에서 해석되고 처리된다. 이 특별한 환경에는 exports라는 이름을 가진 전역 객체가 존재한다. 모듈은 바로 이 객체에 프로퍼티를 정의함으로써 API를 외부에 노출할 수 있다.
+```
+//노드에서 사용할 수 있는 httputils 모듈
+
+//지정된 URL에 대해 비동기 HTTP GET 요청을 전송하고,
+//HTTP 상태, 헤더, 응답본문을 지정된 콜백 함수에 전달한다.
+//exports 객체를 통해 어떻게 이 메서드를 노출하는지 주의 깊게 살펴보라.
+exports.get = function(url, callback) {
+	//URL을 분석하고 필요한 부분을 얻는다.
+    url = require('url').parse(url);
+    var hostname = url.hostname, port = url.port || 80;
+    var path = url.pathname, query = url.query;
+    if(query) path += "?" + query;
+    
+    //간단한 GET 요청을 생성한다.
+    var client = require("http").createClient(port, hostname);
+    var request = client. request("GET", path, {
+    	"HOST": hostname										->요청 헤더
+    });
+    request.end();
+    
+    //응답을 처리할 함수.
+    request.on("response", function(response) {
+    	//응답 본문을 바이트가 아니라 텍스트로 얻으려 인코딩을 지정함.
+        response.setEncodin("utf8");
+        //응답 본문을 저장한다.
+        var body = ""
+        response.on("data", function(chunk) { body += chunk; });
+        //응답이 완료되면 콜백 함수를 호출한다.
+        response.on("end", function() {
+        	if(callback) callback(response.statusCode, response.headers, body);
+        });
+    });
+};
+//요청 본문에 데이터를 포함한 간단한 HTTP POST 요청
+exports.post = function(url, data, callback) {
+	//URL을 분석하고 필요한 부분을 얻는다.
+    url = require('url').parse(url);
+    var hostname = url.hostname, post = url.port || 80;
+    var path = url.pathname, query = url.query;
+    if(query) path += "?" + query;
+    
+    //요청 본문으로 보낼 데이터의 형식을 판단함.
+    var type;
+    if(data == null) data = "";
+    if(data instanceof Buffer)										->바이너리 데이터
+    	type = "application/octet-stream";
+    else if(typeof data === "string")								->문자열 데이터
+    	tpye= "test/plain; charset=UTF-8";
+    else if(typeof data === "object"){								->이름 = 값 쌍
+    	data = require("querystring").stringify(data);
+        type = "application/x-www-form-urlencoded";
+    }
+    //요청 본문을 포함한 POST 요청을 생성한다.
+    var client = require("http").createClient(port, hostname);
+    var request = client.request("POST", path, {
+    	"HOST": hostname,
+        "Content-Type": type
+    });
+    request.write(data);											->요청 본문을 보내고
+    request.end();
+    request.on("response", function(response) {						->응답을 처리함.
+    	response.setEncoding("utf8");								->응답 내용이 텍스트라고 가정
+        var body = "";												->응답 본문을 저장하는 변수
+        response.on("data", function(chunk) { body += chunk; });
+        response.on("end", function() {								->완료되면 콜백을 호출한다.
+        	if(callback) callback(response.statusCode, response.headers, body);
+        });
+    });
+};
+```
