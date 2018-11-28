@@ -5,25 +5,21 @@
 
 </div>
 
-[![Contributors](https://img.shields.io/badge/contributors-1-green.svg?style=flat-square)](/CONTRIBUTING.md) 
 [![HitCount](http://hits.dwyl.io/rjs1197/training.svg)](http://hits.dwyl.io/rjs1197/training) 
-![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
-![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)  
+![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)  
   
 
-#### [필자 소개](/resume/README.md)  
+#### [(2018. 12.)필자 소개](/resume/README.md)  
 
 ```
-"호랑이는 죽어서 가죽을 남기고, 사람은 죽어서 이름을 남긴다. 개발자는 Git을 남기지.. 않을까?"  
+"당연히 있어야 할 자리에, 누구나 이해하기 쉽도록. 저는 이런 당연하고 쉬운 코드를 만들고 싶습니다."  
 ```
 
-## What is this?  
+### What is this?  
 
-가련한 학부생의 개발자가 되기 위한 기록입니다. 부디 :star: 로 사랑을 전하세요. 차린 건 없지만, 유익한 시간이 되었으면 좋겠습니다.  
+가련한 개발자의 `더나은` 개발자가 되기 위한 기록입니다. :pray:  
 
-즐겁게 둘러보고 가셔유 :pray:  
-
-부족한 부분과 추가되었으면 하는 내용에 대해서는 Pull Request 혹은 Issue를 통해 contribution 해주시면 감사하겠습니다. 해당 Repository를 학습하는 과정에서 발생하는 의문, 질문 등은 Issue를 통해 공유하면 빠른 시일 내에 해결할 수 있을 것입니다. :)
+부족한 부분과 추가되었으면 하는 내용에 대해서는 Pull Request 혹은 Issue를 통해 contribution 해주시면 감사하겠습니다. 해당 저장소를 학습하는 과정에서 발생하는 의문, 질문 등은 Issue를 통해 공유하면 빠른 시일 내에 해결할 수 있을 것입니다. :)
 
 Welcome contribution whatever, I like whatever questions. if you will have a question, make an Issues in this repository! Then many people(i hoped) be able to help you!     
 
@@ -33,7 +29,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 - Common Sense for become a better programmer
 	- Common Sense  
-	- books  
+	- books(Non-Technical)  
 - Compter Science  
 	- Java  
 	- Python  
@@ -45,15 +41,16 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 	- Web Framework  
 	- Docker  
 	- AWS  
-  
+	- kubernetes  
+
 ## Common Sense for become a better programmer
 
 #### Recommendation books for become a better programmer!
 
 - [Common Sense](/commonsense/README.md)
 
-	1. Web Framework?
-	2. books
+	1. Web Framework?  
+	2. books  
 
 ## Computer Science  
 
@@ -61,7 +58,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 #### Write Once, Run Anywhere!  
 
-- [Java](/java/README.md)  
+- [Java](/java/README.md)(not Complete)  
 
 	1. Java Basic  
 	2. OOP(Object Oriented Programming)  
@@ -112,7 +109,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 ### Machine Learning  
 
-#### learn to ML, DL. if you wanna used Tensorflow, follow [this](https://github.com/JuniorDevelopersKR/facevalue).  
+#### Learn to ML, DL.  
 
 - [Machine Learning](/machine_learning/README.md)  
 
@@ -122,7 +119,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 ### Algorithm  
 
-#### Algorithm Solving is cool your head.  therefore i naming to short name is AA(Ice Americano).  
+#### Algorithm Solving is cool your head.  
 
 - [Ice Americano](https://github.com/rjs1197/iceamericano)  
 
@@ -130,9 +127,9 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 ### VCS(Version Control System) - Git  
 
-#### Don't think about git, just do git !  
+#### Don't think about git, just do git!  
 
-- [git & github](/git/README.md)
+- [git & github](/git/README.md)  
 	
 	1. Git Basic  
 	2. Correct use of Git  
@@ -141,17 +138,17 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 ### Web Framework  
 
 #### I hope this article will be a basic documentation for junior web developers.  
- 
-- [Web Framework](/web/README.md)
+
+- [Web Framework](/web/README.md)  
 	
 	1. Django - Python web framework  
-	2. Spring - Java web framework  
+	2. Spring - Java web framework(not Complete)  
 
 ### Docker  
 
 #### Docker is Software platform for Container ecosystem.  
 
-- [Docker](/docker/README.md)
+- [Docker](/docker/README.md)  
 	
 	1. Docker Basic  
 	2. Docker Practice  
@@ -160,14 +157,24 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 #### AWS starting with Cloud.  
 
-- [AWS](/aws/README.md)  
+- [AWS](/aws/README.md)(not Complete)  
 
 	1. AWS Basic  
 	2. AWS IAM  
-	3. AWS EC2
-	4. AWS S3 
-	5. AWS SDK
+	3. AWS EC2  
+	4. AWS S3  
+	5. AWS SDK  
 	6. AWS RDS  
+
+### Kubernetes  
+
+- [Kubernetes](/kubernetes/README.md)  
+
+#### Into the infra world  
+
+### CI/CD  
+
+#### Continuous Integration, Continuous Deployment.  
 
 ## (Personal practice, learning contents) Etc.  
 
@@ -178,5 +185,3 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 - [OpenCV](/opencv/README.md)  
 - [Database](/database/README.md)  
 - [Network](/network/README.md)  
-- [Kubernetes](/kubernetes/README.md)  
-
