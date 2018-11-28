@@ -8,7 +8,7 @@
 
 [Sourcerer profile](https://sourcerer.io/rayleighko)
 
-#### 좌우명: [평생학습(Lifelong learning)](https://en.wikipedia.org/wiki/Lifelong_learning), [민이호학 불치하문(敏而好學 不恥下問)](http://igoindol.net/siteagent/100.daum.net/encyclopedia/view/63XX20900013)
+#### 좌우명: [평생학습(Lifelong learning)](https://en.wikipedia.org/wiki/Lifelong_learning), [민이호학 불치하문(敏而好學 不恥下問)](https://bit.ly/2E22Als)
 
 개발자. 더나은 경험을 추구하며, 기술적으로 성장하는 성취감을 좋아합니다. 모든 일을 체계적으로 진행하는 것을 좋아하며, 다양한 의견을 수용해 최적의 결과를 만들 때 가장 큰 성취감을 느끼곤 합니다.  
 
