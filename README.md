@@ -9,17 +9,15 @@
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
 ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)  
 
-#### [(2018. 12.)필자 소개](/resume/README.md)  
+#### [(2018. 12)필자 소개](/resume/README.md)  
 
 ```
-"당연히 있어야 할 자리에, 누구나 이해하기 쉽도록. 저는 이런 당연하고 쉬운 코드를 만들고 싶습니다."  
+"당연히 있어야 할 자리에, 누구나 이해하기 쉽도록. 저는 이런 당연하고 쉬운 코드를 만들고 싶습니다"  
 ```
 
 ### What is this?  
 
 가련한 개발자의 `더나은` 개발자가 되기 위한 기록입니다. :pray:  
-
-부족한 부분과 추가되었으면 하는 내용에 대해서는 Pull Request 혹은 Issue를 통해 contribution 해주시면 감사하겠습니다. 해당 저장소를 학습하는 과정에서 발생하는 의문, 질문 등은 Issue를 통해 공유하면 빠른 시일 내에 해결할 수 있을 것입니다. :)
 
 Welcome contribution whatever, I like whatever questions. if you will have a question, make an Issues in this repository! Then many people(i hoped) be able to help you!     
 
@@ -42,6 +40,9 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 	- Docker  
 	- AWS  
 	- kubernetes  
+
+---  
+
 
 ## Common Sense for become a better programmer
 
@@ -119,7 +120,7 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 
 ### Algorithm  
 
-#### Algorithm Solving is cool your head.  
+#### Algorithm Solving is cool my head.  
 
 - [Ice Americano](https://github.com/rjs1197/iceamericano)  
 
@@ -185,4 +186,5 @@ Welcome contribution whatever, I like whatever questions. if you will have a que
 - [OpenCV](/opencv/README.md)  
 - [Database](/database/README.md)  
 - [Network](/network/README.md)  
-- [unreal](/unreal/README.md)  
+- [Unreal](/unreal/README.md)  
+- [Javascript](/javascript/README.md)  
