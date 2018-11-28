@@ -1,10 +1,3 @@
-
-<div align=center>
-
-![](/assets/training_main.png)
-
-</div>
-
 [![HitCount](http://hits.dwyl.io/rjs1197/training.svg)](http://hits.dwyl.io/rjs1197/training) 
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
 ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)  
