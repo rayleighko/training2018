@@ -4,6 +4,8 @@
 
 [![HitCount](http://hits.dwyl.io/rjs1197/training/resume.svg)](http://hits.dwyl.io/rjs1197/training/resume) 
 
+<a href="https://sourcerer.io/rayleighko"><img src="https://avatars2.githubusercontent.com/u/24822072?v=4" height="50px" width="50px" alt=""/></a>
+
 https://sourcerer.io/rayleighko?fbclid=IwAR1_CsEhhqZVIMZ2jMEDSo9WQ_2FIdx8xGti8cxSTYhYNjf2EM77LKsyPDs
 
 #### 좌우명: [평생학습(Lifelong learning)](https://en.wikipedia.org/wiki/Lifelong_learning), [민이호학 불치하문(敏而好學 不恥下問)](http://igoindol.net/siteagent/100.daum.net/encyclopedia/view/63XX20900013)
