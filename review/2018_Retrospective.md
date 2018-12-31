@@ -18,10 +18,10 @@
 
 #### 진행한 오픈소스
 
-[알고리즘 문제풀이](https://github.com/rayleighko/iceamericano)
-[계산기](https://github.com/rayleighko/chocolate)
-[파이썬 로켓 시뮬레이션](https://github.com/rayleighko/PyRockSim)
-[TIL](https://github.com/rayleighko/TIL)
+[알고리즘 문제풀이](https://github.com/rayleighko/iceamericano)  
+[계산기](https://github.com/rayleighko/chocolate)  
+[파이썬 로켓 시뮬레이션](https://github.com/rayleighko/PyRockSim)  
+[TIL](https://github.com/rayleighko/TIL)  
 
 ### 3월 :: 7월
 
@@ -35,17 +35,17 @@
 
 #### Facebook 게시글
 
-['여혐 문제 때문에 입장 되게 어정쩡한 남자분들에게' - 양파님의 글](https://www.facebook.com/permalink.php?story_fbid=999188266895825&id=100004139834462&__xts__%5B0%5D=68.ARC5pZooQFDWtAUTFWRy6zGDdB3kD-6CdkotkyNcOxrVDqUPJatT0xr81zLOnjcqBVz63IjkQbC7ryX2iR__yiC4hi5UO4kPQOcC715Xhqycp8ewAsUzWMSQaz6McEiQnez6xz8yTtEEKgEOld82BW5nKDDLOoYlGbSZx2Q5W89a3btZUUwh7oLCJqIXPQswtZ5bLr2dlfdEbkOdIxDMydSA68X2VzRFzRd_j2K5lGe8tFyCOHBqdpGYYXPvqV9wG5AGnej7HB_pvYq8qmiDZVKZZPi78TQenVHnmjYGT9Ji3YDOQMFsjRCV03l-FHdZ0eH7FaBhyeeJu9tIcPVu0A&__tn__=-R)
-['<동네 바보 형>' - 더퍼스트미디어 류승연님의 글](https://www.facebook.com/permalink.php?story_fbid=1003172716497380&id=100004139834462&__xts__%5B0%5D=68.ARA2_w_hyBuOWPHYEkRBlRpcz437ZB_lNPEOFoQOQzMIeDWnsJDBaNfWX7nYEfMCTfwS4ddxs-mVkOEQqJua79tBuAsJPv4RvW3Fw2VUQWhDxfJarq4ccVu2dOoJaQh9cvB0c0vGAmldL7GL0Y9L0EDE0zOpqYn-j2SYKrs4YWTfNUADl7oIxHGhk0OIN1Q14H_HJynvJDDwqZLjb0e9Pko9RLmy2wMI-3KllEPrZmLFNhzLKpeyKNCCk7clKJdzkjbfQHnVxjW85f-84f5nb8ftncZ7JZp-Y5nW1hn85YkT9qV0qF6imJA4K3xXOZ4fwNFStlMzH40rrakOBhdmK0KvoA&__tn__=-R)
-['여성을 대상으로 한 범죄의 심각성과 그런 범죄를 다루는 인식 전환의 필요성' - 문재인님의 글](https://www.facebook.com/permalink.php?story_fbid=1004616313019687&id=100004139834462&__xts__%5B0%5D=68.ARBUTwNyk2J95y_ynDp3s1BJeFiSsZ78iihI3Kk8GfsQKld5YdM3HJqdg1-OR0FdPbwUpQDy3kgySLhP3J0ul0_Wtmou1uxHM7MR90DToKY7S16TthSPBUi_pdhTZV4FMsNT7KRnHT6jSf8WxrskRXDh11QgnBuHyYhZr7lNcmijPpGo94dZptCjpV6PPxDjDfykdeZzafvu1Ageq_Cfdk42IsNsx81ozw9QgpTw6yD3G7Vb2dL-dzB0odDk3PDx3inQWen5fl4Wox7H5Qu5sq95dPlON5j3mCtrsZTckr7YjhT4pePLSo7Y2qBXCcGpuNGLYl9M_wJuVOg74LHyCvEGaQ&__tn__=-R)
-['소름 끼치는 불평등, 노엄 촘스키의 놀라운 통찰'을 읽고](https://www.facebook.com/permalink.php?story_fbid=1009075369240448&id=100004139834462)
-['소녀처럼 코딩하기' - 김예은님의 글을 읽고](https://www.facebook.com/permalink.php?story_fbid=1017935315021120&id=100004139834462)
-['공대 학벌에 대해서' - 감동근님의 글](https://www.facebook.com/permalink.php?story_fbid=1042324432582208&id=100004139834462)
-['미중 무역전쟁이 가져온 변화'을 읽고](https://www.facebook.com/permalink.php?story_fbid=1050262601788391&id=100004139834462)
-['요즘 학생들의 공통적인 문제점' - 남세동님의 글을 읽고](https://www.facebook.com/permalink.php?story_fbid=1053649528116365&id=100004139834462)
-['씨 마른 개발자 속타는 스타트업, 구인 비법 어디 없소?'를 읽고](https://www.facebook.com/permalink.php?story_fbid=1054755068005811&id=100004139834462)
+['여혐 문제 때문에 입장 되게 어정쩡한 남자분들에게' - 양파님의 글](https://www.facebook.com/permalink.php?story_fbid=999188266895825&id=100004139834462&__xts__%5B0%5D=68.ARC5pZooQFDWtAUTFWRy6zGDdB3kD-6CdkotkyNcOxrVDqUPJatT0xr81zLOnjcqBVz63IjkQbC7ryX2iR__yiC4hi5UO4kPQOcC715Xhqycp8ewAsUzWMSQaz6McEiQnez6xz8yTtEEKgEOld82BW5nKDDLOoYlGbSZx2Q5W89a3btZUUwh7oLCJqIXPQswtZ5bLr2dlfdEbkOdIxDMydSA68X2VzRFzRd_j2K5lGe8tFyCOHBqdpGYYXPvqV9wG5AGnej7HB_pvYq8qmiDZVKZZPi78TQenVHnmjYGT9Ji3YDOQMFsjRCV03l-FHdZ0eH7FaBhyeeJu9tIcPVu0A&__tn__=-R)  
+['<동네 바보 형>' - 더퍼스트미디어 류승연님의 글](https://www.facebook.com/permalink.php?story_fbid=1003172716497380&id=100004139834462&__xts__%5B0%5D=68.ARA2_w_hyBuOWPHYEkRBlRpcz437ZB_lNPEOFoQOQzMIeDWnsJDBaNfWX7nYEfMCTfwS4ddxs-mVkOEQqJua79tBuAsJPv4RvW3Fw2VUQWhDxfJarq4ccVu2dOoJaQh9cvB0c0vGAmldL7GL0Y9L0EDE0zOpqYn-j2SYKrs4YWTfNUADl7oIxHGhk0OIN1Q14H_HJynvJDDwqZLjb0e9Pko9RLmy2wMI-3KllEPrZmLFNhzLKpeyKNCCk7clKJdzkjbfQHnVxjW85f-84f5nb8ftncZ7JZp-Y5nW1hn85YkT9qV0qF6imJA4K3xXOZ4fwNFStlMzH40rrakOBhdmK0KvoA&__tn__=-R)  
+['여성을 대상으로 한 범죄의 심각성과 그런 범죄를 다루는 인식 전환의 필요성' - 문재인님의 글](https://www.facebook.com/permalink.php?story_fbid=1004616313019687&id=100004139834462&__xts__%5B0%5D=68.ARBUTwNyk2J95y_ynDp3s1BJeFiSsZ78iihI3Kk8GfsQKld5YdM3HJqdg1-OR0FdPbwUpQDy3kgySLhP3J0ul0_Wtmou1uxHM7MR90DToKY7S16TthSPBUi_pdhTZV4FMsNT7KRnHT6jSf8WxrskRXDh11QgnBuHyYhZr7lNcmijPpGo94dZptCjpV6PPxDjDfykdeZzafvu1Ageq_Cfdk42IsNsx81ozw9QgpTw6yD3G7Vb2dL-dzB0odDk3PDx3inQWen5fl4Wox7H5Qu5sq95dPlON5j3mCtrsZTckr7YjhT4pePLSo7Y2qBXCcGpuNGLYl9M_wJuVOg74LHyCvEGaQ&__tn__=-R)  
+['소름 끼치는 불평등, 노엄 촘스키의 놀라운 통찰'을 읽고](https://www.facebook.com/permalink.php?story_fbid=1009075369240448&id=100004139834462)  
+['소녀처럼 코딩하기' - 김예은님의 글을 읽고](https://www.facebook.com/permalink.php?story_fbid=1017935315021120&id=100004139834462)  
+['공대 학벌에 대해서' - 감동근님의 글](https://www.facebook.com/permalink.php?story_fbid=1042324432582208&id=100004139834462)  
+['미중 무역전쟁이 가져온 변화'을 읽고](https://www.facebook.com/permalink.php?story_fbid=1050262601788391&id=100004139834462)  
+['요즘 학생들의 공통적인 문제점' - 남세동님의 글을 읽고](https://www.facebook.com/permalink.php?story_fbid=1053649528116365&id=100004139834462)  
+['씨 마른 개발자 속타는 스타트업, 구인 비법 어디 없소?'를 읽고](https://www.facebook.com/permalink.php?story_fbid=1054755068005811&id=100004139834462)  
 
-결국 7월의 끝에 '파우스트'라는 책 한 권에 있는 한 구절을 통해 기사회생해 삶을 다짐했다. - [파우스트 속의 명언](https://www.facebook.com/permalink.php?story_fbid=1057650874382897&id=100004139834462)
+결국 7월의 끝에 '파우스트'라는 책 한 권에 있는 한 구절을 통해 기사회생해 삶을 다짐했다. - [파우스트 속의 명언](https://www.facebook.com/permalink.php?story_fbid=1057650874382897&id=100004139834462)  
 
 3월부터 7월 사이에는 파이썬을 공부하던 중이었기에 장고로 프로젝트를 만들거나 머신러닝을 직접 구현하는 프로젝트를 기획하기도 했지만 함께하던 팀의 진행 방향이 달라져 기획만 하고 완성하지 못했다.
 이건 팀 전체의 선택에 따라 머신러닝을 사용한 새로운 프로젝트를 진행했으니 한편으로는 실용성에 집중하게 되었다고도 할 수 있지만, 직접 구현해보고 싶기도 했기에아쉬움이 남는다.
@@ -54,15 +54,15 @@
 
 #### 진행한 오픈소스
 
-[클라우드 스터디 저장소](https://github.com/rayleighko/google-study-jam)
-[장고를 활용한 블로그(폐기)](https://github.com/rayleighko/django-blog)
-[머신러닝 스터디 저장소](https://github.com/rayleighko/ml_study)
-[액면가 계산 - 머신러닝 구현 프로젝트(폐기))](https://github.com/rayleighko/facevalue)
-[한이음 ICT - 텐서플로우를 이용한 프로젝트(폐기)](https://github.com/rayleighko/ToText)
-[파이썬 이미지 크롤러](https://github.com/rayleighko/img_crawling)
-[파이썬 학습용 저장소(폐기)](https://github.com/rayleighko/python-training)
-[노드JS 학습용 저장소(폐기)](https://github.com/rayleighko/node-training)
-[학습 저장용 저장소](https://github.com/rayleighko/training)
+[클라우드 스터디 저장소](https://github.com/rayleighko/google-study-jam)  
+[장고를 활용한 블로그(폐기)](https://github.com/rayleighko/django-blog)  
+[머신러닝 스터디 저장소](https://github.com/rayleighko/ml_study)  
+[액면가 계산 - 머신러닝 구현 프로젝트(폐기))](https://github.com/rayleighko/facevalue)  
+[한이음 ICT - 텐서플로우를 이용한 프로젝트(폐기)](https://github.com/rayleighko/ToText)  
+[파이썬 이미지 크롤러](https://github.com/rayleighko/img_crawling)  
+[파이썬 학습용 저장소(폐기)](https://github.com/rayleighko/python-training)  
+[노드JS 학습용 저장소(폐기)](https://github.com/rayleighko/node-training)  
+[학습 저장용 저장소](https://github.com/rayleighko/training)  
 
 ### 7월 :: 11월
 
@@ -88,28 +88,28 @@
 
 #### 페이스북 게시글
 
-[장고걸스 워크샵](https://www.facebook.com/permalink.php?story_fbid=1059893864158598&id=100004139834462&__xts__%5B0%5D=68.ARDKHA8hpke3VwF3IxSzjuO3H9mOQTBrZ_gprTqvAhrGWu7IogSYQo6qBz3s-ThHzDTBbY9_ZHTcghYGw81mEsmhWADGGX5KAhTLQqT9N5yrfiwYM0VKQbOx6MNGchYE9zZYm3zLSV3GpDvaTtX87gt9qwIYNrD8DZTEvm49wdVomr0vD667pHEMmQl6W41yjRpHWEGSYNEP4fQjkXIyaXUqF6waZppCUeUK9gNCb5Ny-AMkGS579HtxopSWZqdJC8FOi0o7ZcXBgkzCh88CyvB3oZ9fIt0VT4JpA9IhsYE7wOEQsOt5wjdCcHlomfq-fz0fTDXub5axqHPdm0B1d_C3OHU&__tn__=-R)
-['아름다운 사람이란 무엇일까'에 대한 고민 글](https://www.facebook.com/permalink.php?story_fbid=1059907420823909&id=100004139834462)
-['지옥이든 천국이든 아무려면 어떠랴 - 보들레르의 여행'을 읽고](https://www.facebook.com/permalink.php?story_fbid=1075688119245839&id=100004139834462)
-[동네 도서관을 다니며 느낀점](https://www.facebook.com/permalink.php?story_fbid=1084986081649376&id=100004139834462)
-['개발자가 밤새는 것은 과연 용서가 되는가' - 이민석님의 글](https://www.facebook.com/permalink.php?story_fbid=1087585251389459&id=100004139834462)
-['어떻게 하면 좋은 제품을 만들까에 대한 고민글'](https://www.facebook.com/permalink.php?story_fbid=1112520542229263&id=100004139834462)
-[지향하는 회사에 대한 고민글](https://www.facebook.com/permalink.php?story_fbid=1112947168853267&id=100004139834462)
-[가끔 드는 "왜?"라는 의문](https://www.facebook.com/permalink.php?story_fbid=1117777565036894&id=100004139834462)
-['카풀서비스(차량공유) vs. 택시 면허' - 윤석찬님의 글](https://www.facebook.com/permalink.php?story_fbid=1130329177115066&id=100004139834462&__xts__%5B0%5D=68.ARDgtdVdAILcm9RYikt3gDrcdaWIWJfrW6aHFhpNgCTn_vnt02QLt3ft4y0QnULAwfgi8HvmDJ0WfjqztL0vJZsaVIET8JXjpADV2xFs_14hd9SKY56FLiANvDjdyMCXvewNfhrudAcX_tm_Q1RH-FpeB_BgMfE2gp9x3b9EayS0Sp5cxORylsjGETQCmxcQj5HgV-pHPZMP17mBaFm0HRKJfxzZ2CbdqE0vS0WjSY1iEsurfNqIqEgyz62L-qStvFRGbeL1JEDdPGflRn8zumXrK2EFGrO8QpG5pgLNY_rbb2Tk84BBEPXE7dZ4bLE58yY_mE7A8zB6HjsAeZZH2zwtBw&__tn__=-R)
-['OECD 성평등 장벽에 대한 자료'를 보고](https://www.facebook.com/permalink.php?story_fbid=1134478516700132&id=100004139834462&__xts__%5B0%5D=68.ARAweu7i0oYgfz2IBjXPPYqsafI5CkHfzKF7Y0vrpIpSmdZLhAtTJ1TcEOx4ROHJRDRfQYNyt7Y3suJwuPMSpEATIroNnKvEHs5vvSg37XjD84ribHQ-8iKVgRyjrJS14xrLGMfqjdSKmNWleURH3K_ShqfVsrpMVUqgf3IuoOIVZEvm677IrzJDlZe_MQh3NR6qYuo8_XzYGmlVSW5tYONSVu6mxggqabfiNqk22uWHdXRBurSA5Q_fWV_oQanZ2lLiBD_vEYBp1yuQsKSE50Gmouq-XxVWzfrYXL2jvj6ETSGn6E1RHhPvsbyjUIjU2yjtvtjUBsbBUQ11JXlF6g&__tn__=-R)
-[빈부격차에 대한 생각](https://www.facebook.com/permalink.php?story_fbid=1134983343316316&id=100004139834462)
-[행복은 타고나는 것이다](https://www.facebook.com/permalink.php?story_fbid=1151889651625685&id=100004139834462)
-[컨트리뷰톤 참여 후기](https://www.facebook.com/permalink.php?story_fbid=1155709824577001&id=100004139834462)
+[장고걸스 워크샵](https://www.facebook.com/permalink.php?story_fbid=1059893864158598&id=100004139834462&__xts__%5B0%5D=68.ARDKHA8hpke3VwF3IxSzjuO3H9mOQTBrZ_gprTqvAhrGWu7IogSYQo6qBz3s-ThHzDTBbY9_ZHTcghYGw81mEsmhWADGGX5KAhTLQqT9N5yrfiwYM0VKQbOx6MNGchYE9zZYm3zLSV3GpDvaTtX87gt9qwIYNrD8DZTEvm49wdVomr0vD667pHEMmQl6W41yjRpHWEGSYNEP4fQjkXIyaXUqF6waZppCUeUK9gNCb5Ny-AMkGS579HtxopSWZqdJC8FOi0o7ZcXBgkzCh88CyvB3oZ9fIt0VT4JpA9IhsYE7wOEQsOt5wjdCcHlomfq-fz0fTDXub5axqHPdm0B1d_C3OHU&__tn__=-R)  
+['아름다운 사람이란 무엇일까'에 대한 고민 글](https://www.facebook.com/permalink.php?story_fbid=1059907420823909&id=100004139834462)  
+['지옥이든 천국이든 아무려면 어떠랴 - 보들레르의 여행'을 읽고](https://www.facebook.com/permalink.php?story_fbid=1075688119245839&id=100004139834462)  
+[동네 도서관을 다니며 느낀점](https://www.facebook.com/permalink.php?story_fbid=1084986081649376&id=100004139834462)  
+['개발자가 밤새는 것은 과연 용서가 되는가' - 이민석님의 글](https://www.facebook.com/permalink.php?story_fbid=1087585251389459&id=100004139834462)  
+['어떻게 하면 좋은 제품을 만들까에 대한 고민글'](https://www.facebook.com/permalink.php?story_fbid=1112520542229263&id=100004139834462)  
+[지향하는 회사에 대한 고민글](https://www.facebook.com/permalink.php?story_fbid=1112947168853267&id=100004139834462)  
+[가끔 드는 "왜?"라는 의문](https://www.facebook.com/permalink.php?story_fbid=1117777565036894&id=100004139834462)  
+['카풀서비스(차량공유) vs. 택시 면허' - 윤석찬님의 글](https://www.facebook.com/permalink.php?story_fbid=1130329177115066&id=100004139834462&__xts__%5B0%5D=68.ARDgtdVdAILcm9RYikt3gDrcdaWIWJfrW6aHFhpNgCTn_vnt02QLt3ft4y0QnULAwfgi8HvmDJ0WfjqztL0vJZsaVIET8JXjpADV2xFs_14hd9SKY56FLiANvDjdyMCXvewNfhrudAcX_tm_Q1RH-FpeB_BgMfE2gp9x3b9EayS0Sp5cxORylsjGETQCmxcQj5HgV-pHPZMP17mBaFm0HRKJfxzZ2CbdqE0vS0WjSY1iEsurfNqIqEgyz62L-qStvFRGbeL1JEDdPGflRn8zumXrK2EFGrO8QpG5pgLNY_rbb2Tk84BBEPXE7dZ4bLE58yY_mE7A8zB6HjsAeZZH2zwtBw&__tn__=-R)  
+['OECD 성평등 장벽에 대한 자료'를 보고](https://www.facebook.com/permalink.php?story_fbid=1134478516700132&id=100004139834462&__xts__%5B0%5D=68.ARAweu7i0oYgfz2IBjXPPYqsafI5CkHfzKF7Y0vrpIpSmdZLhAtTJ1TcEOx4ROHJRDRfQYNyt7Y3suJwuPMSpEATIroNnKvEHs5vvSg37XjD84ribHQ-8iKVgRyjrJS14xrLGMfqjdSKmNWleURH3K_ShqfVsrpMVUqgf3IuoOIVZEvm677IrzJDlZe_MQh3NR6qYuo8_XzYGmlVSW5tYONSVu6mxggqabfiNqk22uWHdXRBurSA5Q_fWV_oQanZ2lLiBD_vEYBp1yuQsKSE50Gmouq-XxVWzfrYXL2jvj6ETSGn6E1RHhPvsbyjUIjU2yjtvtjUBsbBUQ11JXlF6g&__tn__=-R)  
+[빈부격차에 대한 생각](https://www.facebook.com/permalink.php?story_fbid=1134983343316316&id=100004139834462)  
+[행복은 타고나는 것이다](https://www.facebook.com/permalink.php?story_fbid=1151889651625685&id=100004139834462)  
+[컨트리뷰톤 참여 후기](https://www.facebook.com/permalink.php?story_fbid=1155709824577001&id=100004139834462)  
 
 #### 진행한 오픈소스
 
-[C++로 만드는 운영체제 SKYOS를 기반으로 한 VR 운영체제](https://github.com/rayleighko/vros)
-[인프런 강좌 - 플라스크](https://github.com/rayleighko/InflearnFlask)
-[2018 컨트리뷰톤 - gitCodeShare](https://github.com/jsdevkr/gitCodeShare.com)
-[AUSG Docker + Jenkins 세미나 지원](https://github.com/rayleighko/docker-jenkins-seminar)
-[강의 공유 플랫폼 - Athena](https://github.com/rayleighChild/athena)
-[Athena를 만들면서 불편했거나 불만스러웠던 점](https://github.com/rayleighChild/athena_FAQ)
+[C++로 만드는 운영체제 SKYOS를 기반으로 한 VR 운영체제](https://github.com/rayleighko/vros)  
+[인프런 강좌 - 플라스크](https://github.com/rayleighko/InflearnFlask)  
+[2018 컨트리뷰톤 - gitCodeShare](https://github.com/jsdevkr/gitCodeShare.com)  
+[AUSG Docker + Jenkins 세미나 지원](https://github.com/rayleighko/docker-jenkins-seminar)  
+[강의 공유 플랫폼 - Athena](https://github.com/rayleighChild/athena)  
+[Athena를 만들면서 불편했거나 불만스러웠던 점](https://github.com/rayleighChild/athena_FAQ)  
 
 ### 12월
 
@@ -129,26 +129,26 @@
 
 #### 페이스북 게시글
 
-[과연 내가 '어떤 것이든 배움'을 좋아하는지 궁금하다면](https://www.facebook.com/permalink.php?story_fbid=1160570484090935&id=100004139834462)
-[어느 IT 개발자의 죽음 - 국민청원](https://www.facebook.com/permalink.php?story_fbid=1165466326934684&id=100004139834462&__xts__%5B0%5D=68.ARCn7DBi-J3brUPVu--V6NfMvSG59cdnObCwV-qF-NkQIir1CLGjFwQPJttboPNnSQgZ3lyc-8wOD7Zxir7KXuQ61YxzDSIfTjMMpBWun0MhtK6ZlaDX0OO-skqmxLPc6ND5LyU27vDmZh_rn7l_8OMVTPQMw8HGDWxKIMcdQQzJg9ihfsgYpzwnhA-DG-ItK7JCM60klcLkUhk-uIBaoK8m48OUwttKL86Tqed925JnLZO3XKTD9l6_FHLA0kUqYoPO4iVdTaTmMg-b-kWuG6L2t7S47GxrQ6Q2po-SlNGcActsy_FmCd3GX3Lj_RnZTgdB9AceOQgFFjAEx6qj_Ue8sY4&__tn__=-R)
-["하루에 컵라면 하나로 버텨" - SBS 뉴스토리의 댓글을 읽고](https://www.facebook.com/permalink.php?story_fbid=1167438180070832&id=100004139834462&__xts__%5B0%5D=68.ARBm_eyOmpUW9S-fG8Axg9OCanS7pKlJ9_vCGz-S3W3HaXPkbj-hfa9_Xtz_ns5-4XpGKsctF85iLZaaCv9HOlR_9ganHzQIQ09p3iHA9idBcfXhxxsOFDKdep4Ms8dm_cmVTzdHh2F6NByM6THT5dI26MC7YWXolzsB5fJLgZvjTU2Gkh65SYKQmKe7GVxyQt6J8o7STjrW7F7kVbd7OWQb8hNvwEIiEv2EpjLfTZMrNKegeBWB4jtaYC8i_AZYeQc1Pv242pe6ZOmD-esO16OMgEObC34Y5k-vu4aD7gB2VQ2lO-Yutd3BWN6OrURA922YTe9lzIdWzHO9_q2tfy0dAQ&__tn__=-R)
-[임백준님의 연구원 상담 후기를 읽고](https://www.facebook.com/permalink.php?story_fbid=1168703083277675&id=100004139834462)
-[이타심과 공감도 지성이다](https://www.facebook.com/photo.php?fbid=1173057919508858&set=a.108334662647861&type=3)
+[과연 내가 '어떤 것이든 배움'을 좋아하는지 궁금하다면](https://www.facebook.com/permalink.php?story_fbid=1160570484090935&id=100004139834462)  
+[어느 IT 개발자의 죽음 - 국민청원](https://www.facebook.com/permalink.php?story_fbid=1165466326934684&id=100004139834462&__xts__%5B0%5D=68.ARCn7DBi-J3brUPVu--V6NfMvSG59cdnObCwV-qF-NkQIir1CLGjFwQPJttboPNnSQgZ3lyc-8wOD7Zxir7KXuQ61YxzDSIfTjMMpBWun0MhtK6ZlaDX0OO-skqmxLPc6ND5LyU27vDmZh_rn7l_8OMVTPQMw8HGDWxKIMcdQQzJg9ihfsgYpzwnhA-DG-ItK7JCM60klcLkUhk-uIBaoK8m48OUwttKL86Tqed925JnLZO3XKTD9l6_FHLA0kUqYoPO4iVdTaTmMg-b-kWuG6L2t7S47GxrQ6Q2po-SlNGcActsy_FmCd3GX3Lj_RnZTgdB9AceOQgFFjAEx6qj_Ue8sY4&__tn__=-R)  
+["하루에 컵라면 하나로 버텨" - SBS 뉴스토리의 댓글을 읽고](https://www.facebook.com/permalink.php?story_fbid=1167438180070832&id=100004139834462&__xts__%5B0%5D=68.ARBm_eyOmpUW9S-fG8Axg9OCanS7pKlJ9_vCGz-S3W3HaXPkbj-hfa9_Xtz_ns5-4XpGKsctF85iLZaaCv9HOlR_9ganHzQIQ09p3iHA9idBcfXhxxsOFDKdep4Ms8dm_cmVTzdHh2F6NByM6THT5dI26MC7YWXolzsB5fJLgZvjTU2Gkh65SYKQmKe7GVxyQt6J8o7STjrW7F7kVbd7OWQb8hNvwEIiEv2EpjLfTZMrNKegeBWB4jtaYC8i_AZYeQc1Pv242pe6ZOmD-esO16OMgEObC34Y5k-vu4aD7gB2VQ2lO-Yutd3BWN6OrURA922YTe9lzIdWzHO9_q2tfy0dAQ&__tn__=-R)  
+[임백준님의 연구원 상담 후기를 읽고](https://www.facebook.com/permalink.php?story_fbid=1168703083277675&id=100004139834462)  
+[이타심과 공감도 지성이다](https://www.facebook.com/photo.php?fbid=1173057919508858&set=a.108334662647861&type=3)  
 
 #### 진행한 오픈소스
 
-[react-basic](https://github.com/rayleighko/react-basic)
-[react-scss](https://github.com/rayleighko/react-scss)
-[react-styledComponents](https://github.com/rayleighko/react-styledComponents)
-[react-antd](https://github.com/rayleighko/react-antd)
-[react-redux](https://github.com/rayleighko/react-redux)
-[react-mobx](https://github.com/rayleighko/react-mobx)
-[react TodoList](https://github.com/rayleighko/react-todo)
-[react-testCode](https://github.com/rayleighko/react-testCode)
-[리액트로 만드는 블로그(템플릿)](https://github.com/rayleighko/bloglates)
-[팀원들과의 두 번째 프로젝트 boggle](https://github.com/rayleighChild/boggle)
-[boggle에서 사용하는 머신러닝 Speech recognition](https://github.com/rayleighChild/boggler)
-[곰의 시점에서 세상을 살아가는 텍스트 기반 웹 게임](https://github.com/rayleighko/bearLife)
+[react-basic](https://github.com/rayleighko/react-basic)  
+[react-scss](https://github.com/rayleighko/react-scss)  
+[react-styledComponents](https://github.com/rayleighko/react-styledComponents)  
+[react-antd](https://github.com/rayleighko/react-antd)  
+[react-redux](https://github.com/rayleighko/react-redux)  
+[react-mobx](https://github.com/rayleighko/react-mobx)  
+[react TodoList](https://github.com/rayleighko/react-todo)  
+[react-testCode](https://github.com/rayleighko/react-testCode)  
+[리액트로 만드는 블로그(템플릿)](https://github.com/rayleighko/bloglates)  
+[팀원들과의 두 번째 프로젝트 boggle](https://github.com/rayleighChild/boggle)  
+[boggle에서 사용하는 머신러닝 Speech recognition](https://github.com/rayleighChild/boggler)  
+[곰의 시점에서 세상을 살아가는 텍스트 기반 웹 게임](https://github.com/rayleighko/bearLife)  
 
 공개 컨트리뷰션 수(비공개 repo{gitLab 제외}): 1030 여 개
 완성여부와 상관없이 진행한 프로젝트 수: 30여 개
@@ -160,4 +160,4 @@
 
 나의 글을 읽어주는 당신의 존재로 인해 나는 또 한 번 삶의 동력을 얻고 또 다른 글을 쓸 힘을 얻게 되기 때문이다. 내년에도 무수히 많은 행복 속에서 살기를 바라며, 올 해를 빛내 준 DjangoGrils Seoul과 2018 컨트리뷰톤, AUSG, AWSKRUG, 마음치유학교, 평창 올림픽/패럴림픽과 같은 활동에서 함께 한 모두와 여자친구에게 감사하다는 말을 전하고 싶다.
 
-아듀 2018!
+아듀 2018!  
