@@ -2,7 +2,7 @@
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)
 ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)
 
-#### [(2018. 12)필자 소개](/resume/README.md)
+#### [(2019. 01)필자 소개](/resume/README.md)
 
 #### [2018 결산 회고](/review/2018_Retrospective.md)
 
