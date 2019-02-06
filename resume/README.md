@@ -122,7 +122,7 @@ DevOps에 관심이 많지만, 좋은 인프라를 관리하기 위해서는 개
 **프로젝트 주소**:　https://github.com/teamthesol/node-DeepSpeech  
 
 ## 가장 기억에 남는 문제 해결 사례 소개  
-  
+
 ### 1. 기능 구현 - 비동기적으로 구현되어 있는 함수를 동기적으로 구현하기 위해 수정한 사례  
 
 #### 문제 정의
@@ -183,7 +183,7 @@ DevOps에 관심이 많지만, 좋은 인프라를 관리하기 위해서는 개
 : https://github.com/teamthesol/boggler/commit/705b3c61d6b99439b4f989a4286275ac4099710c  
 * 스타일링: https://github.com/teamthesol/boggler/commit/09aaa346b5202fbdb519c2e239e327c564b2ee50  
 * 스타일링: https://github.com/teamthesol/boggler/commit/38712adcb82b7ab4a623c521760c0d822668f148  
-  
+
 #### 기타 내용
 
 ```
